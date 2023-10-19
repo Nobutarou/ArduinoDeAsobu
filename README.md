@@ -1,2 +1,2 @@
 # ArduinoDeAsobu
-Arduino で遊んだときの記録
+Arduino で遊んだときの記録。
