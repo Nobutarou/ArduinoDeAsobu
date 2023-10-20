@@ -29,6 +29,7 @@ const float kp = 100.0 / (crit_temp - target_temp);
 const float kd = 100.0 / (10.0 / dt);
 
 // no integrate gain. might be not needed for this case.
+// If do, +10deg for 100sec --> full power?
 const float ki = 0.0;
 
 //// Read vars
