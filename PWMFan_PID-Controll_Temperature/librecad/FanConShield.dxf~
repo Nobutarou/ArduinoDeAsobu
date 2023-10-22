@@ -91,7 +91,7 @@ STANDARD
   9
 $CLAYER
   8
-condenser
+JST XH Posts
   9
 $CELTYPE
   6
@@ -1115,9 +1115,9 @@ AcDbViewportTableRecord
  21
 1
  12
-31.64705367603464
+34.17008275088873
  22
-11.88411424470576
+11.40001445568888
  13
 0
  23
@@ -1143,7 +1143,7 @@ AcDbViewportTableRecord
  37
 0
  40
-25.95532711981192
+29.51120693522613
  41
 1.496446700507614
  42
@@ -21709,96 +21709,6 @@ STANDARD
  44
 1
   0
-CIRCLE
-  5
-36E
-100
-AcDbEntity
-  8
-condenser
-  6
-ByLayer
- 62
-  256
-370
-   -1
-100
-AcDbCircle
- 10
-43.18
- 20
-10.16
- 40
-0.3
-  0
-CIRCLE
-  5
-36F
-100
-AcDbEntity
-  8
-condenser
-  6
-ByLayer
- 62
-  256
-370
-   -1
-100
-AcDbCircle
- 10
-43.18
- 20
-5.079999999999997
- 40
-0.3
-  0
-MTEXT
-  5
-370
-100
-AcDbEntity
-  8
-condenser
-  6
-ByLayer
- 62
-  256
-370
-   15
-100
-AcDbMText
- 10
-43.1886103039307
- 20
-8.221382803432812
- 30
-0
- 40
-1
- 41
-2.888888888888889
- 71
-    5
- 72
-    1
-  1
-0.1uF
-  7
-
-210
-0
-220
-0
-230
-1
- 50
-0
- 73
-    2
- 44
-1
-  0
 ENDSEC
   0
 SECTION
@@ -21831,7 +21741,7 @@ AcDbDictionary
   0
 PLOTSETTINGS
   5
-371
+36E
 100
 AcDbPlotSettings
   6
