@@ -31,4 +31,4 @@ avrdude: stk500_getsync() attempt 1 of 10：not in sync resp=0x00
 https://qiita.com/Potewo/items/33380a4b2d787284895a
 
 を見ながらやってみたけど、R4 に Arduino ISP プログラムの書き込み自身はできたけど、動作はし
-てくれなかった。
+てくれなかった。あくまで Atmega329P を想定しているんだと思う。

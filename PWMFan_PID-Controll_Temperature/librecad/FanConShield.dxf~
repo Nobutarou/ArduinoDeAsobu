@@ -23,17 +23,17 @@ $INSBASE
   9
 $EXTMIN
  10
--3.37
+-3.17
  20
--13.276
+-4.042885819744384
  30
 0
   9
 $EXTMAX
  10
-96.64200000000014
+76.8300000000003
  20
-61.86000000000026
+52.94459755756728
  30
 0
   9
@@ -91,7 +91,7 @@ STANDARD
   9
 $CLAYER
   8
-JST XH Posts
+condenser
   9
 $CELTYPE
   6
@@ -1115,9 +1115,9 @@ AcDbViewportTableRecord
  21
 1
  12
-34.17008275088873
+39.31507417539027
  22
-11.40001445568888
+17.93157371069242
  13
 0
  23
@@ -1143,7 +1143,7 @@ AcDbViewportTableRecord
  37
 0
  40
-29.51120693522613
+25.95532711981194
  41
 1.496446700507614
  42
@@ -2393,7 +2393,7 @@ AcDbLayerTableRecord
   2
 draft
  70
-    0
+    1
  62
     7
   6
@@ -20457,101 +20457,9 @@ AcDbLine
  21
 27.98000000000132
   0
-MTEXT
-  5
-344
-100
-AcDbEntity
-  8
-JST XH Posts
-  6
-ByLayer
- 62
-  256
-370
-   15
-100
-AcDbMText
- 10
-52.94040878633917
- 20
-27.89333366161956
- 30
-0
- 40
-1
- 41
-1.444444444444444
- 71
-    5
- 72
-    1
-  1
-A0
-  7
-STANDARD
-210
-0
-220
-0
-230
-1
- 50
-0
- 73
-    2
- 44
-1
-  0
-MTEXT
-  5
-345
-100
-AcDbEntity
-  8
-JST XH Posts
-  6
-ByLayer
- 62
-  256
-370
-   15
-100
-AcDbMText
- 10
-63.81611245891479
- 20
-27.83341242926377
- 30
-0
- 40
-1
- 41
-1.444444444444444
- 71
-    5
- 72
-    1
-  1
-A0
-  7
-STANDARD
-210
-0
-220
-0
-230
-1
- 50
-0
- 73
-    2
- 44
-1
-  0
 LWPOLYLINE
   5
-346
+344
 100
 AcDbEntity
   8
@@ -20589,7 +20497,7 @@ AcDbPolyline
   0
 CIRCLE
   5
-347
+345
 100
 AcDbEntity
   8
@@ -20611,7 +20519,7 @@ AcDbCircle
   0
 CIRCLE
   5
-348
+346
 100
 AcDbEntity
   8
@@ -20633,7 +20541,7 @@ AcDbCircle
   0
 CIRCLE
   5
-349
+347
 100
 AcDbEntity
   8
@@ -20655,7 +20563,7 @@ AcDbCircle
   0
 MTEXT
   5
-34A
+348
 100
 AcDbEntity
   8
@@ -20701,7 +20609,7 @@ STANDARD
   0
 MTEXT
   5
-34B
+349
 100
 AcDbEntity
   8
@@ -20747,7 +20655,7 @@ STANDARD
   0
 MTEXT
   5
-34C
+34A
 100
 AcDbEntity
   8
@@ -20793,7 +20701,7 @@ STANDARD
   0
 LINE
   5
-34D
+34B
 100
 AcDbEntity
   8
@@ -20817,7 +20725,7 @@ AcDbLine
   0
 LINE
   5
-34E
+34C
 100
 AcDbEntity
   8
@@ -20841,7 +20749,7 @@ AcDbLine
   0
 LINE
   5
-34F
+34D
 100
 AcDbEntity
   8
@@ -20865,7 +20773,7 @@ AcDbLine
   0
 LINE
   5
-350
+34E
 100
 AcDbEntity
   8
@@ -20889,7 +20797,7 @@ AcDbLine
   0
 LINE
   5
-351
+34F
 100
 AcDbEntity
   8
@@ -20913,7 +20821,7 @@ AcDbLine
   0
 LINE
   5
-352
+350
 100
 AcDbEntity
   8
@@ -20937,7 +20845,7 @@ AcDbLine
   0
 ARC
   5
-353
+351
 100
 AcDbEntity
   8
@@ -20965,7 +20873,7 @@ AcDbArc
   0
 ARC
   5
-354
+352
 100
 AcDbEntity
   8
@@ -20993,7 +20901,7 @@ AcDbArc
   0
 LINE
   5
-355
+353
 100
 AcDbEntity
   8
@@ -21017,7 +20925,7 @@ AcDbLine
   0
 LINE
   5
-356
+354
 100
 AcDbEntity
   8
@@ -21041,7 +20949,7 @@ AcDbLine
   0
 LINE
   5
-357
+355
 100
 AcDbEntity
   8
@@ -21065,7 +20973,7 @@ AcDbLine
   0
 LINE
   5
-358
+356
 100
 AcDbEntity
   8
@@ -21089,7 +20997,7 @@ AcDbLine
   0
 CIRCLE
   5
-359
+357
 100
 AcDbEntity
   8
@@ -21111,7 +21019,7 @@ AcDbCircle
   0
 CIRCLE
   5
-35A
+358
 100
 AcDbEntity
   8
@@ -21133,7 +21041,7 @@ AcDbCircle
   0
 CIRCLE
   5
-35B
+359
 100
 AcDbEntity
   8
@@ -21155,7 +21063,7 @@ AcDbCircle
   0
 MTEXT
   5
-35C
+35A
 100
 AcDbEntity
   8
@@ -21201,7 +21109,7 @@ STANDARD
   0
 MTEXT
   5
-35D
+35B
 100
 AcDbEntity
   8
@@ -21247,7 +21155,7 @@ STANDARD
   0
 MTEXT
   5
-35E
+35C
 100
 AcDbEntity
   8
@@ -21293,7 +21201,7 @@ STANDARD
   0
 MTEXT
   5
-35F
+35D
 100
 AcDbEntity
   8
@@ -21339,7 +21247,7 @@ STANDARD
   0
 LINE
   5
-360
+35E
 100
 AcDbEntity
   8
@@ -21363,7 +21271,7 @@ AcDbLine
   0
 LINE
   5
-361
+35F
 100
 AcDbEntity
   8
@@ -21387,7 +21295,7 @@ AcDbLine
   0
 LINE
   5
-362
+360
 100
 AcDbEntity
   8
@@ -21411,7 +21319,7 @@ AcDbLine
   0
 LINE
   5
-363
+361
 100
 AcDbEntity
   8
@@ -21435,7 +21343,7 @@ AcDbLine
   0
 LINE
   5
-364
+362
 100
 AcDbEntity
   8
@@ -21459,7 +21367,7 @@ AcDbLine
   0
 LINE
   5
-365
+363
 100
 AcDbEntity
   8
@@ -21483,7 +21391,7 @@ AcDbLine
   0
 LINE
   5
-366
+364
 100
 AcDbEntity
   8
@@ -21502,6 +21410,54 @@ AcDbLine
 7.619999999999997
  11
 43.18
+ 21
+17.62
+  0
+LINE
+  5
+365
+100
+AcDbEntity
+  8
+draft
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+43.18
+ 20
+7.619999999999997
+ 11
+53.18
+ 21
+7.619999999999997
+  0
+LINE
+  5
+366
+100
+AcDbEntity
+  8
+draft
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+46.78000000000002
+ 20
+7.619999999999997
+ 11
+46.78000000000002
  21
 17.62
   0
@@ -21523,63 +21479,15 @@ AcDbLine
  10
 43.18
  20
-7.619999999999997
+11.72000000000002
  11
 53.18
  21
-7.619999999999997
+11.72000000000002
   0
 LINE
   5
 368
-100
-AcDbEntity
-  8
-draft
-  6
-ByLayer
- 62
-  256
-370
-   -1
-100
-AcDbLine
- 10
-46.78000000000002
- 20
-7.619999999999997
- 11
-46.78000000000002
- 21
-17.62
-  0
-LINE
-  5
-369
-100
-AcDbEntity
-  8
-draft
-  6
-ByLayer
- 62
-  256
-370
-   -1
-100
-AcDbLine
- 10
-43.18
- 20
-11.72000000000002
- 11
-53.18
- 21
-11.72000000000002
-  0
-LINE
-  5
-36A
 100
 AcDbEntity
   8
@@ -21603,7 +21511,7 @@ AcDbLine
   0
 LINE
   5
-36B
+369
 100
 AcDbEntity
   8
@@ -21627,7 +21535,7 @@ AcDbLine
   0
 LWPOLYLINE
   5
-36C
+36A
 100
 AcDbEntity
   8
@@ -21665,7 +21573,7 @@ AcDbPolyline
   0
 MTEXT
   5
-36D
+36B
 100
 AcDbEntity
   8
@@ -21696,6 +21604,188 @@ AcDbMText
 to MCE9700
   7
 STANDARD
+210
+0
+220
+0
+230
+1
+ 50
+0
+ 73
+    2
+ 44
+1
+  0
+CIRCLE
+  5
+36C
+100
+AcDbEntity
+  8
+condenser
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+43.18
+ 20
+10.16
+ 40
+0.3
+  0
+CIRCLE
+  5
+36D
+100
+AcDbEntity
+  8
+condenser
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+43.18
+ 20
+5.079999999999997
+ 40
+0.3
+  0
+MTEXT
+  5
+36E
+100
+AcDbEntity
+  8
+condenser
+  6
+ByLayer
+ 62
+  256
+370
+   15
+100
+AcDbMText
+ 10
+43.1886103039307
+ 20
+8.221382803432812
+ 30
+0
+ 40
+1
+ 41
+2.888888888888889
+ 71
+    5
+ 72
+    1
+  1
+0.1uF
+  7
+
+210
+0
+220
+0
+230
+1
+ 50
+0
+ 73
+    2
+ 44
+1
+  0
+MTEXT
+  5
+36F
+100
+AcDbEntity
+  8
+JST XH Posts
+  6
+ByLayer
+ 62
+  256
+370
+   15
+100
+AcDbMText
+ 10
+52.94040878633917
+ 20
+27.89333366161956
+ 30
+0
+ 40
+1
+ 41
+1.333333333333333
+ 71
+    5
+ 72
+    1
+  1
+Z0
+  7
+
+210
+0
+220
+0
+230
+1
+ 50
+0
+ 73
+    2
+ 44
+1
+  0
+MTEXT
+  5
+370
+100
+AcDbEntity
+  8
+JST XH Posts
+  6
+ByLayer
+ 62
+  256
+370
+   15
+100
+AcDbMText
+ 10
+63.81611245891479
+ 20
+27.83341242926377
+ 30
+0
+ 40
+1
+ 41
+1.333333333333333
+ 71
+    5
+ 72
+    1
+  1
+Z0
+  7
+
 210
 0
 220
@@ -21741,7 +21831,7 @@ AcDbDictionary
   0
 PLOTSETTINGS
   5
-36E
+371
 100
 AcDbPlotSettings
   6
