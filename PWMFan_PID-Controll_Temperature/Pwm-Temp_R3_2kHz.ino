@@ -1,4 +1,6 @@
-// R4 用に雑に書いたプログラムが 56kB で R3 に載せるにはピンチ!!!
+// to modify registers.
+#include <avr/io.h>
+
 // T sensor setup
 const short TEMP_PIN = A3;
 
@@ -12,11 +14,10 @@ const float d_v = 10.0;
 const float vref = 1800.0;
 
 // PWM setting
-// on UNO, D5, D6 have 980Hz and others have 490Hz
-const short PWM_PIN = 3;
+const char PWM_PIN = 5;
 // on R4, I can use percentage via pwm().
 // on R3, I have to use 0 - 255 integer.
-const short max_pwm_perc = 255; //100%
+const short max_pwm_perc = 99; //100%
 const short min_pwm_perc = 26; //10%
 
 //// PID setup
@@ -50,15 +51,27 @@ void setup() {
   // output to serial for debug.
   Serial.begin(9600);
 
-  // AR_EXTERNAL: Work (AREF pin input V)
-  // AR_INTERNAL: Work. Vref might be 1400~1500mV?
-  // AR_INTERNAL_1_5V: no output.
-  // AR_INTERNAL_2_0V: no output.
-  // AR_INTERNAL_2_5V: no output.
+  // use Vref
   analogReference(EXTERNAL);
 
+  // set 2kHz fast PWM
+  // top count = 99
+  // The output pin is D5.
+  // D6 is dead.
+  TCCR0A = 0b01100011;
+  TCCR0B = 0b00001010;
+  OCR0A = 99;
+
+  //TCCR1A = 0b01100011;
+  //TCCR1B = 0b00011010;
+  //OCR1A = 99;
+
+  //TCCR2A = 0b01100011;
+  //TCCR2B = 0b00001010;
+  //OCR2A = 99;    
+
   // とりあえずフル回転
-  analogWrite( PWM_PIN, 255);
+  analogWrite( PWM_PIN, max_pwm_perc);
 }
 
 void loop() {

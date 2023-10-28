@@ -66,3 +66,7 @@ https://rtmrw.parallel.jp/laboratory6/lab-report-157/lab-157.html
 R4 はフラッシュメモリが 256kB あり、プログラムが 56kB で問題なかったが、R3 のフラッシュメ
 モリは 32kB だから足りなくない？ということで、こちらも見直しが必要になりそうな気配。先走っ
 てハード買ってなくて良かった。
+
+で
+
+![R3 用 Arduino の PWM のソース](./Pwm-Temp_R3.ino)
