@@ -3,8 +3,9 @@
 ## PIC 側の準備
 
 使ったのは PIC12F2840.
-参考にしたのはデータシートと 
-![ヒサオメモ氏の記事](https://hisaomemo.blogspot.com/2016/02/picarduino.html)
+参考にしたのはデータシートと、次のヒサオメモ氏の記事。 
+
+https://hisaomemo.blogspot.com/2016/02/picarduino.html
 
 データシートに TRISA や ANSELA のあたりは書いてなかったと思うんだけど、きっとやってる人に
 は当たり前のことなんだろうなあ。Simulator の I/O ピンの状態を見ながら Dout になるまで設定。
