@@ -29,7 +29,7 @@ VDD と GND の間のコンデンサは 0.1uF くらい。まあこれはブレ�
 ということで、写真に惑わされたけど、本当に表にある通りの結線で OK. 一応、結線図も書いてお
 いた。交差せず書ける人は本当にすごいですね。
 
-![最小の結線図](./pdf/a-p-prog.pdf)
+![最小の結線図](./ArduinoPICProgrammer/zu/Haisenzu.png)
 
 
 で、fw/pp フォルダの pp.ino を Arduino に書き込めば、PIC プログラマの完成である。
