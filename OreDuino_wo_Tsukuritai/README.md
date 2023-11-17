@@ -1,34 +1,33 @@
-# 自分で Arduino を作ってみたい
+# 安価なArduinoの作りかた
 
-## ブートローダ書き込み済を使う
+信仰上の理由により、中華互換品を除く。
 
-いきなり素の Atmega328P は荷が思いので 
+## 秋月の ATmega168／328マイコンボードキット
 
-https://akizukidenshi.com/catalog/g/gI-12774/
+![ATmega168/328 マイコンボードキット](https://akizukidenshi.com/catalog/g/gK-04590/)
 
-で書き込みに挑戦するところから
+2023年11月時点で 2,100 円と超安価なわけではなく、Arduino そのものではないが、Arduino BIOS
+書き込み済の ATmega328P に挿げ替えれば、Arduino Uno R3 互換となる。
 
-### USB シリアル変換の PL2303 で書き込もうとしたけどあきらめた
+![Arduino　Bootloader書込済（5V　16MHz仕様）　ATmega328P](https://akizukidenshi.com/catalog/g/gI-12774/)
 
-USB シリアル変換の PL2303 を持っていたので、
+なお自分は失敗したが、本機に付属している超有能な USB シリアル変換アダプタ FT232RL は、その
+ままだとはんだ付けが必要になる。がんばって結線すれば他でも使えなくはないけど IC ソケットを
+買っておいて、取り外せるようにするべきだと思う。
 
-https://www.instructables.com/USB-to-Serial-TTL-Adapter-to-Program-ATmega328p/
+![丸ピンＩＣソケット　（２４Ｐ）　６００ｍｉｌ](https://akizukidenshi.com/catalog/g/gP-00032/)
 
-を見ながら書き込みに挑戦してみたけど、
+ボードで開発して、実装は別途ユニバーサル基板などで行なうのであれば、2個目からは Boot 書き込み済み
+ATmega328p だけ購入すれば良い。
 
-```
-avrdude: stk500_recv(): programmer is not responding
-avrdude: stk500_getsync() attempt 1 of 10：not in sync resp=0x00
-```
+または、Arduino Uno R3 があれば Arduino ブートローダも書きこめる。
 
-みたいなのが出てだめだった。自分で壊してしまったのかは分からない。
+https://ht-deko.com/arduino/atmega328p.html
 
-ただ Windows10 だと、そもそも COM ポートに通信すらできなかった。情報の多い Windows ですら、
-ほぼ情報が見つからないので、この方法は諦める。
+こちらのサイトが分かりやすい
 
-### Arduino UNO R4 を書き込み器としてみる。
+こちらのサイトが無くなると困るから、Kicad で似た図を書いておく。このサイトは Frit某という
+ソフトで書いているのだと思うけど使いこなせないので、Kicad。一応実際のブレッドボードを意識
+した図にはしておいた。
 
-https://qiita.com/Potewo/items/33380a4b2d787284895a
-
-を見ながらやってみたけど、R4 に Arduino ISP プログラムの書き込み自身はできたけど、動作はし
-てくれなかった。あくまで Atmega329P を想定しているんだと思う。
+![ArduinoによるATmega328P書き込み最小セットアップ](./figure/ATmegaArduinoMinimumSetup.png)
