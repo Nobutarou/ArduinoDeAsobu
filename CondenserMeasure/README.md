@@ -34,6 +34,10 @@ https://www.digikey.jp/ja/resources/conversion-calculators/conversion-calculator
 
 とりあえず、容量の桁を知る、壊れていないかどうかを知る、という観点からは、問題ないようだ。
 
+参考サイトの計測終了後の放電のギミックは、電力供給ピン D2 を GND接続、放電ピン D3 も GND接
+続にして、両方から放電している。サイトでは D3 から放電と言ってるが、厳密には違う。 
+
+
 ## ソース、配線図
 
 ![ソース](./arduino/main/main.ino)
@@ -52,7 +56,7 @@ https://www.digikey.jp/ja/resources/conversion-calculators/conversion-calculator
 時定数 0.1-1.0sec を狙う。
 
 放電時間は Arduino Uno R3 のデジタルピンが 40mA までのようなので、5V なので、瞬間 0.2W ま
-では対応できるから、そこを目処とする。時間はあくまでプログラムの都合での参考値だ。
+では対応できるから、そこを目処とする。面倒なので抵抗 R2 側に全電流が流れると仮定した。
 
 10MΩを測定できる計測器は持ってないが、±1% だって書いてあるし、精度よりも動作確認なので、
 まあ大丈夫でしょう。

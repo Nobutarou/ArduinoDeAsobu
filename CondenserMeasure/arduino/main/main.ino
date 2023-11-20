@@ -43,6 +43,6 @@ void loop() {
   
   Serial.println(c);
   digitalWrite(PULSE_PIN, LOW);
-  discharge();
+  // discharge(); // 2回は不要では？
 
 }
