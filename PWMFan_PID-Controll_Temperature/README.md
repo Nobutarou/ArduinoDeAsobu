@@ -305,3 +305,4 @@ https://www.paltek.co.jp/techblog/techinfo/210621_01
 |PC1    | PIC12F1840                  |
 |PS1    | 2227MC-08-03                |
 |R1     | CFS50J0RB, 0ohm             |
+
