@@ -1,17 +1,16 @@
-#define _R 9400.0; // 実測値
+#define _R 10000.0; // 実測値
 
 #include <Arduino.h>
 
-const int PULSE_PIN = 2;
-const int DIGITAL_READ_PIN = 3;
-const int ANALOG_READ_PIN = 5;
-
+const char PULSE_PIN = 2;
+const char DIGITAL_READ_PIN = 3;
+const char ANALOG_READ_PIN = A5;
 
 void setup()
 {
   Serial.begin(9600);
   Serial.println("setup");
-  pinMode(PULSE_PIN, OUTPUT);
+  pinMode( PULSE_PIN , OUTPUT);
   digitalWrite(PULSE_PIN, LOW);
 
   // PIC と違い レジスタ名bits.ビット名での操作はできない。
@@ -53,6 +52,4 @@ void loop() {
   
   Serial.println(c,16);
   digitalWrite(PULSE_PIN, LOW);
-  // discharge(); // 2回は不要では？
-
 }
