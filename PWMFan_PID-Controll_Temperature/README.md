@@ -306,3 +306,8 @@ https://www.paltek.co.jp/techblog/techinfo/210621_01
 |PS1    | 2227MC-08-03                |
 |R1     | CFS50J0RB, 0ohm             |
 
+とここまで考えて、SATA の電源ケーブルが AWG 18 であり XH 適合外であることが分かる。
+
+でターミナルを使って、こうしてみた。
+
+![設計図 #4.1](./pic12f1840/librecad/fancon4_1_librecad.png)
