@@ -98,4 +98,4 @@ $Vc = V0 ( 1 - e^{- \frac{t}{RC}})$
 
 よって
 
-$C=-\frac{t}{R}\frac{1}{\ln(1-\frac{Vc}{V0}})$
+$C=-\frac{t}{R}\frac{1}{\ln(1-\frac{Vc}{V0})}$
