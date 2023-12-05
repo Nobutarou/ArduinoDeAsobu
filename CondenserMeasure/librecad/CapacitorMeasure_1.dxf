@@ -23,7 +23,7 @@ $INSBASE
   9
 $EXTMIN
  10
--71.65400055239155
+-46.6464204977452
  20
 4.250000000000082
  30
@@ -31,7 +31,7 @@ $EXTMIN
   9
 $EXTMAX
  10
-11.38893624114566
+28.59654788047002
  20
 66.9800000000003
  30
@@ -1115,9 +1115,9 @@ AcDbViewportTableRecord
  21
 1
  12
-7.978090056997906
+27.02649438898784
  22
-20.0969822903181
+32.92829385694705
  13
 0
  23
@@ -1143,7 +1143,7 @@ AcDbViewportTableRecord
  37
 0
  40
-42.9689524265485
+92.8362424245648
  41
 1.487386478304743
  42
@@ -2617,7 +2617,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-unicode
+STANDARD
  70
     0
  40
@@ -2631,7 +2631,7 @@ unicode
  42
 1
   3
-unicode
+STANDARD
   4
 
   0
@@ -2645,7 +2645,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-STANDARD
+unicode
  70
     0
  40
@@ -2659,7 +2659,7 @@ STANDARD
  42
 1
   3
-STANDARD
+unicode
   4
 
   0
@@ -24433,7 +24433,7 @@ AcDbMText
   1
 U1
   7
-
+STANDARD
 210
 0
 220
@@ -24479,7 +24479,7 @@ AcDbMText
   1
 toA5
   7
-
+STANDARD
 210
 0
 220
@@ -24565,55 +24565,9 @@ AcDbLine
  21
 62.91000000000018
   0
-MTEXT
-  5
-3D9
-100
-AcDbEntity
-  8
-0
-  6
-ByLayer
- 62
-  256
-370
-   -1
-100
-AcDbMText
- 10
--71.65400055239155
- 20
-17.80371780808883
- 30
-0
- 40
-1
- 41
-17.97222222222252
- 71
-    4
- 72
-    1
-  1
-U1-3: Pin Header, unknown\PU4-6: Terminal, APF-102
-  7
-
-210
-0
-220
-0
-230
-1
- 50
-0
- 73
-    2
- 44
-1
-  0
 LINE
   5
-3DA
+3D9
 100
 AcDbEntity
   8
@@ -24637,7 +24591,7 @@ AcDbLine
   0
 LINE
   5
-3DB
+3DA
 100
 AcDbEntity
   8
@@ -24661,7 +24615,7 @@ AcDbLine
   0
 LINE
   5
-3DC
+3DB
 100
 AcDbEntity
   8
@@ -24685,7 +24639,7 @@ AcDbLine
   0
 LINE
   5
-3DD
+3DC
 100
 AcDbEntity
   8
@@ -24709,7 +24663,7 @@ AcDbLine
   0
 LINE
   5
-3DE
+3DD
 100
 AcDbEntity
   8
@@ -24733,7 +24687,7 @@ AcDbLine
   0
 LINE
   5
-3DF
+3DE
 100
 AcDbEntity
   8
@@ -24757,7 +24711,7 @@ AcDbLine
   0
 LINE
   5
-3E0
+3DF
 100
 AcDbEntity
   8
@@ -24781,7 +24735,7 @@ AcDbLine
   0
 LINE
   5
-3E1
+3E0
 100
 AcDbEntity
   8
@@ -24805,7 +24759,7 @@ AcDbLine
   0
 LINE
   5
-3E2
+3E1
 100
 AcDbEntity
   8
@@ -24829,7 +24783,7 @@ AcDbLine
   0
 LINE
   5
-3E3
+3E2
 100
 AcDbEntity
   8
@@ -24853,7 +24807,7 @@ AcDbLine
   0
 LINE
   5
-3E4
+3E3
 100
 AcDbEntity
   8
@@ -24877,7 +24831,7 @@ AcDbLine
   0
 LINE
   5
-3E5
+3E4
 100
 AcDbEntity
   8
@@ -24901,7 +24855,7 @@ AcDbLine
   0
 LINE
   5
-3E6
+3E5
 100
 AcDbEntity
   8
@@ -24925,7 +24879,7 @@ AcDbLine
   0
 LINE
   5
-3E7
+3E6
 100
 AcDbEntity
   8
@@ -24949,7 +24903,7 @@ AcDbLine
   0
 LINE
   5
-3E8
+3E7
 100
 AcDbEntity
   8
@@ -24973,7 +24927,7 @@ AcDbLine
   0
 LINE
   5
-3E9
+3E8
 100
 AcDbEntity
   8
@@ -24997,7 +24951,7 @@ AcDbLine
   0
 LINE
   5
-3EA
+3E9
 100
 AcDbEntity
   8
@@ -25021,7 +24975,7 @@ AcDbLine
   0
 LINE
   5
-3EB
+3EA
 100
 AcDbEntity
   8
@@ -25045,7 +24999,7 @@ AcDbLine
   0
 LINE
   5
-3EC
+3EB
 100
 AcDbEntity
   8
@@ -25069,7 +25023,7 @@ AcDbLine
   0
 LINE
   5
-3ED
+3EC
 100
 AcDbEntity
   8
@@ -25093,7 +25047,7 @@ AcDbLine
   0
 LINE
   5
-3EE
+3ED
 100
 AcDbEntity
   8
@@ -25117,7 +25071,7 @@ AcDbLine
   0
 LINE
   5
-3EF
+3EE
 100
 AcDbEntity
   8
@@ -25141,7 +25095,7 @@ AcDbLine
   0
 LINE
   5
-3F0
+3EF
 100
 AcDbEntity
   8
@@ -25165,7 +25119,7 @@ AcDbLine
   0
 CIRCLE
   5
-3F1
+3F0
 100
 AcDbEntity
   8
@@ -25187,7 +25141,7 @@ AcDbCircle
   0
 CIRCLE
   5
-3F2
+3F1
 100
 AcDbEntity
   8
@@ -25209,7 +25163,7 @@ AcDbCircle
   0
 LINE
   5
-3F3
+3F2
 100
 AcDbEntity
   8
@@ -25233,7 +25187,7 @@ AcDbLine
   0
 LINE
   5
-3F4
+3F3
 100
 AcDbEntity
   8
@@ -25257,7 +25211,7 @@ AcDbLine
   0
 MTEXT
   5
-3F5
+3F4
 100
 AcDbEntity
   8
@@ -25287,7 +25241,7 @@ AcDbMText
   1
 U4
   7
-
+STANDARD
 210
 0
 220
@@ -25303,7 +25257,7 @@ U4
   0
 LINE
   5
-3F6
+3F5
 100
 AcDbEntity
   8
@@ -25327,7 +25281,7 @@ AcDbLine
   0
 LINE
   5
-3F7
+3F6
 100
 AcDbEntity
   8
@@ -25351,7 +25305,7 @@ AcDbLine
   0
 LINE
   5
-3F8
+3F7
 100
 AcDbEntity
   8
@@ -25375,7 +25329,7 @@ AcDbLine
   0
 CIRCLE
   5
-3F9
+3F8
 100
 AcDbEntity
   8
@@ -25397,7 +25351,7 @@ AcDbCircle
   0
 CIRCLE
   5
-3FA
+3F9
 100
 AcDbEntity
   8
@@ -25419,7 +25373,7 @@ AcDbCircle
   0
 LINE
   5
-3FB
+3FA
 100
 AcDbEntity
   8
@@ -25443,7 +25397,7 @@ AcDbLine
   0
 LINE
   5
-3FC
+3FB
 100
 AcDbEntity
   8
@@ -25467,7 +25421,7 @@ AcDbLine
   0
 LINE
   5
-3FD
+3FC
 100
 AcDbEntity
   8
@@ -25491,7 +25445,7 @@ AcDbLine
   0
 LINE
   5
-3FE
+3FD
 100
 AcDbEntity
   8
@@ -25515,7 +25469,7 @@ AcDbLine
   0
 LINE
   5
-3FF
+3FE
 100
 AcDbEntity
   8
@@ -25539,7 +25493,7 @@ AcDbLine
   0
 CIRCLE
   5
-400
+3FF
 100
 AcDbEntity
   8
@@ -25561,7 +25515,7 @@ AcDbCircle
   0
 CIRCLE
   5
-401
+400
 100
 AcDbEntity
   8
@@ -25583,7 +25537,7 @@ AcDbCircle
   0
 LINE
   5
-402
+401
 100
 AcDbEntity
   8
@@ -25607,7 +25561,7 @@ AcDbLine
   0
 LINE
   5
-403
+402
 100
 AcDbEntity
   8
@@ -25631,7 +25585,7 @@ AcDbLine
   0
 MTEXT
   5
-404
+403
 100
 AcDbEntity
   8
@@ -25661,7 +25615,7 @@ AcDbMText
   1
 U5
   7
-
+STANDARD
 210
 0
 220
@@ -25677,7 +25631,7 @@ U5
   0
 MTEXT
   5
-405
+404
 100
 AcDbEntity
   8
@@ -25707,7 +25661,7 @@ AcDbMText
   1
 U6
   7
-
+STANDARD
 210
 0
 220
@@ -25723,7 +25677,7 @@ U6
   0
 MTEXT
   5
-406
+405
 100
 AcDbEntity
   8
@@ -25753,7 +25707,7 @@ AcDbMText
   1
 - C1 +
   7
-
+STANDARD
 210
 0
 220
@@ -25769,7 +25723,7 @@ AcDbMText
   0
 MTEXT
   5
-407
+406
 100
 AcDbEntity
   8
@@ -25799,7 +25753,7 @@ AcDbMText
   1
 R1
   7
-
+STANDARD
 210
 0
 220
@@ -25815,7 +25769,7 @@ R1
   0
 MTEXT
   5
-408
+407
 100
 AcDbEntity
   8
@@ -25845,7 +25799,7 @@ AcDbMText
   1
 R2
   7
-
+STANDARD
 210
 0
 220
@@ -25861,7 +25815,7 @@ R2
   0
 LINE
   5
-409
+408
 100
 AcDbEntity
   8
@@ -25885,7 +25839,7 @@ AcDbLine
   0
 LINE
   5
-40A
+409
 100
 AcDbEntity
   8
@@ -25909,7 +25863,7 @@ AcDbLine
   0
 LINE
   5
-40B
+40A
 100
 AcDbEntity
   8
@@ -25933,7 +25887,7 @@ AcDbLine
   0
 LINE
   5
-40C
+40B
 100
 AcDbEntity
   8
@@ -25957,7 +25911,7 @@ AcDbLine
   0
 LINE
   5
-40D
+40C
 100
 AcDbEntity
   8
@@ -25981,7 +25935,7 @@ AcDbLine
   0
 LINE
   5
-40E
+40D
 100
 AcDbEntity
   8
@@ -26005,7 +25959,7 @@ AcDbLine
   0
 LINE
   5
-40F
+40E
 100
 AcDbEntity
   8
@@ -26029,7 +25983,7 @@ AcDbLine
   0
 LINE
   5
-410
+40F
 100
 AcDbEntity
   8
@@ -26053,7 +26007,7 @@ AcDbLine
   0
 LINE
   5
-411
+410
 100
 AcDbEntity
   8
@@ -26077,7 +26031,7 @@ AcDbLine
   0
 LINE
   5
-412
+411
 100
 AcDbEntity
   8
@@ -26101,7 +26055,7 @@ AcDbLine
   0
 LINE
   5
-413
+412
 100
 AcDbEntity
   8
@@ -26125,7 +26079,7 @@ AcDbLine
   0
 LINE
   5
-414
+413
 100
 AcDbEntity
   8
@@ -26149,7 +26103,7 @@ AcDbLine
   0
 LINE
   5
-415
+414
 100
 AcDbEntity
   8
@@ -26173,7 +26127,7 @@ AcDbLine
   0
 LINE
   5
-416
+415
 100
 AcDbEntity
   8
@@ -26197,7 +26151,7 @@ AcDbLine
   0
 LINE
   5
-417
+416
 100
 AcDbEntity
   8
@@ -26221,7 +26175,7 @@ AcDbLine
   0
 LINE
   5
-418
+417
 100
 AcDbEntity
   8
@@ -26245,7 +26199,7 @@ AcDbLine
   0
 LINE
   5
-419
+418
 100
 AcDbEntity
   8
@@ -26269,7 +26223,7 @@ AcDbLine
   0
 LINE
   5
-41A
+419
 100
 AcDbEntity
   8
@@ -26293,7 +26247,7 @@ AcDbLine
   0
 LINE
   5
-41B
+41A
 100
 AcDbEntity
   8
@@ -26317,7 +26271,7 @@ AcDbLine
   0
 LINE
   5
-41C
+41B
 100
 AcDbEntity
   8
@@ -26338,6 +26292,52 @@ AcDbLine
 6.97999999999861
  21
 13.13999999999993
+  0
+MTEXT
+  5
+41C
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbMText
+ 10
+10.6243256582475
+ 20
+30.20613692943975
+ 30
+0
+ 40
+1
+ 41
+17.97222222222252
+ 71
+    4
+ 72
+    1
+  1
+U1-3: Pin Header, unknown\PU4-6: Terminal, APF-102
+  7
+STANDARD
+210
+0
+220
+0
+230
+1
+ 50
+0
+ 73
+    2
+ 44
+1
   0
 ENDSEC
   0
