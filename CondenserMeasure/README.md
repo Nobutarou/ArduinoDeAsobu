@@ -132,3 +132,7 @@ LCD への表示は興味がある。ただ I2C の物でも 2ピンを使うの
 | 22p           | 100M     | 100M     | 2.20e-3 | 2.50e-7 | 1.37e-2|
 
 ![kicad 配線図](./kicad/CapacityMeasure_2pin/CapacityMeasure_2pin_kicad.png)
+
+![LibreCad 設計図](./librecad/CapacitorMeasure_2_2pin.png)
+
+![ソース](./arduino/tester2_2pin/tester2_2pin.ino)
