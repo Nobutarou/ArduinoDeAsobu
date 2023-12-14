@@ -140,7 +140,9 @@ LCD への表示は興味がある。ただ I2C の物でも 2ピンを使うの
 
 ![LibreCad 設計図](./librecad/CapacitorMeasure_2_2pin.png)
 
-![ソース](./arduino/tester2_2pin/tester2_2pin.ino)
+[ソース](./arduino/tester2_2pin/tester2_2pin.ino)
+
+![完成品](./photos/静電容量測定シールド.jpg)
 
 ## アナログピンに一本化 (そこまでこだわることでもない)
 
