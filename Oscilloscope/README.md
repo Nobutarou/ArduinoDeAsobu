@@ -19,3 +19,7 @@ https://www.iizuka.kyutech.ac.jp/faculty/physicalcomputing/pc_kitscope
 位置決めのために、あえて使わない A5, A4 にもピンヘッダをかます。
 
 入出力はチェック端子を IC クリップやみのむしなどで摘む形にする。
+
+![PWN 波形を確認している本体](./figure/完成写真.jpg)
+
+![アプリ](./figure/アプリ画面.png)
