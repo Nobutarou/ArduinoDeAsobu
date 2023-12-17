@@ -60,3 +60,5 @@ https://www.satoparts.co.jp/products/search/T_TJ/TJ-3B
 
 ケーブルは AWG 20 なので 11A。余裕だけど、さらに余裕を見て、3.3V, 5V, 12V, GND をそれぞれ
 2本、3.3Vsense 一本の合計 9本を残すことにする。
+
+![完成](./photos/完成写真.jpg)
