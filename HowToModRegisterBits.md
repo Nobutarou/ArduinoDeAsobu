@@ -30,10 +30,10 @@ PIC のように REGISTERbits.BIT という書式はない。
 REGISTER の下位 3ビットを 101 にしたいなら、
 
 ```
-# とりあえず下位 3 と 1ビットをクリア
-REGISTER = REGISTER & 0b11111010;
+# とりあえず下位 2 番目のビットをクリア
+REGISTER = REGISTER & 0b11111101;
 
-# 下位 2ビットを 1に
+# 下位 3 番目と 1番目を 1 に
 REGISTER = REGISTER | 0b00000101;
 ```
 
