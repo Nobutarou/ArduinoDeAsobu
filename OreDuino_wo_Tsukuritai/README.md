@@ -38,4 +38,35 @@ IC ソケットって基本的に本番までに何回か試せるようにす�
 り差し込んで使うものらしい。ボード側にピンソケットを配置して、差して使うことにしよう。ピン
 ソケットの寿命は知らないけど。
 
+### UNO用 ブートローダだとスケッチアップロードできない件
+
+こちらでいろいろ調査して、どうやら (IDE から) スケッチが書き込めるマイコンと失敗するものがあることが判
+明。
+
+[調査してみた](./fuzebits.md)
+
+一応 ``avrdude`` コマンドで SPI 通信でプログラミングはできるので、まあいいかなと思っていた
+ら
+
+https://github.com/MCUdude/MiniCore
+
+これを使ったら、IDE からスケッチを書き込めた。
+
+どうやらデータシートを読む限り ATmega328P が対応しているプログラミング方式は SPI 通信であ
+り、昔ながらの TX, RX の普通のシリアル通信、USART と言うらしいものは対応していなく、これは
+Arduino のブートローダが USART の一つの実装である STK500v1 プロトコルを模擬しているとのこ
+とで、それを嫌った方があらたに実装した USART を使った通信手段ということのようだ。もちろん
+良く分からない。
+
+https://github.com/stefanrueger/urboot/blob/main/urprotocol.md 
+
+ということで、秋月のマイコンボードのパーツを使って、安価に Arduino を作る算段はついた。
+
+![ArduinoAsISP_to_program_BootLoader](./figure/ArduinoAsISP_BootloaderProgram.jpg)
+
+Arduino As ISP としてマイコンに MiniCore のブートローダを焼いているところ。
+
+![SketchUpload](./figure/SketchUpload.jpg)
+
+普通にスケッチのアップロードができている所
 
