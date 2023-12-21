@@ -63,7 +63,7 @@ https://github.com/stefanrueger/urboot/blob/main/urprotocol.md
 ということで、秋月のマイコンボードのパーツを使って、安価に Arduino を作る算段はついた。
 
 ![ArduinoAsISP_to_program_BootLoader](./figure/ArduinoAsISP_BootloaderProgram.jpg "Arduino
-からブートローダを焼いている)
+からブートローダを焼いている")
 
 Arduino As ISP としてマイコンに MiniCore のブートローダを焼いているところ。
 
