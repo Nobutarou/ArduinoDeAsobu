@@ -102,7 +102,7 @@ PORTB = PORTB ^ 0b00100000;
 最終形
 
 ```
-#define chkbi(addr,bit) ((addr >> bit) & 1)^1
+#define chkbi(addr,bit) ((addr >> bit) & 1)
 
 chkbi(PORTB,PORTB5);
 ```
@@ -112,7 +112,31 @@ chkbi(PORTB,PORTB5);
 ```
 char i; //とりあえず代入式にしておく
 
-//i = ((PORTB>>PORTB5) & 1)^2;
+//i = ((PORTB>>PORTB5) & 1);
 ```
 
 ``PORTB >> PORTB5`` は 2進数の PORTB レジスタを PORTB5 が 1桁目にくるところまで右にずらすという意味になる。
+この部分の結果は ``0bxxy`` となる。xx は 0 か 1、y が PORTB5 レジスタの値である。また
+``&`` 演算の 1 は 2進数で桁を揃えて 0b001 と書くと比較しやすい。
+
+```
+// PORTB5=0 なら
+i = (0bxx0 & 0b001) 
+
+// PORTB5=1 なら
+i = (0bxx1 & 0b001)
+```
+
+``&`` の結果は以前の節の表で示した通りなので、次の結果となる。
+
+```
+// PORTB5=0 なら
+//i = 0b000 
+i = 0;
+
+// PORTB5=1 なら
+// i = 0b001
+i = 1;
+```
+
+
