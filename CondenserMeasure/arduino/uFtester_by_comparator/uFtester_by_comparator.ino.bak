@@ -3,11 +3,9 @@
 #define _PULSE_PIN 2
 
 double T_end;
-//char iflag=0; // 割り込みフラッグ
 
 ISR(ANALOG_COMP_vect) {
   T_end = micros();
-  //iflag = 1;
 }
 
 void setup() {
@@ -15,9 +13,6 @@ void setup() {
   Serial.setTimeout(2 ^ 32 - 1);  //no timeout
   pinMode(_PULSE_PIN, OUTPUT);
   digitalWrite(_PULSE_PIN, LOW);
-
-  // AIN0 = PD6 = D6
-  // AIN1 = PD7 = D7
 
   // |-|ACME -> 0|-|-|-|ADTS2|ADTS1|ADTS0|
   // ACME: PD6 の代わりに ADC を負入力に使う ->0
@@ -40,9 +35,9 @@ void setup() {
 }
 
 
-void discharge(short td) {
+void discharge() {
   digitalWrite(_PULSE_PIN, LOW);
-  delay(td);
+  delay(1000);
 }
 
 unsigned long charge() {
@@ -60,9 +55,9 @@ void loop() {
   // TinkerCad では不要だったけど、これがないと Serial.available()>0 になってしまう。
   Serial.end();
   Serial.begin(9600);
-  discharge(1000);
 
   while (Serial.available() == 0) {
+    discharge();
     cbi(ACSR, ACIE);     // 念のため 一旦割込み無効
     cbi(PORTD, PORTD6);  //念のためグランドに落とす
     cbi(PORTD, PORTD7);  //念のためグランドに落とす
@@ -70,22 +65,15 @@ void loop() {
     sbi(ACSR, ACIE);     // もう一度割込み有孔
     unsigned long time_start = charge();
 
-  // 遅い while の間に割り込みが発生する手筈
-  // 本当は割り込んだら break とかしたいけど、分からない
+    // 遅い while の間に割り込みが発生する手筈
+    // 本当は割り込んだら break とかしたいけど、分からない
     while ((ACSR & 0b00100000) != 0b00100000) {};
-
-    // どういう理由か、while を抜けられない
-    //while(iflag==0){};
-    //Serial.println(iflag);
-    //iflag=0;
 
     double T = T_end - time_start;  // T: 時定数
     // c=-T/R/ln(1-Vc/Vtotal)
     double c = -T / _R / log(0.33333333);
     Serial.println(c, 16);
-    short td=-_R*c/log(1.0/500.0)/1.0e3 *2; //ms, *2 は余裕を見て
-    td = (td>1000)*td + (td<=1000)*1000; //最低でも 1s。出力が速すぎても困るし 
-    discharge(td);
+    digitalWrite(_PULSE_PIN, LOW);
   }
   Serial.end();
   Serial.begin(9600);
