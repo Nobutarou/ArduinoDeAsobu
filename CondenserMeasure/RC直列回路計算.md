@@ -2,7 +2,7 @@
 
 $$ V=\frac{1}{C} \int I dt + RI $$
 
-理想的な定電圧回路で `$ V=const `$ とすると微分して
+理想的な定電圧回路で $` V=const `$ とすると微分して
 
 $$ 0 = \frac{I}{C} + R \frac{\mathrm{d} I}{\mathrm{d} x} $$
 
