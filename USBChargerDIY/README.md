@@ -23,6 +23,5 @@ https://usb.org/sites/default/files/USB_Battery_Charging_1.2.pdf
 
 PD チャージャーの規格らしい
 
-https://www.usb.org/usb-charger-pd
-
+https://www.usb.org/document-library/usb-power-delivery
 
