@@ -1,3 +1,7 @@
+#define cbi(addr, bit) addr &= ~(1 << bit)  // addrのbit目を'0'にする
+#define sbi(addr, bit) addr |= (1 << bit)   // addrのbit目を'1'にする
+#define _PULSE_PIN 2
+
 // シリアル通信について TinkerCad と実物で相違がある。
 // Linux の改行が <LF><CR> だかで、文字+Enter という送信になってるのかも
 // まあ Windows 使わないからいいや
@@ -30,7 +34,8 @@ void discharge() {
 }
 
 unsigned long charge() {
-  digitalWrite(PULSE_PIN, HIGH);
+//  digitalWrite(PULSE_PIN, HIGH);
+  sbi(PORTD, PORTD2);
   return micros();
 }
 
