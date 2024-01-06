@@ -91,7 +91,7 @@ STANDARD
   9
 $CLAYER
   8
-draft
+5V line
   9
 $CELTYPE
   6
@@ -1115,9 +1115,9 @@ AcDbViewportTableRecord
  21
 1
  12
-8.356247189781296
+10.55007019830795
  22
-18.90631738808925
+19.69510768328985
  13
 0
  23
@@ -1143,7 +1143,7 @@ AcDbViewportTableRecord
  37
 0
  40
-48.85569890898681
+48.85569890898684
  41
 1.487386478304743
  42
@@ -24217,7 +24217,7 @@ AcDbMText
   1
 toD5
   7
-
+STANDARD
 210
 0
 220
@@ -24263,7 +24263,7 @@ AcDbMText
   1
 toD4
   7
-
+STANDARD
 210
 0
 220
@@ -24309,7 +24309,7 @@ AcDbMText
   1
 to5V
   7
-
+STANDARD
 210
 0
 220
@@ -24555,7 +24555,7 @@ AcDbMText
   1
 ON
   7
-
+STANDARD
 210
 0
 220
@@ -24601,7 +24601,7 @@ AcDbMText
   1
 1
   7
-
+STANDARD
 210
 0
 220
@@ -25709,7 +25709,7 @@ AcDbMText
   1
 DSW1
   7
-
+STANDARD
 210
 0
 220
@@ -25827,7 +25827,7 @@ AcDbMText
   1
 4
   7
-
+STANDARD
 210
 0
 220
@@ -27237,7 +27237,7 @@ AcDbMText
   1
 R2
   7
-
+STANDARD
 210
 0
 220
@@ -27283,7 +27283,7 @@ AcDbMText
   1
 R4
   7
-
+STANDARD
 210
 0
 220
@@ -27329,7 +27329,7 @@ AcDbMText
   1
 R5
   7
-
+STANDARD
 210
 0
 220
@@ -27375,7 +27375,7 @@ AcDbMText
   1
 ZR1
   7
-
+STANDARD
 210
 0
 220
@@ -27421,7 +27421,7 @@ AcDbMText
   1
 toD0
   7
-
+STANDARD
 210
 0
 220
@@ -27609,7 +27609,7 @@ AcDbMText
   1
 LF1
   7
-
+STANDARD
 210
 0
 220
@@ -27655,7 +27655,7 @@ AcDbMText
   1
 LF2
   7
-
+STANDARD
 210
 0
 220
@@ -28109,7 +28109,7 @@ AcDbMText
   1
 LF3
   7
-
+STANDARD
 210
 0
 220
@@ -28797,7 +28797,7 @@ AcDbMText
   1
 VR1
   7
-
+STANDARD
 210
 0
 220
@@ -28843,7 +28843,7 @@ AcDbMText
   1
 3
   7
-
+STANDARD
 210
 0
 220
@@ -28889,7 +28889,7 @@ AcDbMText
   1
 1
   7
-
+STANDARD
 210
 0
 220
@@ -29171,7 +29171,7 @@ AcDbMText
   1
 PH1
   7
-
+STANDARD
 210
 0
 220
@@ -29217,7 +29217,7 @@ AcDbMText
   1
 toSpeaker
   7
-
+STANDARD
 210
 0
 220
@@ -29263,7 +29263,7 @@ AcDbMText
   1
 R2-5: R 300 Ohm\PZR1:  R 0 Ohm\PVR1: Volume 0-1kOhm, GF063P B102K\PDSW1: Dip Switch, KSD05\PLF1-3: Lead Frame\PPH1: Pin header
   7
-
+STANDARD
 210
 0
 220
@@ -29637,6 +29637,102 @@ AcDbLine
  21
 32.18999999999966
   0
+LINE
+  5
+495
+100
+AcDbEntity
+  8
+5V line
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+-23.5
+ 20
+30.91999999999997
+ 11
+-20.96000000000012
+ 21
+30.91999999999998
+  0
+LINE
+  5
+496
+100
+AcDbEntity
+  8
+5V line
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+-20.96000000000012
+ 20
+30.91999999999998
+ 11
+-18.42000000000025
+ 21
+30.92
+  0
+LINE
+  5
+497
+100
+AcDbEntity
+  8
+5V line
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+-18.42000000000025
+ 20
+30.92
+ 11
+-15.88000000000037
+ 21
+30.92000000000001
+  0
+LINE
+  5
+498
+100
+AcDbEntity
+  8
+5V line
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+-15.88000000000037
+ 20
+30.92000000000001
+ 11
+-13.34000000000049
+ 21
+30.92000000000001
+  0
 ENDSEC
   0
 SECTION
@@ -29669,7 +29765,7 @@ AcDbDictionary
   0
 PLOTSETTINGS
   5
-495
+499
 100
 AcDbPlotSettings
   6
