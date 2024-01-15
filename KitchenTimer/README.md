@@ -1,5 +1,7 @@
 # キッチンタイマーを作ろう
 
+## 初版
+
 まずは TinkerCAD で練習。
 
 https://www.tinkercad.com/things/kBFFgeoPNej-timer
@@ -17,3 +19,16 @@ https://www.tinkercad.com/things/kBFFgeoPNej-timer
 完成したシールド。
 
 ![シールド実物](./photos/KitchenTimerShield.jpg)
+
+### 課題
+
+- リードフレームとピンヘッダの嵌め合いがゆるくて、動作しないことが多い
+- Arduino は割と他のプログラムを書いてある機会が多いので、使いたいときに、すぐに使えない
+- DIP スイッチが小さすぎて、思うように操作できない
+
+## 改良版その1
+
+PIC12F1840, 8 pin, 6 I/O のものが余ってるので、これで専用機を作る。
+
+- ピン配置的に RA2 ~ RA5 をスイッチに, RA0 をスピーカー出力にする。
+- DIP スイッチじゃなくて、ピンヘッダを並べてジャンパーを挿すスタイルにしてみる
