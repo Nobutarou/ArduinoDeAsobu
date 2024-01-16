@@ -803,7 +803,7 @@ $PEXTMAX
   9
 $GRIDMODE
  70
-    0
+    1
   9
 $SNAPSTYLE
  70
@@ -1167,7 +1167,7 @@ AcDbViewportTableRecord
  75
     0
  76
-    0
+    1
  77
     0
  78
