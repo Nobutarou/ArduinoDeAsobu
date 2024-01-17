@@ -26,9 +26,13 @@ https://www.tinkercad.com/things/kBFFgeoPNej-timer
 - Arduino は割と他のプログラムを書いてある機会が多いので、使いたいときに、すぐに使えない
 - DIP スイッチが小さすぎて、思うように操作できない
 
-## 改良版その1
+## PIC 版 ver 1.0
 
 PIC12F1840, 8 pin, 6 I/O のものが余ってるので、これで専用機を作る。
 
 - ピン配置的に RA2 ~ RA5 をスイッチに, RA0 をスピーカー出力にする。
 - DIP スイッチじゃなくて、ピンヘッダを並べてジャンパーを挿すスタイルにしてみる
+
+回路図はこんな感じ。
+
+![PIC版1.0回路図](./pic_version/kicad/TimerPIC12F1840_1/TimerPic12F1840_1.png)
