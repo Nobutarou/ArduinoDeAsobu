@@ -25,12 +25,13 @@ void setup()
   // | or は 1&1=1, 1&0=1, 0&1=1, 0&0=0 だから、第2 ビット以外は元の値が保持される
   ADCSRA = ADCSRA | 0b00000010;
 
+  discharge(1000);
 }
 
 
-void discharge() { 
+void discharge(unsigned int td) { 
   digitalWrite(PULSE_PIN, LOW);
-  delay(1000);
+  delay(td);
 }
 
 unsigned long charge() {
@@ -42,6 +43,7 @@ unsigned long charge() {
 void loop() {
   double _R;
   _R=r_setup();
+  discharge(1000);
 
   // TinkerCad では文字を送る必要があったが、実物では Enter で反応する
   Serial.println("Enter to reset registor");
@@ -51,7 +53,6 @@ void loop() {
   Serial.begin(9600);
   
   while(Serial.available()==0){
-    discharge();
 
     unsigned long time_start = charge();
 
@@ -59,9 +60,10 @@ void loop() {
 
     double T = micros() - time_start; // T: 時定数
     double c=T/_R; // [uF]
-  
+    unsigned int td=-_R*c*log(1.0/500.0)/1.0e3;
+    td = (td>1000)*td + (td<=1000)*1000;
     Serial.println(c,16);
-    digitalWrite(PULSE_PIN, LOW);
+    discharge(td);
   }
   Serial.end();
   Serial.begin(9600);
