@@ -37,3 +37,7 @@ PIC12F1840, 8 pin, 6 I/O のものが余ってるので、これで専用機を�
 回路図はこんな感じ。
 
 ![PIC版1.0回路図](./pic_version/kicad/TimerPIC12F1840_1/TimerPic12F1840_1.png)
+
+設計図はこんな感じ。
+
+![PIC版 設計図 v1.0](./pic_version/librecad/timer01.png)
