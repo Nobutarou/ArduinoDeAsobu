@@ -22,11 +22,19 @@ IC なのではないだろうか。今回はむしろ、理想的には抵抗 0
 
 ![USB 切替器 1.0 回路図](./kicad/USBSwitcher_1.0/USBSwitcher_1.0_kicad.png)
 
+設計図はこちら。
+
+![USB 切替器 1.0 設計図)(./librecad/USB_Switcher_1.0.png)
+
+スイッチ MS-500M-B 側はこちら
+
+| 左
 
 ### memo (あとで消す)
 
 USB typeB の受けはダイセン工業 C-USB-B x 2
 https://www.daisen-netstore.com/shopdetail/000000000148/ct32/page1/order/
+と思ったけど、機能にたいしてやたらと大きいのでやめた。
 
 typeB ケーブルは miniB よりはんだが楽だから。
 
@@ -35,6 +43,14 @@ typeB ケーブルは miniB よりはんだが楽だから。
 USB コネクタに Omron 製があった。A & B。ちゃんと引っ掛けのあるタイプ
 https://x.gd/3Nein
 
-せっかくだから DIP化製品に頼らずにユニバーサル基板に配置する方法を考える。
+せっかくだから DIP化製品に頼らずにユニバーサル基板に配置する方法を考える。--> 考えた。
 
+XH コネクタは秋月の価格が圧倒的に安い。
+
+コンデンサは 1個 10円とエレショップでも安い
+https://eleshop.jp/shop/g/gJ93311/
+
+100個の不要だけど 300円とロマンを感じてしまった。けどデータシートに非推奨とか書いてあるし、
+やっぱ 100個も要らん。
+https://eleshop.jp/shop/g/gL9S41F/
 
