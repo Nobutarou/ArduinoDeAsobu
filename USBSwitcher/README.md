@@ -24,7 +24,7 @@ IC なのではないだろうか。今回はむしろ、理想的には抵抗 0
 
 設計図はこちら。
 
-![USB 切替器 1.0 設計図)(./librecad/USB_Switcher_1.0.png)
+![USB 切替器 1.0 設計図](./librecad/USB_Switcher_1.0.png)
 
 スイッチ MS-500M-B 側はこちら
 
