@@ -15,6 +15,10 @@ https://www.marutsu.co.jp/pc/i/2537574/
 
 ![USB B 加工図](./librecad/USB_B_Recepter.png)
 
+DIP 化しておくならこんな感じ。ピンヘッダかソケットかは用途に合わせて。
+
+![USB B DIP 設計図](./librecad/USB_B_Dip.png)
+
 ## USB A メスコネクタ
 
 Omron XM7A-0442 が対象だけど、これもやはりどれも変わらないと思う。
