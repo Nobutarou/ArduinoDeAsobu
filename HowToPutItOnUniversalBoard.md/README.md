@@ -29,3 +29,5 @@ https://www.marutsu.co.jp/pc/i/2537572/
 直径 1.5mm のドリルが必要になりそう。剥がれたランドはシール基板で修復を。以下が加工図。
 
 ![USB A 加工図](./librecad/USB_A_Recepter.png)
+
+こちらは真っ直ぐ出すだけだから DIP は図面無しで作れるだろう。
