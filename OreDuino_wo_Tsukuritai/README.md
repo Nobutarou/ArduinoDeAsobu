@@ -71,3 +71,8 @@ Arduino As ISP としてマイコンに MiniCore のブートローダを焼い�
 
 普通にスケッチのアップロードができている所
 
+## 自分で設計しているボード
+
+ASOBoard と名付けて、こちらで開発中
+
+[ASOBoard](./ASOBorad.md)
