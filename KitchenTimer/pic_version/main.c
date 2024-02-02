@@ -4,6 +4,8 @@
  *
  */
 
+// 500kHz 駆動に切替えてみる
+
 // とりあえずデフォルトで出してから考える。
 // CONFIG1
 /*{{{*/
@@ -62,8 +64,12 @@
 // Use project enums instead of #define for ON and OFF.
 /*}}}*/
 
+
+
 #include <xc.h>
-#define _XTAL_FREQ 16000000 
+//#define _XTAL_FREQ 16000000 
+#define _XTAL_FREQ 500000
+
 #define _C    262 // [Hz]
 #define _D    294
 #define _E    330
@@ -81,7 +87,9 @@ void noTone(int n_haku);
 void main(void) {
   // 16MHz clock にする設定
   OSCTUNEbits.TUN = 0b000000; // 多分要らない
-  OSCCONbits.IRCF = 0b1111; // 多分要る
+  //OSCCONbits.IRCF = 0b1111; // 多分要る
+  // 今は 500kHz にする。
+  OSCCONbits.IRCF = 0b0111; 
 
   PORTA = 0;
   // Analog input は使わない
@@ -94,6 +102,7 @@ void main(void) {
 
   // RA1 が 1桁目で RA5 が 4桁目とする
   // __delay_ms の最大値は 12000ms (=12s) くらい
+  // 上は 16MHz の話。500kHz なら 384000ms (384秒) くらい
   if(PORTAbits.RA1 == 1){ 
     __delay_ms(12000);
     __delay_ms(12000);
