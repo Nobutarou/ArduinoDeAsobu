@@ -33,7 +33,7 @@ $EXTMAX
  10
 135.319999999995
  20
-99.3705459105375
+104.1600001077753
  30
 0
   9
@@ -91,7 +91,7 @@ STANDARD
   9
 $CLAYER
   8
-0_wire
+0_GND
   9
 $CELTYPE
   6
@@ -1115,9 +1115,9 @@ AcDbViewportTableRecord
  21
 1
  12
-25.34141683541517
+26.9528316833901
  22
-51.52690811500768
+52.50526712984961
  13
 0
  23
@@ -1143,7 +1143,7 @@ AcDbViewportTableRecord
  37
 0
  40
-37.79151488703095
+37.79151488703096
  41
 1.496446700507614
  42
@@ -2621,7 +2621,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-unicode
+STANDARD
  70
     0
  40
@@ -2635,7 +2635,7 @@ unicode
  42
 1
   3
-unicode
+STANDARD
   4
 
   0
@@ -2649,7 +2649,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-STANDARD
+iso
  70
     0
  40
@@ -2663,7 +2663,7 @@ STANDARD
  42
 1
   3
-STANDARD
+iso
   4
 
   0
@@ -2677,7 +2677,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-iso
+unicode
  70
     0
  40
@@ -2691,7 +2691,7 @@ iso
  42
 1
   3
-iso
+unicode
   4
 
   0
@@ -29731,6 +29731,54 @@ AcDbLine
  21
 74.0999996766779
   0
+LINE
+  5
+4DA
+100
+AcDbEntity
+  8
+0_GND
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+19.67999999999791
+ 20
+81.7200000000005
+ 11
+19.67999999999791
+ 21
+84.26000000000052
+  0
+LINE
+  5
+4DB
+100
+AcDbEntity
+  8
+0_GND
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+19.67999999999791
+ 20
+84.26000000000052
+ 11
+27.29999999999755
+ 21
+84.26000000000056
+  0
 ENDSEC
   0
 SECTION
@@ -29763,7 +29811,7 @@ AcDbDictionary
   0
 PLOTSETTINGS
   5
-4DA
+4DC
 100
 AcDbPlotSettings
   6
