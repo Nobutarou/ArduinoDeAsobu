@@ -91,7 +91,7 @@ STANDARD
   9
 $CLAYER
   8
-1_VBUS
+4_GND
   9
 $CELTYPE
   6
@@ -1117,7 +1117,7 @@ AcDbViewportTableRecord
  12
 14.01412083288492
  22
-55.97189105287036
+55.94369362664727
  13
 0
  23
@@ -2597,7 +2597,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-unicode
+STANDARD
  70
     0
  40
@@ -2611,7 +2611,7 @@ unicode
  42
 1
   3
-unicode
+STANDARD
   4
 
   0
@@ -2625,7 +2625,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-STANDARD
+iso
  70
     0
  40
@@ -2639,7 +2639,7 @@ STANDARD
  42
 1
   3
-STANDARD
+iso
   4
 
   0
@@ -2653,7 +2653,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-iso
+unicode
  70
     0
  40
@@ -2667,7 +2667,7 @@ iso
  42
 1
   3
-iso
+unicode
   4
 
   0
@@ -26201,6 +26201,78 @@ AcDbLine
  21
 76.64000000000036
   0
+LINE
+  5
+444
+100
+AcDbEntity
+  8
+4_GND
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+-31.11999999999976
+ 20
+79.18000000000035
+ 11
+-31.11999999999976
+ 21
+76.64000000000033
+  0
+LINE
+  5
+445
+100
+AcDbEntity
+  8
+4_GND
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+-31.11999999999976
+ 20
+76.64000000000033
+ 11
+-33.65999999999966
+ 21
+76.64000000000033
+  0
+LINE
+  5
+446
+100
+AcDbEntity
+  8
+4_GND
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+-33.65999999999966
+ 20
+76.64000000000033
+ 11
+-33.65999999999966
+ 21
+89.34000000000043
+  0
 ENDSEC
   0
 SECTION
@@ -26233,7 +26305,7 @@ AcDbDictionary
   0
 PLOTSETTINGS
   5
-444
+447
 100
 AcDbPlotSettings
   6
