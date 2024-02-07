@@ -28905,52 +28905,6 @@ MTEXT
 100
 AcDbEntity
   8
-0
-  6
-ByLayer
- 62
-  256
-370
-   -1
-100
-AcDbMText
- 10
-48.61631635192901
- 20
-56.7806609805909
- 30
-0
- 40
-1
- 41
-19.80555606984299
- 71
-    4
- 72
-    1
-  1
-R1: 75ohm\PR2: 10kohm\PR3: 10Mohm\PR4: 200ohm\PPH1: Pin header, total 8 pins\PUB1: Universal board, 15x9\PXH1: XH 2pins header
-  7
-iso
-210
-0
-220
-0
-230
-1
- 50
-0
- 73
-    2
- 44
-1.54
-  0
-MTEXT
-  5
-4B2
-100
-AcDbEntity
-  8
 resister
   6
 ByLayer
@@ -28990,6 +28944,52 @@ R4
     2
  44
 1
+  0
+MTEXT
+  5
+4B2
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbMText
+ 10
+48.61631635192901
+ 20
+56.7806609805909
+ 30
+0
+ 40
+1
+ 41
+19.80555606984299
+ 71
+    4
+ 72
+    1
+  1
+R1: 75ohm\PR2: 22kohm\PR3: 10Mohm\PR4: 200ohm\PPH1: Pin header, total 8 pins\PUB1: Universal board, 15x9\PXH1: XH 2pins header
+  7
+iso
+210
+0
+220
+0
+230
+1
+ 50
+0
+ 73
+    2
+ 44
+1.54
   0
 ENDSEC
   0

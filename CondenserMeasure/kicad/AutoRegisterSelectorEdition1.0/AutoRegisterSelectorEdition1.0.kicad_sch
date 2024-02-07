@@ -518,7 +518,7 @@
     (property "Reference" "R2" (at 52.07 74.93 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Value" "10k" (at 52.07 77.47 0)
+    (property "Value" "22k" (at 52.07 77.47 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
     (property "Footprint" "" (at 49.022 76.2 90)
