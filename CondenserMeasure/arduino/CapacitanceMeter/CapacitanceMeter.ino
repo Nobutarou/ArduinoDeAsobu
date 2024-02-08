@@ -15,9 +15,9 @@
 
 #define _pin_discharge 8 //放電用, PB0
 
-#define _r_s 75.0     //小さい抵抗[Ω]
+#define _r_s 300.0     //小さい抵抗[Ω]
 #define _r_m  22.0e3 //中くらい抵抗[Ω]
-#define _r_l 10.0e6 //大抵抗[Ω]
+#define _r_l 10.0e6 //大抵抗[Ω] 300Ωの付け替えをしたときに壊れたのか？10MΩなんだが。。。
 #define _r_discharge 200.0 //放電抵抗[Ω]
 
 #define _analog_pin A0 //測定用アナログピン, PC0
