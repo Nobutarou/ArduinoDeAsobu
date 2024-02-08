@@ -232,6 +232,7 @@ void loop() {
   Serial.print("V1: Analog read: ");
   Serial.println(a1);
 
+  //1023にへばりついてるから、もう測定しない
   a0=1023;
   Serial.print("V0: Analog is decided to: ");
   Serial.println(a0);
