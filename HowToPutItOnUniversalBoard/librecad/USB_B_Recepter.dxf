@@ -33,7 +33,7 @@ $EXTMAX
  10
 135.319999999995
  20
-99.63228572227317
+104.1600001077753
  30
 0
   9
@@ -1115,9 +1115,9 @@ AcDbViewportTableRecord
  21
 1
  12
-28.28971131839635
+25.15225041049297
  22
-53.52579149988022
+50.15610996310693
  13
 0
  23
@@ -1143,7 +1143,7 @@ AcDbViewportTableRecord
  37
 0
  40
-42.96895242655421
+29.23299900216587
  41
 1.496446700507614
  42
@@ -2621,7 +2621,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-unicode
+iso
  70
     0
  40
@@ -2635,7 +2635,7 @@ unicode
  42
 1
   3
-unicode
+iso
   4
 
   0
@@ -2677,7 +2677,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-iso
+unicode
  70
     0
  40
@@ -2691,7 +2691,7 @@ iso
  42
 1
   3
-iso
+unicode
   4
 
   0
