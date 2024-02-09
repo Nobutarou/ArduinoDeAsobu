@@ -34,9 +34,11 @@ https://www.marutsu.co.jp/pc/i/2537572/
 
 ![USB A 加工図](./librecad/USB_A_Recepter.png)
 
-こちらは真っ直ぐ出すだけだから DIP は図面無しで作れるだろう。
-
 実際にやってみたところ、かなりきついけど、ピンの穴加工は不要だった。
+
+![USB A DIP 設計図](./librecad/USB_A_Recepter_Dip.png)
+
+DIP はこんな感じで良いだろう。制作は、配線済み基板で GND 以外を彫っておくのが楽な気がする。
 
 ## USB A 2段メスコネクタ
 
