@@ -78,6 +78,8 @@ programmer
     sdi                    = 1;  # RxD
 ```
 
+sdo は ATmega328P では MOSI, sdi は MISO のようだ。統一してくれ。
+
 先のサイトは ``-t`` で対話モードを使っていたが、本家が非推奨ということで、
 
 https://synapse.kyoto/tips/ArduinoISP_AVRWriter/page002.html
