@@ -80,6 +80,12 @@ programmer
 
 sdo は ATmega328P では MOSI, sdi は MISO のようだ。統一してくれ。
 
+ちなみに Arduino 使わずに FT232RL でそのままヒューズビットの確認が可能だった。
+
+```
+avrdude -c ft232r -p m328p -U hfuse:r:-:h -U lfuse:r:-:h -Ulock:r:-:h
+```
+
 先のサイトは ``-t`` で対話モードを使っていたが、本家が非推奨ということで、
 
 https://synapse.kyoto/tips/ArduinoISP_AVRWriter/page002.html
