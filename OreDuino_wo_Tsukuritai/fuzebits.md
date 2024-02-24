@@ -78,7 +78,16 @@ programmer
     sdi                    = 1;  # RxD
 ```
 
-sdo は ATmega328P では MOSI, sdi は MISO のようだ。統一してくれ。
+sdo は ATmega328P では MOSI, sdi は MISO のようだ。統一してくれ。要は次の 6本を継げば良い。
+
+| avrdude.conf| Arduino Uno R3 | FT232RL |
+| ---         | ---            | ---     |
+| reset       | RST#           | DTR#    |
+| sck         | D13            | TxD     |
+| sdo         | D11            | RTS#    |
+| sdi         | D12            | RxD     |
+|             | VCC            | VCC     |
+|             | GND            | GND     |
 
 ちなみに Arduino 使わずに FT232RL でそのままヒューズビットの確認が可能だった。
 
@@ -168,9 +177,6 @@ avrdude -v -V -p m328p -c ft232r -D -Uflash:w:Blink.ino.with_bootloader.hex:i
 avrdude -v -V -p m328p -c ft232r -Uflash:w:Blink.ino.with_bootloader.hex:i
 avrdude -v -V -p m328p -c ft232r -Uflash:w:Blink.ino.hex:i
 ```
-
-そして一度上手く行った後は ``-D`` 付けても動いた。いろいろやってる間の出来事なので、単に配
-線ミスだったのかもしれない。ちょっと不明。
 
 これはヒューズビットを書き替えたシール無しにも、そのままにしたシール有りにも有効だったので、
 ヒューズビットは完全に無罪となった。
