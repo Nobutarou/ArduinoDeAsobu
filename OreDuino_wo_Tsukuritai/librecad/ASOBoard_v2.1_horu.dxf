@@ -1115,9 +1115,9 @@ AcDbViewportTableRecord
  21
 1
  12
-18.61030130725515
+15.81875611116687
  22
-46.1873841534605
+45.53884335032887
  13
 0
  23
@@ -2263,7 +2263,7 @@ AcDbLayerTableRecord
   6
 CONTINUOUS
 370
-   15
+  120
 390
 F
   0
@@ -2311,7 +2311,7 @@ AcDbLayerTableRecord
   6
 CONTINUOUS
 370
-   15
+  120
 390
 F
   0
@@ -2357,7 +2357,7 @@ AcDbLayerTableRecord
   6
 CONTINUOUS
 370
-   15
+  120
 390
 F
   0
@@ -2379,7 +2379,7 @@ AcDbLayerTableRecord
   6
 CONTINUOUS
 370
-   15
+  120
 390
 F
   0
@@ -48277,9 +48277,31 @@ AcDbCircle
  40
 0.2
   0
-LINE
+CIRCLE
   5
 801
+100
+AcDbEntity
+  8
+0_wire
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbCircle
+ 10
+4.439999999998641
+ 20
+76.64000000000034
+ 40
+0.2
+  0
+LINE
+  5
+802
 100
 AcDbEntity
   8
@@ -48300,28 +48322,6 @@ AcDbLine
 4.439999999998641
  21
 69.02000000000029
-  0
-CIRCLE
-  5
-802
-100
-AcDbEntity
-  8
-0_GND
-  6
-ByLayer
- 62
-  256
-370
-   -1
-100
-AcDbCircle
- 10
-4.439999999998641
- 20
-76.64000000000034
- 40
-0.2
   0
 ENDSEC
   0
