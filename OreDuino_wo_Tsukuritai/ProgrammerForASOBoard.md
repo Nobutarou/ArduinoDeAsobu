@@ -63,6 +63,10 @@ FT232RL 側のアダプタの回路図はこちら。
 
 ![FT232ShieldV1.0](./ProgrammerForAsoBoard/librecad/ABSheild_FTProgrammer_v1.0.png)
 
+十字配線基板切削図。反転済み。
+
+![FT232Shiled 切削図 v1.0](./ProgrammerForAsoBoard/librecad/ABSheild_FTProgrammer_Cutting_v1.0.png)
+
 部品表
 
 | 記号 | 品目                   | 個数 |
