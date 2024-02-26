@@ -59,5 +59,9 @@ FT232RL 側のアダプタの回路図はこちら。
 
 [ASOBoard FT232RL プログラムシールド v1.0](./ProgrammerForAsoBoard/kicad/ASOBoardShield_FT232RLProgrammer/ASOBoardShield_FT232RLProgrammer.pdf)
 
-シールドには Sunhayato の UB-ARD03 を使おう。GND と VCC が配線済みで、使えるホールが少なく
-なってるけど、問題ないだろう。
+設計図
+
+![FT232ShieldV1.0](./ProgrammerForAsoBoard/librecad/ABSheild_FTProgrammer_v1.0.png)
+
+
+
