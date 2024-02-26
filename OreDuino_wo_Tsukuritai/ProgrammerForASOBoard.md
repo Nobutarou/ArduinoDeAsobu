@@ -63,5 +63,11 @@ FT232RL 側のアダプタの回路図はこちら。
 
 ![FT232ShieldV1.0](./ProgrammerForAsoBoard/librecad/ABSheild_FTProgrammer_v1.0.png)
 
+部品表
 
-
+| 記号 | 品目                   | 個数 |
+| ---  | ---                    | ---  |
+| H1   | ピンヘッダ、計 11ピン  | 11   |
+| J1   | XH 3ピンヘッダ         | 1    |
+| J2   | XH 2ピンヘッダ         | 1    |
+| UB1  | ユニバーサル基板 15x14穴 | 1  |
