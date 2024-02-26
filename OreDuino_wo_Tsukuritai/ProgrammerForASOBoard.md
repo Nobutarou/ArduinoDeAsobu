@@ -29,6 +29,7 @@ ASOBoard には専用シールドを作り、プログラマのときだけ、FT
 
 ## FT232RL版 ver 1.0
 
+### FT232RL 側のアダプタ
 FT232RL 側のアダプタの回路図はこちら。
 
 [FT232RL アダプタ回路図](./ProgrammerForAsoBoard/kicad/FT232RL_Adaptor/FT232RL_Adaptor.pdf)
@@ -43,11 +44,20 @@ FT232RL 側のアダプタの回路図はこちら。
 
 部品表
 
-| 記号 | 品目           | 個数 |
-| ---  | ---            | ---  |
-| D1   | LED            | 1    |
-| J1,2 | 3ピン XH ヘッダ| 2    |
-| J3   | 2ピン XH ヘッダ| 1    |
-| JR1,2| ジャンパー     | 2    |
-| S1,2 | 12ピンソケット | 2    |
-| -    | ユニバーサル基板 15x10 | 1 |
+| 記号 | 品目                   | 個数 |
+| ---  | ---                    | ---  |
+| D1   | LED                    | 1    |
+| J1,2 | 3ピン XH ヘッダ        | 2    |
+| J3   | 2ピン XH ヘッダ        | 1    |
+| JR1,2| ジャンパー             | 2    |
+| S1,2 | 12ピンソケット         | 2    |
+| -    | ユニバーサル基板 15x10 | 1    |
+
+### ASOBoard 側のプログラムシールド
+
+回路図 pdf
+
+[ASOBoard FT232RL プログラムシールド v1.0](./ProgrammerForAsoBoard/kicad/ASOBoardShield_FT232RLProgrammer/ASOBoardShield_FT232RLProgrammer.pdf)
+
+シールドには Sunhayato の UB-ARD03 を使おう。GND と VCC が配線済みで、使えるホールが少なく
+なってるけど、問題ないだろう。
