@@ -140,3 +140,5 @@ https://github.com/Nobutarou/ArduinoDeAsobu/blob/main/OreDuino_wo_Tsukuritai/ASO
 | S1   | ピンヘッダ、計 11ピン    | 11   |
 | UB1  | ユニバーサル基板 15x14穴 | 1    |
 | XH1  | XH 4ピン ヘッダ          | 1    |
+
+ケーブルは ASOBoard で作ったものを抜いて使うので作成不要。
