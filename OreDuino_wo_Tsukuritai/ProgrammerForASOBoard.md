@@ -101,7 +101,7 @@ FT232RL 側のアダプタの回路図はこちら。
 
 ![FT232RL アダプタ 1.1](./ProgrammerForAsoBoard/librecad/FT232RL_Adaptor_v1.1.png)
 
-十字配線基板切削パターンはこちら。
+十字配線基板切削パターンはこちら。細線は切削をさぼっても大丈夫なところ
 
 ![FT232RL アダプタ 基板パターン 1.1](./ProgrammerForAsoBoard/librecad/FT232RL_Adaptor_pattern_v1.1.png)
 
