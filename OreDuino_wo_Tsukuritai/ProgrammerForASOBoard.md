@@ -119,3 +119,24 @@ FT232RL 側のアダプタの回路図はこちら。
 | X2   | XH コンタクト          | 7    | 配線用 |
 | X3   | 適当なケーブル         |      | 配線用 |
 
+### ASOBoard シールド ver 1.1
+
+ASOBoard v2.2 で信号線の接続順番が決まったので、こちらも設計しなおす。
+
+https://github.com/Nobutarou/ArduinoDeAsobu/blob/main/OreDuino_wo_Tsukuritai/ASOBorad.md
+
+設計図
+
+![設計図](./ProgrammerForAsoBoard/librecad/Shiled_FTProg_v1.1.dxf)
+
+十字配線基板の切削パターンはこちら
+
+![切削パターン](./ProgrammerForAsoBoard/librecad/Shield_FTProg_v1.1_pattern.png)
+
+部品表
+
+| 記号 | 品目                     | 個数 |
+| ---  | ---                      | ---  |
+| S1   | ピンヘッダ、計 11ピン    | 11   |
+| UB1  | ユニバーサル基板 15x14穴 | 1    |
+| XH1  | XH 4ピン ヘッダ          | 1    |
