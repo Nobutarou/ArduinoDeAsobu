@@ -127,7 +127,7 @@ https://github.com/Nobutarou/ArduinoDeAsobu/blob/main/OreDuino_wo_Tsukuritai/ASO
 
 設計図
 
-![設計図](./ProgrammerForAsoBoard/librecad/Shiled_FTProg_v1.1.dxf)
+![設計図](./ProgrammerForAsoBoard/librecad/Shield_FTProg_v1.1.png)
 
 十字配線基板の切削パターンはこちら
 
