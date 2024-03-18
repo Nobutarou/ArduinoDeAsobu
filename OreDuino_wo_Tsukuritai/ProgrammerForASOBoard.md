@@ -142,3 +142,26 @@ https://github.com/Nobutarou/ArduinoDeAsobu/blob/main/OreDuino_wo_Tsukuritai/ASO
 | XH1  | XH 4ピン ヘッダ          | 1    |
 
 ケーブルは ASOBoard で作ったものを抜いて使うので作成不要。
+
+#### 使い方
+
+![写真](./ProgrammerForAsoBoard/pictures/FT232RLプログラマシールド1.1.jpg)
+
+```zsh
+setopt interactivecomments
+
+# ブートローダ書き込み前はヒューズビットを自力で変更する必要がある。出荷状態は、おそらく
+# 1MHz 動作でありボーレートは 19200bps が上限だったため ``-B`` オプションが必要。Arduino の
+# 値で書き込む
+
+avrdude -v -V -c ft232r -p m328p -B 19200 -U lfuse:w:0xFF:m -U hfuse:w:0xD6:m \
+-U efuse:w:0xFD:m -U lock:w:0xCF:m
+
+# 初回はブートローダが無いのでブートローダごと書き込む。たいした時間じゃないから毎回ブートロ
+# ーダーごとでも問題ない。例題の Blink の場合は以下。16MHz動作しているのでボーレートの指定は
+# 不要。
+
+avrdude -v -V -c ft232r -p m328p -D -Uflash:w:Blink.ino.with_bootloader.hex:i
+
+# ハードに問題がなければ Arduino IDE から次回から書き込みができる
+```
