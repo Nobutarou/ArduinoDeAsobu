@@ -165,3 +165,45 @@ avrdude -v -V -c ft232r -p m328p -D -Uflash:w:Blink.ino.with_bootloader.hex:i
 
 # ハードに問題がなければ Arduino IDE から次回から書き込みができる
 ```
+
+## ASOBoard as Programmer v1.0
+
+配線は、とても簡単。
+
+| 親機 | 子機 |
+| ---  | ---  |
+| VCC  | VCC  |
+| GND  | GND  |
+| D10  | RST  |
+| D11  | D11  |
+| D12  | D12  |
+| D13  | D13  |
+
+親機の設計図, 部品表
+
+| 記号 | 品目、品番              | 個数 |
+| ---  | ------------            | ---  |
+| PH1  | ピンヘッダ 8 極         | 1    |
+| UB1  | ユニバーサル基板 8x3 穴 | 1    |
+| XH1  | XH ヘッダ 6 極          | 1    |
+
+![親機](./ProgrammerForAsoBoard/librecad/ASB_as_Prog_v1.0_parent.png)
+
+子機の設計図, 部品表
+
+![子機](./ProgrammerForAsoBoard/librecad/ASB_as_Prog_v1.0_client.png)
+
+| 記号 | 品目、品番              | 個数 |
+| ---  | ------------            | ---  |
+| PH1  | ピンヘッダ 8極          | 1    |
+| PH2-4| ピンヘッダ 2極          | 3    |
+| UB1  | ユニバーサル基板 15x14穴| 1    |
+| XH1  | XH ヘッダ 6極           | 1    |
+
+ケーブル部品表
+
+| 品目、品番                  | 個数 |
+| ------------                | ---  |
+| スリムロボットケーブル 40cm | 1    |
+| XH ハウジング 6極           | 2    |
+| XH コンタクト               | 12   |
