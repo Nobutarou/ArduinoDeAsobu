@@ -1,14 +1,14 @@
 // C++ code
-#define VA 4 // typeA V
-#define DMA 5 // typeA D-
+#define VA 8 // typeA V
+#define DMA 7 // typeA D-
 #define DPA 6 // typeA D+
-#define GA 7 // typeA GND
-#define SA 8 // typeA shield
-#define VB 13 // typeB V
-#define DMB 12 // typeB D-
-#define DPB 11 // typeB D+
-#define GB 10// typeB GND
-#define SB 9 // typeB shield
+#define GA 5 // typeA GND
+#define SA 4 // typeA shield
+#define VB 10 // typeB V
+#define DMB 11 // typeB D-
+#define DPB 12 // typeB D+
+#define GB 9 // typeB GND
+#define SB 13 // typeB shield
 
 void(* resetFunc) (void) = 0;
 
