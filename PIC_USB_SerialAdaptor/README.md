@@ -7,9 +7,13 @@ https://elchika.com/article/a4b16182-6270-493c-b4da-7c519ac3429c
 
 https://github.com/Calcousin55/PIC16F145x_USB2Serial
 
+http://machoto2.g2.xrea.com/page/P16F1455/P16_L04.htm
+
+(3個目は後で見付けたため、まったく検討していない)
+
 ## 検討
 
-### 前者のやつ MPLAB IDE でビルドできるのかの確認
+### 一つ目のプロジェクト MPLAB IDE でビルドできるのかの確認
 
 MCC は Classic を使うと同じ画面が出た。また USB_device_CDC.c の 117行目の書き換えが必要と
 書いてあるが、似ている部分がない。ただし 117行目というのがちょうど関数定義の始まる部分であ
@@ -34,7 +38,7 @@ void USBCDCSetLineCoding(void);
 
 ビルドは通った。なのであとはブレッドボードで試してみるしかない。
 
-### 後者でテスト 
+### 2つ目のテスト
 
 .hex も配布されているが PIC16F1454 向けにビルドされたようなので PIC16F1455 向けに設定を変
 えてビルドしてみたところ普通にビルドできた。
