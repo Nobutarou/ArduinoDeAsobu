@@ -207,3 +207,7 @@ avrdude -v -V -c ft232r -p m328p -D -Uflash:w:Blink.ino.with_bootloader.hex:i
 | スリムロボットケーブル 40cm | 1    |
 | XH ハウジング 6極           | 2    |
 | XH コンタクト               | 12   |
+
+実際に書き込んで見たところ。左が親機で、右が子機。
+
+![書き込んでみたところ](./ProgrammerForAsoBoard/pictures/左から右にLチカ書き込み.jpg)
