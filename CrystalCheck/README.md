@@ -43,4 +43,18 @@ https://www.ndk.com/jp/products/info/post_15.html
 
 [ソース v1.0](./arduinio/CrystalChecker1.0/CrystalChecker1.0.ino)
 
-1秒間の観測で 61 回しか観測できない。2秒に延ばしても 121 回だったので間違いないようだ。
+KDS の 12MHz クリスタルのとき
+
+```
+Count: 46878
+Freq [MHz]: 12.00
+```
+
+Murata の 16MHz セラロックのとき (水晶じゃないのはご愛嬌)
+
+```
+Count: 62497
+Freq [MHz]: 16.00
+```
+
+ちゃんと出た。
