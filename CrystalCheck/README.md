@@ -37,3 +37,10 @@ https://www.ndk.com/jp/products/info/post_15.html
 
 波長がおおよそ 20usec だから ``1/20e-6*256=12.8MHz`` とおおよそのところは分かる。
 
+## Arduino で観測できるか
+
+ソース v1.0
+
+[ソース v1.0](./arduinio/CrystalChecker1.0/CrystalChecker1.0.ino)
+
+1秒間の観測で 61 回しか観測できない。2秒に延ばしても 121 回だったので間違いないようだ。
