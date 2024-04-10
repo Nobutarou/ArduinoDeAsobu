@@ -23,3 +23,22 @@ https://www.iizuka.kyutech.ac.jp/faculty/physicalcomputing/pc_kitscope
 ![PWN 波形を確認している本体](./figure/完成写真.jpg)
 
 ![アプリ](./figure/アプリ画面.png)
+
+## ASOBoard 用シールド v1.0
+
+何かと便利なので ASOBoard でも使えるようにする。
+
+![設計図](./librecad/ASB_Oscillo1.0.png)
+
+部品表
+
+| 記号  | 品目                     | 個数   |
+| ---   | -----------              | ---    |
+| C1    | 1uF                      | 1      |
+| CT1-5 | チェック端子             | 5      |
+| PH1   | ピンヘッダ 7ピン         | 1      |
+| PH2   | ピンヘッダ 12ピン        | 1      |
+| R1-3  | 1kΩ                     | 3      |
+| R4    | 100kΩ                   | 1      |
+| UB1   | ユニバーサル基板 15x12穴 | 1      |
+
