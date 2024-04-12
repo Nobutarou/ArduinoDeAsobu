@@ -24,7 +24,7 @@ void setup()
   // typeA V to typeB all
   pinMode(VA, OUTPUT);
   digitalWrite(VA, HIGH);
-  delay(1);
+  delay(100); //十分な時間を待たないと誤反応する
   if(digitalRead(VB)){
     Serial.println("VA-VB: OK");
   } else {
@@ -48,7 +48,7 @@ void setup()
   // typeA D- to typeB all
   pinMode(DMA, OUTPUT);
   digitalWrite(DMA, HIGH);
-  delay(1);
+  delay(100);
   if(digitalRead(VB)){
     Serial.println("D-A-VB: ERR, wrongly connected");
   };
@@ -72,7 +72,7 @@ void setup()
   // typeA D+ to typeB all
   pinMode(DPA, OUTPUT);
   digitalWrite(DPA, HIGH);
-  delay(1);
+  delay(100);
   if(digitalRead(VB)){
     Serial.println("D+A-VB: ERR, wrongly connected");
   };
@@ -96,7 +96,7 @@ void setup()
   // typeA GND to typeB all
   pinMode(GA, OUTPUT);
   digitalWrite(GA, HIGH);
-  delay(1);
+  delay(100);
   if(digitalRead(VB)){
     Serial.println("GNDA-VB: ERR, wrongly connected");
   };
@@ -118,7 +118,8 @@ void setup()
   // typeA Shiled to typeB all
   pinMode(SA, OUTPUT);
   digitalWrite(SA, HIGH);
-  delay(1);
+  delay(100);
+
   if(digitalRead(VB)){
     Serial.println("ShiledA-VB: ERR, wrongly connected");
   };
@@ -137,6 +138,8 @@ void setup()
     Serial.println("Shiled is grounded in the cable");
   } ;
 
+  ResetAllPins();
+  
   Serial.end();
   resetFunc();
 }
@@ -147,6 +150,32 @@ void loop()
 
 void ResetAllPins()
 {
+  // まず放電する。
+  // そうしないと貯まった電荷で誤検知してしまう。
+  pinMode(VA, OUTPUT);
+  pinMode(DMA, OUTPUT);
+  pinMode(DPA, OUTPUT);
+  pinMode(GA, OUTPUT);
+  pinMode(SA, OUTPUT);
+  pinMode(VB, OUTPUT);
+  pinMode(DMB, OUTPUT);
+  pinMode(DPB, OUTPUT);
+  pinMode(GB, OUTPUT);
+  pinMode(SB, OUTPUT);
+
+  digitalWrite(VA, LOW);
+  digitalWrite(DMA, LOW);
+  digitalWrite(DPA, LOW);
+  digitalWrite(GA, LOW);
+  digitalWrite(SA, LOW);
+  digitalWrite(VB, LOW);
+  digitalWrite(DMB, LOW);
+  digitalWrite(DPB, LOW);
+  digitalWrite(GB, LOW);
+  digitalWrite(SB, LOW);
+
+  delay(1000);
+
   // change all pins to input
   pinMode(VA, INPUT);
   pinMode(DMA, INPUT);
@@ -158,5 +187,6 @@ void ResetAllPins()
   pinMode(DPB, INPUT);
   pinMode(GB, INPUT);
   pinMode(SB, INPUT);
-  
+
+  delay(100);
 }
