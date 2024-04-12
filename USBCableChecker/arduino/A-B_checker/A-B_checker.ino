@@ -174,7 +174,7 @@ void ResetAllPins()
   digitalWrite(GB, LOW);
   digitalWrite(SB, LOW);
 
-  delay(1000);
+  delay(100);
 
   // change all pins to input
   pinMode(VA, INPUT);
