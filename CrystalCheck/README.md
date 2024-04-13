@@ -39,7 +39,7 @@ https://www.ndk.com/jp/products/info/post_15.html
 
 ## Arduino で観測できるか
 
-ソース v1.0
+D2 ピンで 1000ms の間 Falling をカウントする。
 
 [ソース v1.0](./arduinio/CrystalChecker1.0/CrystalChecker1.0.ino)
 
@@ -58,3 +58,24 @@ Freq [MHz]: 16.00
 ```
 
 ちゃんと出た。
+
+## Crystal Checker Shiled for ASOBoard 1.0
+
+設計図
+
+![設計図](./librecad/CrystalChecker1.0.png)
+
+部品表
+
+| 記号  | 品目                                | 個数  |
+| ---   | ----------                          | ---   |
+| H1-4  | ピンヘッダ 2ピン                    | 4     |
+| H5    | ピンヘッダ 3ピン                    | 1     |
+| H6    | ピンヘッダ 5ピン                    | 1     |
+| J1-4  | ジャンパ抵抗等                      | 4     |
+| R1    | 抵抗 1MΩ                           | 1     |
+| R2    | 抵抗 1kΩ                           | 1     |
+| U1    | インバータ TC74HCU04AP              | 1     |
+| U2    | 8 bit カウンタ TC74HC590AP          | 1     |
+| UB1   | ユニバーサル基板 15x14穴            | 1     |
+| XH1   | XH ヘッダ 6ピン                     | 1     |
