@@ -28,10 +28,10 @@ void setup()
   Serial.print("Freq [MHz]: ");
   Serial.println(final_count*256.0/1.0e6);
 
-  Serial.println("Enter to restart");
-  while (Serial.available() == 0) {}; //打ち込みを待つ
-  Serial.read();
-  Serial.println("Restarting.");
+//  Serial.println("Enter to restart");
+//  while (Serial.available() == 0) {}; //打ち込みを待つ
+//  Serial.read();
+//  Serial.println("Restarting.");
   Serial.end();
   resetFunc();
 }
