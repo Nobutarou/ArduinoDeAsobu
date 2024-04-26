@@ -117,10 +117,11 @@ void loop() {
     delay(100);
 
     //何か打ち込んだらリスタートする
-    Serial.println("Enter (or reset button) to restart measureing.");
-    while (Serial.available() == 0) {}; //打ち込みを待つ
-    Serial.read();
-    Serial.println("Restarting...");
+    //Serial.println("Enter (or reset button) to restart measureing.");
+    //while (Serial.available() == 0) {}; //打ち込みを待つ
+    //Serial.read();
+    //Serial.println("Restarting...");
+    Serial.end();
     resetFunc();
   }
   
@@ -170,10 +171,12 @@ void loop() {
     delay(100);
 
     //何か打ち込んだらリスタートする
-    Serial.println("Enter (or reset button) to restart measureing.");
-    while (Serial.available() == 0) {}; //打ち込みを待つ
-    Serial.read();
-    Serial.println("Restarting...");
+    //何か打ち込むのを待つ必要は別にない
+    //Serial.println("Enter (or reset button) to restart measureing.");
+    //while (Serial.available() == 0) {}; //打ち込みを待つ
+    //Serial.read();
+    //Serial.println("Restarting...");
+    Serial.end();
     resetFunc();
   }
   
@@ -227,10 +230,13 @@ void loop() {
   delay(100);
 
   //何か打ち込んだらリスタートする
-  Serial.println("Enter (or reset button) to restart measureing.");
-  while (Serial.available() == 0) {}; //打ち込みを待つ
-  Serial.read();
-  Serial.println("Restarting...");
+  // ようにしていたが、別にシリアル端末画面がリセットされる分けでもないので
+  // 無条件でリセットすれば良い。
+  //Serial.println("Enter (or reset button) to restart measureing.");
+  //while (Serial.available() == 0) {}; //打ち込みを待つ
+  //Serial.read();
+  //Serial.println("Restarting...");
+  Serial.end();
   resetFunc();
 
 }  

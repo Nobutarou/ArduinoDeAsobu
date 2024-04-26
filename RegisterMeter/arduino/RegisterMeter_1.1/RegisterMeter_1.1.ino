@@ -81,10 +81,13 @@ void show_result(double R1, String unit){
 }
 
 void loop_again(){
-  Serial.println("Enter (or reset button) to restart measureing.");
-  while (Serial.available() == 0) {}; //打ち込みを待つ
-  Serial.read();
-  Serial.println("Restarting...");
+  //シリアルモニタの画面がリセットされる分けでもないので
+  //黙ってリセットすれば OK
+  //Serial.println("Enter (or reset button) to restart measureing.");
+  //while (Serial.available() == 0) {}; //打ち込みを待つ
+  //Serial.read();
+  //Serial.println("Restarting...");
+  Serial.end();
   resetFunc();
 }
 
