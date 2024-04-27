@@ -14,9 +14,9 @@
 #define _R0_3 1.0e6 
 
 #define _analog_pin_V1 A5 // 対象抵抗電圧測定用
-#define _analog_pin_V0_1 A4 // 小抵抗出力ピン電圧測定用
+#define _analog_pin_V0_1 A2 // 小抵抗出力ピン電圧測定用
 #define _analog_pin_V0_2 A3 // 中抵抗出力ピン電圧測定用
-#define _analog_pin_V0_3 A2 // 高抵抗出力ピン電圧測定用
+#define _analog_pin_V0_3 A4 // 高抵抗出力ピン電圧測定用
 
 void(* resetFunc) (void) = 0; //declare reset function @ address 0
 
