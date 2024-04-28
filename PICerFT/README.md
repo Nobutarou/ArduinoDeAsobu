@@ -14,3 +14,17 @@ http://einstlab.web.fc2.com/PICerFT/PICerFT.html
 まあ、まずはそのまま作ってみても良いと思う。
 
 ## テスト2、FT232RL の VIO, DTR のあたり
+
+これは何をしているのか分からない。DTR の状態に係らず、4.4 ~ 5V を VIO に入力しているように
+見える。常に 5V 入力ではだめなんだろうか。
+
+![DTR, VIO テスト](./figure/PICerFT_DTR_VIO.png)
+
+とりあえず、そのまま作ってみるしかないか。
+
+## テスト3、PIC ライター回り
+
+FT232RL の RI# ピンが LOW のときには PIC の VPP (プログラム用電力供給ピンかな) に電圧を掛
+けずに、RI# が HIGH の時に掛けるというスイッチの役目をしている。
+
+![PIC ライター回り](./figure/PICerFT_PIC.png)
