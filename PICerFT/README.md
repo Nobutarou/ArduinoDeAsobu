@@ -11,7 +11,9 @@ http://einstlab.web.fc2.com/PICerFT/PICerFT.html
 
 ![電源回路](./figure/PICerFT_電源回路.png)
 
-まあ、まずはそのまま作ってみても良いと思う。
+まあ、まずはそのまま作ってみるが。
+
+なお自分の対象は PIC18F2550 で min VPP = 9V なので 9V 側で動かせるかもしれない。
 
 ## テスト2、FT232RL の VIO, DTR のあたり
 
@@ -25,12 +27,21 @@ http://einstlab.web.fc2.com/PICerFT/PICerFT.html
 
 https://akizukidenshi.com/catalog/g/g106693/
 
-VIO はすでに入っている。DTR は FT232RL が決める。となると一体これは何をするものなのか、全
-く分からない。
+VIO = 3.3V で DTR = LOW のときに 5V 電源から 1.2mA の電流が VIO に流れるのを確認。もしかし
+てこれは、電圧を何かしたいわけではなくて、電流 (電力) を補充しているのか。VIO 3.3V は
+FT232RL 自身のレギュレータからやってくるが、もしかして微妙に足りなくなることがあるのだろう
+か。
+
+![VIO テスト2](./figure/PICerFT_VIO_2.png)
+
+今自分が書き込みたいのが PIC18F2550 で、これは VDD=5.5V までの対応だから、VIO = 5V で良い。
+となると、自分には、この回路は不要なのかもしれない。
+
+まあ、まずはそのまま作ってみるが。
 
 ## テスト3、PIC ライター回り
 
-FT232RL の RI# ピンが LOW のときには PIC の VPP (プログラム用電力供給ピンかな) に電圧を掛
-けずに、RI# が HIGH の時に掛けるというスイッチの役目をしている。
+FT232RL の RI# ピンが LOW のときには PIC の VPP (プログラム用電力供給ピン) に電圧を掛けず
+に、RI# が HIGH の時に掛けるというスイッチの役目をしている。
 
 ![PIC ライター回り](./figure/PICerFT_PIC.png)
