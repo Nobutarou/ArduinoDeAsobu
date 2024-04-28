@@ -20,7 +20,13 @@ http://einstlab.web.fc2.com/PICerFT/PICerFT.html
 
 ![DTR, VIO テスト](./figure/PICerFT_DTR_VIO.png)
 
-とりあえず、そのまま作ってみるしかないか。
+違うな。秋月のこれだと VCCIO は秋月のモジュールの時点で USB からの 5V もしくは内蔵 レギュ
+レータからの 3.3V が入っているので、VIO に入力しているわけではないな。
+
+https://akizukidenshi.com/catalog/g/g106693/
+
+VIO はすでに入っている。DTR は FT232RL が決める。となると一体これは何をするものなのか、全
+く分からない。
 
 ## テスト3、PIC ライター回り
 
