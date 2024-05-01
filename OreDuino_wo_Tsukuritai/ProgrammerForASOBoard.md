@@ -160,8 +160,9 @@ avrdude -v -V -c ft232r -p m328p -B 19200 -U lfuse:w:0xFF:m -U hfuse:w:0xD6:m \
 # 初回はブートローダが無いのでブートローダごと書き込む。たいした時間じゃないから毎回ブートロ
 # ーダーごとでも問題ない。例題の Blink の場合は以下。16MHz動作しているのでボーレートの指定は
 # 不要。
+# -D オプションを付けると動かないので -D オプションは付けないこと
 
-avrdude -v -V -c ft232r -p m328p -D -Uflash:w:Blink.ino.with_bootloader.hex:i
+avrdude -v -V -c ft232r -p m328p -Uflash:w:Blink.ino.with_bootloader.hex:i
 
 # ハードに問題がなければ Arduino IDE から次回から書き込みができる
 ```
