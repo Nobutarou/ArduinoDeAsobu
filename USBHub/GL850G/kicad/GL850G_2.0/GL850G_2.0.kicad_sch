@@ -2364,16 +2364,6 @@
 		)
 		(uuid "e51b2c72-8ea5-44c5-9e88-fe6b5b7c72e2")
 	)
-	(wire
-		(pts
-			(xy 83.82 85.09) (xy 92.71 85.09)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "e98da7cc-4922-40b6-b0b9-cf8ed695189c")
-	)
 	(text "External power supply"
 		(exclude_from_sim no)
 		(at 46.99 18.288 0)
@@ -2859,6 +2849,28 @@
 		(uuid "758c719f-3e5e-48b4-9cb6-db57dd947e8d")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 127.5661 113.03 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "V33"
+		(shape input)
+		(at 83.82 85.09 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "76316f7d-249b-4ab8-a0c1-b1ee053d5bbb")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 90.3128 85.09 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -5004,73 +5016,6 @@
 			(project "GL850G_2.0"
 				(path "/ddc50684-2832-457a-af57-346958dc495f"
 					(reference "#PWR06")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_name "GND_1")
-		(lib_id "power:GND")
-		(at 92.71 85.09 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "edd9c4a3-4db7-4d72-b3ea-8277db136700")
-		(property "Reference" "#PWR07"
-			(at 92.71 91.44 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 92.71 90.17 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 92.71 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 92.71 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 92.71 85.09 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "b01b93ea-7d4e-42bb-b469-e19a103ee08e")
-		)
-		(instances
-			(project "GL850G_2.0"
-				(path "/ddc50684-2832-457a-af57-346958dc495f"
-					(reference "#PWR07")
 					(unit 1)
 				)
 			)
