@@ -1,5 +1,7 @@
 # LMT01LPG 使ってみる
 
+## 予習
+
 データシート:
 
 https://x.gd/vT8MS
@@ -29,8 +31,13 @@ TDATA の最短は 44ms なので、2回目の TDATA 突入までの時間は 46
 
 カウントは水晶チェッカーの時に使った attachInterrupt を使えば良いだろう。
 
-オシロで波形を取ってみたが、これ ATMega328P で捉えられるのだろうか。
+オシロで波形を取ってみたが、これ ATMega328P で捉えられるのだろうか。オシロの採取が雑すぎて
+捉えられてないだけかもしれないので、そのままテストしてみよう。
 
 ![50ms div](./figure/LMT01LPG_Oscillo_50ms_div.png)
 
 ![2ms div](./figure/LMT01LPG_Oscillo_2ms_div.png)
+
+## テスト 1.0
+
+[テスト回路 1.0](./kicad/LMT01LPT_1.0/LMT01LPT_1.0.pdf)
