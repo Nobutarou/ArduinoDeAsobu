@@ -2364,6 +2364,26 @@
 		)
 		(uuid "e51b2c72-8ea5-44c5-9e88-fe6b5b7c72e2")
 	)
+	(text_box "実際にはスイッチではなくて単に\nターミナルに使いたい方を差すだけ。"
+		(exclude_from_sim no)
+		(at 43.18 22.86 0)
+		(size 30.48 5.08)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(fill
+			(type none)
+		)
+		(effects
+			(font
+				(face "源ノ角ゴシック Code JP M")
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "e7b32367-c4a5-4cf0-bd71-c577fa21dc7c")
+	)
 	(text "External power supply"
 		(exclude_from_sim no)
 		(at 46.99 18.288 0)
@@ -3850,7 +3870,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "0.1u"
+		(property "Value" "1u"
 			(at 105.41 58.166 0)
 			(effects
 				(font
