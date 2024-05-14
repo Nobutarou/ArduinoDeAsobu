@@ -89,3 +89,36 @@ https://www.fa.omron.co.jp/products/family/2675/lineup.html
 
 回路図を見直して 300Ωが気になったが、実測したところ目に見える電圧低下はなかったので、他に
 使い道もないので 300Ωを消費することにする。
+
+あと忘れやすいが RA3 のリセットピンは内部でプルアップされてるので、こちらからのプルアップ
+は不要。
+
+設計図↓
+![設計図 2.0](./pic_version/librecad/timer02.png)
+
+部品表
+
+| 記号 | 品名等                                                 | 個数 |
+| ---  | -----------------------------------------------------  | ---  |
+| C1   | 0.1uF                                                  | 1    |
+| IS1  | IC socket 8P                                           | 1    |
+| JR1,2| Jumper register 0 ohm                                  | 2    |
+| M1   | PIC12F1840                                             | 1    |
+| PH1  | Pin header 3P                                          | 1    |
+| PH2,3| Pin header 4P                                          | 2    |
+| PS1,2| Pin socket 4P                                          | 2    |
+| R1   | Volume 500 ohm                                         | 1    |
+| R2-5 | 300 ohm                                                | 4    |
+| SW1  | Toggle switch                                          | 1    |
+| SW2  | Rotary switch                                          | 1    |
+| UB1  | Universal board 12x7                                   | 1    |
+| UB2  | Universal board 8x7                                    | 1    |
+| XH1  | XH header 2P                                           | 1    |
+
+ケーブル類
+
+| 品名等                                                          | 個数  |
+| -------------------------------------------------------------   | ----- |
+| XH ハウジング 2P                                                | 2     |
+| XH コンタクト                                                   | 4     |
+| AWG24 ケーブル                                                  | 適当  |
