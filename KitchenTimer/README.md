@@ -115,10 +115,11 @@ https://www.fa.omron.co.jp/products/family/2675/lineup.html
 | UB2  | Universal board 8x7                                    | 1    |
 | XH1  | XH header 2P                                           | 1    |
 
-ケーブル類
+ケーブル、スピーカー
 
 | 品名等                                                          | 個数  |
 | -------------------------------------------------------------   | ----- |
 | XH ハウジング 2P                                                | 2     |
 | XH コンタクト                                                   | 4     |
 | AWG24 ケーブル                                                  | 適当  |
+| スピーカー                                                      | 1     |
