@@ -146,7 +146,7 @@ USB ケーブルも
 
 コンデンサ無し↓
 
-![3.3V テスト C 無し](./figures/v1.0_3v3_test_noC.png
+![3.3V テスト C 無し](./figures/v1.0_3v3_test_noC.png)
 
 0.1uF 追加。少しは効果がある
 
