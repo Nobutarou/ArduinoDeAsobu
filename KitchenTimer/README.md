@@ -126,6 +126,4 @@ https://www.fa.omron.co.jp/products/family/2675/lineup.html
 
 ![完成品](./photos/キッチンタイマー2.0.jpeg)
 
-感想:
-
-- UI となる両スイッチを上段にしたことで、他と干渉せずに操作しやすい
+v1.0 に比べると雲泥の差で操作しやすい。
