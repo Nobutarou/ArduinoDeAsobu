@@ -123,3 +123,9 @@ https://www.fa.omron.co.jp/products/family/2675/lineup.html
 | XH コンタクト                                                   | 4     |
 | AWG24 ケーブル                                                  | 適当  |
 | スピーカー                                                      | 1     |
+
+![完成品](./photos/キッチンタイマー2.0.jpeg)
+
+感想:
+
+- UI となる両スイッチを上段にしたことで、他と干渉せずに操作しやすい
