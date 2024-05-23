@@ -104,7 +104,7 @@ https://www.fa.omron.co.jp/products/family/2675/lineup.html
 | IS1  | IC socket 8P                                           | 1    |
 | JR1,2| Jumper register 0 ohm                                  | 2    |
 | M1   | PIC12F1840                                             | 1    |
-| PH1  | Pin header 3P                                          | 1    |
+| PH1  | Pin socket 3P (注1)                                    | 1    |
 | PH2,3| Pin header 4P                                          | 2    |
 | PS1,2| Pin socket 4P                                          | 2    |
 | R1   | Volume 500 ohm                                         | 1    |
@@ -114,6 +114,8 @@ https://www.fa.omron.co.jp/products/family/2675/lineup.html
 | UB1  | Universal board 12x7                                   | 1    |
 | UB2  | Universal board 8x7                                    | 1    |
 | XH1  | XH header 2P                                           | 1    |
+
+1) 図面はピンヘッダとしてるけどピンソケットの間違い。
 
 ケーブル、スピーカー
 
