@@ -2106,7 +2106,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "850622fe-f939-482f-b47b-2a83ba6742ea")
-		(property "Reference" "U3"
+		(property "Reference" "U2"
 			(at 93.345 31.75 0)
 			(effects
 				(font
@@ -2194,7 +2194,7 @@
 		(instances
 			(project "MCP9700"
 				(path "/404faf25-665b-4e5e-b4dc-0f02329db52a"
-					(reference "U3")
+					(reference "U2")
 					(unit 1)
 				)
 			)
