@@ -4,6 +4,14 @@
  *
  * Created on 2024/05/19, 20:27
  */
+// CONFIG1
+#pragma config FEXTOSC = OFF    // FEXTOSC External Oscillator mode Selection bits (Oscillator not enabled)
+#pragma config RSTOSC = HFINT32 // Power-up default value for COSC bits (HFINTOSC with 2x PLL (32MHz))
+#pragma config CLKOUTEN = OFF   // Clock Out Enable bit (CLKOUT function is disabled; I/O or oscillator function on OSC2)
+#pragma config CSWEN = ON       // Clock Switch Enable bit (Writing to NOSC and NDIV is allowed)
+#pragma config FCMEN = ON       // Fail-Safe Clock Monitor Enable (Fail-Safe Clock Monitor is enabled)
+
+// CONFIG2
 #pragma config MCLRE = ON       // Master Clear Enable bit (MCLR/VPP pin function is MCLR; Weak pull-up enabled)
 #pragma config PWRTE = OFF      // Power-up Timer Enable bit (PWRT disabled)
 #pragma config WDTE = ON        // Watchdog Timer Enable bits (WDT enabled, SWDTEN is ignored)
@@ -26,9 +34,9 @@
 
 #define _XTAL_FREQ 8000000
 
-#define V_0degC 500.0 // [mV]
-#define T_C     10.0  // [mV/℃]
-#define V_REF   1024.0 // [mV]
+#define V_0degC 500.0f // [mV]
+#define T_C     10.0f  // [mV/℃]
+#define V_REF   1024.0f // [mV]
 
 // 設計
 // V_OUT ピンは RA4 に接続
@@ -79,7 +87,7 @@ void main(void) {
                                       // だけどね
     T_A= (V_OUT - V_0degC)/T_C;
     PORTC = (int)T_A;  
-    __delay_ms(4700); 
+    __delay_ms(1000); 
   }
 
   return;
