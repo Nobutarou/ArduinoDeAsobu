@@ -78,8 +78,8 @@ void main(void) {
     V_OUT = V_OUT_ADC/1023.0 * V_REF; // V_REF=1024 なら、ほぼ ADC の値そのままでも良いん
                                       // だけどね
     T_A= (V_OUT - V_0degC)/T_C;
-    PORTC = (int)T_A;
-    __delay_ms(1000);
+    PORTC = (int)T_A;  
+    __delay_ms(4700); 
   }
 
   return;
