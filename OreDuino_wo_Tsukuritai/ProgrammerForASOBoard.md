@@ -212,3 +212,49 @@ avrdude -v -V -c ft232r -p m328p -Uflash:w:Blink.ino.with_bootloader.hex:i
 実際に書き込んで見たところ。左が親機で、右が子機。
 
 ![書き込んでみたところ](./ProgrammerForAsoBoard/pictures/左から右にLチカ書き込み.jpg)
+
+## ASOBoard as Programmer for Breadboard v1.0
+
+ASOBoard のマイナーアップデートを考えていたところ、そもそもブレッドボードで、
+
+https://x.gd/lBr5Q 
+
+の回路で書き込みができる物が欲しくなってきた。毎回やるたびにどこか間違えるし、かと言って事
+前テストをせずに ASOBoard を作ってから書き込むのはトラブル対応に弱すぎると思う。
+
+方針としては
+
+- ブレッドボードには ATMega328P のみ差す
+- つまり R 10k, クリスタルと発振用のコンデンサは、こちらが準備する。実際には村田のセラロッ
+  クを使う予定。
+
+あと ASOBoard の PIC プログラムシールドを作ったときに、XH コネクタを PIC の真上に来る設計
+にしたところ、コネクタのはんだと PIC が干渉して、ちゃんと最後まで差せないという問題が起き
+た。
+
+https://x.gd/vJV9x
+
+そこで今回は
+
+- 長くなって良いので ATMega328P の上にはんだが来ないように部品配置する
+
+という 3 方針としてみる。
+
+親機は ASOBoard as Programmer v1.0 と同じ。子機は 5列のブレッドボードに入るように狭くして
+10k 抵抗とセラロックを載せれば OK のはず。ケーブルは ASOBoard as Programmer v1.0 から外し
+て使おう。もし頻繁に両者を使うことになるようだったら、作ろう。
+
+子機の設計図
+
+![子機設計図](./ProgrammerForAsoBoard/librecad/ASB_as_Prog_for_BredB_1.0-client.png)
+
+子機部品表
+
+| 記号   | 品目、品番                                           | 個数    |
+| ---    | ---                                                  | ---     |
+| JR1,2  | ジャンパ                                             | 2       |
+| PH2    | ピンヘッダ 8P                                        | 1       |
+| PH3-5  | ピンヘッダ 2P                                        | 3       |
+| PH6    | ピンヘッダ 4P                                        | 1       |
+| UB1    | ユニバーサル基板 12x14P                              | 1       |
+| XH2    | XH ヘッダ 6P                                         | 1       |
