@@ -1,3 +1,5 @@
+今のところ [ASOBorad.md](./ASOBorad.md) で自作中。
+
 # 安価なArduinoの作りかた
 
 信仰上の理由により、中華互換品を除く。
