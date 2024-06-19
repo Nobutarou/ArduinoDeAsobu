@@ -261,3 +261,9 @@ https://x.gd/vJV9x
 | UB1    | ユニバーサル基板 12x14P                              | 1       |
 | X1     | 村田のセラロック 16MHz                               | 1       |
 | XH2    | XH ヘッダ 6P                                         | 1       |
+
+完成品。ブートローダと Lチカの書き込みに成功。
+
+![完成図](./ProgrammerForAsoBoard/pictures/ASOBoard_ATMegaProgrammer_on_BredBoard_1.0.jpg)
+
+これでもまだ底付きするが、まあ妥協しておこう。
