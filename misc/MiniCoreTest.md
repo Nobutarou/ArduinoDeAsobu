@@ -4,7 +4,7 @@ https://github.com/MCUdude/MiniCore
 
 のテスト
 
-# ArduinoISP は動くのか
+# ArduinoISP は動くのか (結論: 動く)
 
 手順
 
@@ -25,6 +25,24 @@ tk500_getsync() warning: attempt 1 of 10: not in sync: resp=0xa0
 このことから MiniCore では ArduinoISP は使えないようだ。
 
 つまり Arduino (OptiBoot) 自体を無くすことは、危険だと言うことだ。
+
+というのは全て間違いだった。
+
+ここによると、RST-GND に 10uF のコンデンサを入れたら動いたとある。
+
+https://github.com/MCUdude/MiniCore/issues/271
+
+さらにここによると要は USB シリアル変換器を遠しているボードは 10uF 入れてリセットを防げと
+ある。
+
+https://docs.arduino.cc/built-in-examples/arduino-isp/ArduinoISP/?queryID=undefined
+
+つまり OptiBoot はボーレート 115200 で avrdude コマンドは 19200 を発行しているから握手でき
+ずに、ArduinoISP プログラムが起動する。こっちは 19200 で握手できるようになっている。なので
+OptiBoot の場合、コンデンサを挟まなくても動作した。
+
+urboot の場合、ボーレートは可変なので avrdude コマンドと握手してしまう。そのため
+ArduinoISP が起動せずエラーとなってしまう、ということだと思う。
 
 # ボード選択を Arduino UNO で書き込めるのか
 
