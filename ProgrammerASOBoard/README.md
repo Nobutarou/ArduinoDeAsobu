@@ -267,3 +267,26 @@ https://x.gd/vJV9x
 ![完成図](./ProgrammerForAsoBoard/pictures/ASOBoard_ATMegaProgrammer_on_BredBoard_1.0.jpg)
 
 これでもまだ底付きするが、まあ妥協しておこう。
+
+## ASOBoard as Programmer 親機 v1.1
+
+親機のみの変更。RST-GND 間に 10uF を挿入。MiniCore 使用時にリセットが掛かると avrdude が
+urboot ブートローダと握手してしまうので、リセットを掛からないようにする。シミュレーション
+してみれば、RST ピンへの電圧が DTR の影響をほとんど受けないことが分かる (いつでもできるの
+で割愛)。
+
+![親機 v1.1](./ProgrammerForAsoBoard/librecad/ASB_as_Prog_v1.1.png)
+
+ケーブル、子機は v1.0 のものをそのまま使える。コンデンサは充電時間を待てるなら大きくても良
+い。まあ 10uF 台が現実的なところではないだろうか。
+
+部品表 v1.1
+
+|記号    | 品番、品目                                   | 個数    |
+| ---    | ---                                          | ---     |
+| C1     | 10uF~                                        | 1       |
+| PH1    | ピンヘッダ 8P                                | 1       |
+| PH2-5  | ピンヘッダ 2P                                | 4       |
+| UB1    | ユニバーサル基板 15x14P                      | 1       |
+| XH1    | XH ヘッダ 6P                                 |   1     |
+
