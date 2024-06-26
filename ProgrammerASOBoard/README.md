@@ -290,3 +290,6 @@ urboot ブートローダと握手してしまうので、リセットを掛か�
 | UB1    | ユニバーサル基板 15x14P                      | 1       |
 | XH1    | XH ヘッダ 6P                                 |   1     |
 
+子機に Lチカを書き込んだところ
+
+![完成品](./ProgrammerForAsoBoard/pictures/ABProg_prime_v1.1.jpg)
