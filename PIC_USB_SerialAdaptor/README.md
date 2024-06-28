@@ -210,3 +210,10 @@ USB ケーブルも
 なんか LRX, LTX 線を使って LED 光らせたくなってきた。
 
 [回路図 v1.2](./kicad/pic16f1455_serial_adaptor_1.2/pic16f1455_serial_adaptor_1.2.pdf)
+
+io_mapping.h を読むと LED を付けるときは LOW output で電流を引き込み、消すときは input に
+して絶縁している。PIC と LED への電圧の違いを踏まえて、単純に High, Low にはしていないとの
+こと。なので、抵抗を並列にしても、抵抗同士で電流が流れることはない (input で溜まった電荷の
+吐き出しによる電流はあるだろうが、無視できるだろう、知らんけど)
+
+
