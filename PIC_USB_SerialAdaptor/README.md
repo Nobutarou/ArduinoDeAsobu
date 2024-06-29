@@ -240,3 +240,6 @@ io_mapping.h を読むと LED を付けるときは LOW output で電流を引�
 
 *1) スペースに問題がなければヒロスギ LED スペーサーを敷く。
 
+完成品。適当に Serial.print() をしている所。
+
+![完成品 v1.2](./figures/PIC16F1455_UART_v1.2.jpg)
