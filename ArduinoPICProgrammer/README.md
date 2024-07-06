@@ -169,6 +169,9 @@ XH コネクタは配置を変えないようにしようとしてたのに、�
 
 [回路図](./kicad/ASB_a-p-prog_v1.1/ASB_a-p-prog_v1.1.pdf)
 
+設計図
+
+![設計図](./librecad/ASO_APProg_1.1.png)
 
 
 ## fpicprog はあきらめた件
