@@ -2086,7 +2086,7 @@
 		)
 		(uuid "f05e3c64-d25d-4808-819b-becc3b9aabc9")
 	)
-	(text_box "C1: 100uF 前後で OK\nC2: 0.33uF 以上で多分 OK"
+	(text_box "C1: Roughly 100uF\nC2: C2 >= 0.33uF, Ceramic\nC3: C3 >= 2.2uF, Ceramic"
 		(exclude_from_sim no)
 		(at 88.9 96.52 0)
 		(size 30.48 7.62)
@@ -3700,7 +3700,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "cc528210-0b09-4f24-aa18-d29e24e4c514")
-		(property "Reference" "J3"
+		(property "Reference" "J2"
 			(at 43.18 16.51 0)
 			(effects
 				(font
@@ -3761,7 +3761,7 @@
 		(instances
 			(project ""
 				(path "/e15c2708-3073-48fd-862b-d302223bf0d2"
-					(reference "J3")
+					(reference "J2")
 					(unit 1)
 				)
 			)
@@ -3923,7 +3923,7 @@
 		(dnp no)
 		(fields_autoplaced yes)
 		(uuid "de1a8b61-d3ff-4157-bebd-fcd46095f47b")
-		(property "Reference" "J2"
+		(property "Reference" "J3"
 			(at 24.13 83.82 0)
 			(effects
 				(font
@@ -3984,7 +3984,7 @@
 		(instances
 			(project ""
 				(path "/e15c2708-3073-48fd-862b-d302223bf0d2"
-					(reference "J2")
+					(reference "J3")
 					(unit 1)
 				)
 			)
