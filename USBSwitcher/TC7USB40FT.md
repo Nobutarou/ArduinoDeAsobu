@@ -132,3 +132,8 @@ Low 判定V_IL 最大値は 0.25 x VCC = 0.825V くらいあるので、こち�
 
 というわけで考えた
 [回路1.2](./TC7USB40FT/kicad/TC7USB40FT_1.2/TC7USB40FT_1.2.pdf)
+
+無事、R1=100kΩ, R2=56kΩでブレッドボード試験に成功したので、設計図はこうなる。
+
+![設計図1.2](./TC7USB40FT/librecad/TC7USB40FT_1.2.png)
+
