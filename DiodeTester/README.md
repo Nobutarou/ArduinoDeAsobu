@@ -20,9 +20,6 @@
 
 LED は逆耐圧が 5V ないものも世の中にはあるようなので、あくまで壊しても良いときだけ使おう。
 
-ソース:
-
 [ソース](./arduino/DiodeChecker1.0.ino)
 
-回路図:
-
+[回路図](./kicad/DiodeTester1.0/DiodeTester1.0.pdf)
