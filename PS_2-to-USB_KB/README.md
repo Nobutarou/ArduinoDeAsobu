@@ -34,3 +34,38 @@ mcc_generated_files/pin_manager.c:84:5: error: use of undeclared identifier 'WPU
 というとで RB ポートは自分は使わないので RB ポートに関する先のビット操作を全て削除してみる。
 
 あ、通った。
+
+```
+mcc_generated_files/tmr2.c:93:: warning: (520) function "_TMR2_StopTimer" is never called
+mcc_generated_files/tmr2.c:99:: warning: (520) function "_TMR2_ReadTimer" is never called
+mcc_generated_files/tmr2.c:108:: warning: (520) function "_TMR2_WriteTimer" is never called
+mcc_generated_files/tmr2.c:114:: warning: (520) function "_TMR2_LoadPeriodRegister" is never called
+mcc_generated_files/eusart.c:137:: warning: (520) function "_EUSART_is_rx_ready" is never called
+mcc_generated_files/eusart.c:142:: warning: (520) function "_EUSART_is_tx_done" is never called
+mcc_generated_files/eusart.c:147:: warning: (520) function "_EUSART_get_last_status" is never called
+mcc_generated_files/eusart.c:151:: warning: (520) function "_EUSART_Read" is never called
+usb/usb_device.c:1077:: warning: (520) function "_USBStallEndpoint" is never called
+usb/usb_device.c:1133:: warning: (520) function "_USBCancelIO" is never called
+usb/usb_device.c:1251:: warning: (520) function "_USBDeviceDetach" is never called
+usb/usb_device.c:3077:: warning: (520) function "_USBGet1msTickCount" is never called
+```
+
+使われてないファンクションが沢山あるみたい。気持悪いのでコメントアウトしていく。
+
+### キー信号変換
+
+信号変換は ps2usb.c でやっていると思う。
+
+[PS/2 スキャンコード](https://www.ne.jp/asahi/shared/o-family/ElecRoom/AVRMCOM/PS2_RS232C/KeyCordList.pdf)
+
+の 0x83 までの HID のキーコードを ps2UsbMap[] に 0x00 から順番に書き込み、それ以降を
+ps2ExtUsbMap[] に書き込んでいるように見える。
+
+[HID のコード](https://bsakatu.net/doc/usb-hid-to-scancode/)
+の hex 値。JIS 配列のキーも記載がある。
+
+ps2ExtUsbMap は PS/2 スキャンコードで E0 で始まるものだと思う。E0,11 番が E6 右Alt と言う
+ことだと思う
+
+ps2_keyboard.h にいろいろ定義されてるけど、全然使われてないので、これは無視して良いと思う。
+
