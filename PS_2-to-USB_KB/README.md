@@ -6,4 +6,5 @@
 
 https://github.com/Nobutarou/at2usb_jp
 
-
+設計図
+![設計図1.0](./librecad/ps2toUSB_v1.0.pdf)
