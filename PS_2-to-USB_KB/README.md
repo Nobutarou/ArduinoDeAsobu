@@ -6,7 +6,7 @@
 
 https://github.com/Nobutarou/at2usb_jp
 
-![設計図1.0](./librecad/ps2toUSB_v1.0.pdf)
+[設計図1.0](./librecad/ps2toUSB_v1.0.pdf)
 
 部品表
 
@@ -31,3 +31,5 @@ https://github.com/Nobutarou/at2usb_jp
 |       | 4芯シールド線, 好きな長さ | 1 |
 |       | XHP コネクタ 4P           | 1 |
 |       | XH 端子                   | 4 |
+
+![完成品1.0](./fig/PS_2-to-USB_1.0.jpg)
