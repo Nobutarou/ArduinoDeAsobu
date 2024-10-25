@@ -47,6 +47,6 @@ RESET をヘッダに出しているのは、本機をプログラムすると�
 で書き込むから、これも不要だ。
 
 そんなこんなで
-[回路図1.0](./kicad/USBasp_1.0/USBasp_1.0.kicad_pcb)
+[回路図1.0](./kicad/USBasp_1.0/USBasp_1.0.pdf)
 
 
