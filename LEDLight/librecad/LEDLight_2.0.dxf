@@ -1121,9 +1121,9 @@ AcDbViewportTableRecord
  21
 1
  12
-46.39317601333951
+51.56892964625832
  22
-86.94632483466749
+84.81137114731249
  13
 0
  23
@@ -1149,7 +1149,7 @@ AcDbViewportTableRecord
  37
 0
  40
-92.22570941624592
+81.11320089379595
  41
 1.564336372847011
  42
@@ -2647,7 +2647,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-azomix
+iso
  70
     0
  40
@@ -2661,7 +2661,7 @@ azomix
  42
 1
   3
-azomix
+iso
   4
 
   0
@@ -2675,7 +2675,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-STANDARD
+azomix
  70
     0
  40
@@ -2689,7 +2689,7 @@ STANDARD
  42
 1
   3
-STANDARD
+azomix
   4
 
   0
@@ -2703,7 +2703,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-unicode
+STANDARD
  70
     0
  40
@@ -2717,7 +2717,7 @@ unicode
  42
 1
   3
-unicode
+STANDARD
   4
 
   0
@@ -2731,7 +2731,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-iso
+unicode
  70
     0
  40
@@ -2745,7 +2745,7 @@ iso
  42
 1
   3
-iso
+unicode
   4
 
   0
@@ -16325,6 +16325,150 @@ iso
  44
 1.54
   0
+LINE
+  5
+2A1
+100
+AcDbEntity
+  8
+3.3V line
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+47.61999999999676
+ 20
+135.0600000000008
+ 11
+45.07999999999686
+ 21
+135.0600000000008
+  0
+LINE
+  5
+2A2
+100
+AcDbEntity
+  8
+3.3V line
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+45.07999999999686
+ 20
+135.0600000000008
+ 11
+45.07999999999686
+ 21
+117.2800000000007
+  0
+LINE
+  5
+2A3
+100
+AcDbEntity
+  8
+3.3V line
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+45.07999999999686
+ 20
+117.2800000000007
+ 11
+47.61999999999676
+ 21
+117.2800000000007
+  0
+LINE
+  5
+2A4
+100
+AcDbEntity
+  8
+0_GND
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+45.07999999999686
+ 20
+152.8400000000009
+ 11
+52.69999999999654
+ 21
+152.8400000000009
+  0
+LINE
+  5
+2A5
+100
+AcDbEntity
+  8
+0_GND
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+52.69999999999654
+ 20
+152.8400000000009
+ 11
+52.69999999999654
+ 21
+117.2800000000007
+  0
+LINE
+  5
+2A6
+100
+AcDbEntity
+  8
+0_GND
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbLine
+ 10
+45.07999999999686
+ 20
+150.3000000000009
+ 11
+52.69999999999654
+ 21
+150.3000000000009
+  0
 ENDSEC
   0
 SECTION
@@ -16357,7 +16501,7 @@ AcDbDictionary
   0
 PLOTSETTINGS
   5
-2A1
+2A7
 100
 AcDbPlotSettings
   6
