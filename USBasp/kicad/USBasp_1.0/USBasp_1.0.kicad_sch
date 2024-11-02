@@ -1753,6 +1753,12 @@
 		(uuid "208693a4-d5df-4e15-9e36-890c34dd8867")
 	)
 	(junction
+		(at 41.91 48.26)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "d52d10df-da60-4cd4-ba8b-f4e01fe08148")
+	)
+	(junction
 		(at 30.48 133.35)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1864,6 +1870,16 @@
 	)
 	(wire
 		(pts
+			(xy 34.29 48.26) (xy 34.29 34.29)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "795aa94d-88f6-492d-8e3e-403c8d020032")
+	)
+	(wire
+		(pts
 			(xy 24.13 41.91) (xy 26.67 41.91)
 		)
 		(stroke
@@ -1924,6 +1940,16 @@
 	)
 	(wire
 		(pts
+			(xy 41.91 48.26) (xy 34.29 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "a186cf12-7010-4548-b7df-0914a15f8cbf")
+	)
+	(wire
+		(pts
 			(xy 38.1 133.35) (xy 40.64 133.35)
 		)
 		(stroke
@@ -1951,6 +1977,16 @@
 			(type default)
 		)
 		(uuid "c8a3bf9b-d37f-4eba-827f-32a367f2b421")
+	)
+	(wire
+		(pts
+			(xy 49.53 48.26) (xy 41.91 48.26)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cf27daf9-a333-4bf5-9a5e-4a762d3327e5")
 	)
 	(wire
 		(pts
@@ -2240,7 +2276,7 @@
 	)
 	(global_label "D-"
 		(shape input)
-		(at 34.29 34.29 0)
+		(at 49.53 48.26 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -2250,7 +2286,7 @@
 		)
 		(uuid "4f825fff-6d84-40e5-9377-a32564a59698")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 40.1176 34.29 0)
+			(at 55.3576 48.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -2493,6 +2529,28 @@
 		(uuid "b8cf77ae-9043-46ea-841c-f90a6d507a4e")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
 			(at 40.1176 31.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+	)
+	(global_label "5V"
+		(shape input)
+		(at 41.91 40.64 90)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "cc09e5f6-a08c-4e76-9290-d85b458fb22b")
+		(property "Intersheetrefs" "${INTERSHEET_REFS}"
+			(at 41.91 35.3567 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3553,6 +3611,76 @@
 			(project ""
 				(path "/3d8db78b-f3e8-43dd-b475-5cbf51decb09"
 					(reference "J1")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 41.91 44.45 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "9bd2ce09-c7ac-4cc4-be96-2b0b5bfa2271")
+		(property "Reference" "R4"
+			(at 44.45 43.1799 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "2k"
+			(at 44.45 45.7199 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 40.132 44.45 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 41.91 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 41.91 44.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "07d57a02-6599-45de-a6db-d771bbe144f9")
+		)
+		(pin "2"
+			(uuid "39ec1a5e-8a7f-4f10-8d33-566d1d4bc452")
+		)
+		(instances
+			(project "USBasp_1.0"
+				(path "/3d8db78b-f3e8-43dd-b475-5cbf51decb09"
+					(reference "R4")
 					(unit 1)
 				)
 			)
