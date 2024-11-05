@@ -94,3 +94,42 @@ USB デバイスとして認識するところまではできたが、どうや�
 | Y1         | 水晶 12MHz              | 1    |
 
 *) は任意
+
+結果は、あっさり動き ATmega8P に対して Minicore ブートローダと Lチカの書き込みに成功。原因
+は分からない。
+
+ただし制作から試行までで、一カ所設計間違いを見つけた。D- のプルアップを間違って D+ に行な
+っていた。設計図と回路図と実物を見比べながら確認しやすい一方で、ブレッドボードのときは設計
+図なしでいきなり配線するので、間違いに気がつきにくい。5V と GND のショートも何度もやってた
+りする。というようなことを考えるとこの手のマイコン系のテストは、最初から実装してみても良い
+のかもしれない。ブレッドボードで動かなくても、結局実装して確認するのであれば、やらなくて良
+さそう。
+
+あと Udev のルールが付属の物だと動かなかったので、こうしてある。
+
+```
+# USBasp - USB programmer for Atmel AVR controllers
+# Copy this file to /etc/udev/rules.d so
+
+#SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", SYSFS{idVendor}=="16c0", SYSFS{idProduct}=="05dc", MODE="0666"
+SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ENV{ID_VENDOR_ID}=="16c0", ENV{ID_MODEL_ID}=="05dc", MODE="0666"
+
+#ID_BUS=usb
+#ID_MODEL=USBasp
+#ID_MODEL_ENC=USBasp
+#ID_MODEL_ID=05dc
+#ID_SERIAL=www.fischl.de_USBasp
+#ID_VENDOR=www.fischl.de
+#ID_VENDOR_ENC=www.fischl.de
+#ID_VENDOR_ID=16c0
+#ID_REVISION=0104
+#ID_USB_MODEL=USBasp
+#ID_USB_MODEL_ENC=USBasp
+#ID_USB_MODEL_ID=05dc
+#ID_USB_SERIAL=www.fischl.de_USBasp
+#ID_USB_VENDOR=www.fischl.de
+#ID_USB_VENDOR_ENC=www.fischl.de
+#ID_USB_VENDOR_ID=16c0
+#ID_USB_REVISION=0104
+```
+
