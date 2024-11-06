@@ -133,3 +133,17 @@ SUBSYSTEM=="usb", ENV{DEVTYPE}=="usb_device", ENV{ID_VENDOR_ID}=="16c0", ENV{ID_
 #ID_USB_REVISION=0104
 ```
 
+## ver 1.1
+
+D+, D- の定電圧ダイオードが ATmega8 側の 5V を USB 側に伝えないためだと分かった。
+
+https://tinyurl.com/29rq6v27
+
+ATmega8 側が 5V, USB 側が入力 (コンデンサ) となっているときに何もしないと 5V 入ってしまう。
+
+ということで追加する。
+
+[回路図1.1](./kicad/USBasp_1.1/USBasp_1.1.pdf)
+
+アノテーションを振り直したので記号に一貫性がないけど 1.0 から R1,3 = 75Ω と D1, D2 3.6V
+ツェナーダイオードを追加している。
