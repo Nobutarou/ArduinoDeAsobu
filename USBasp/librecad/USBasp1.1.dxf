@@ -23,17 +23,17 @@ $INSBASE
   9
 $EXTMIN
  10
-0.2241462054841818
+52.36999999999628
  20
-1.709999999999582
+53.78000000000073
  30
 0
   9
 $EXTMAX
  10
-84.44999999999528
+61.80090355508684
  20
-79.51697691903682
+66.96000000000073
  30
 0
   9
@@ -1121,9 +1121,9 @@ AcDbViewportTableRecord
  21
 1
  12
-52.18954689047897
+40.44274995349033
  22
-40.13662561927841
+33.54943558687493
  13
 0
  23
@@ -1149,9 +1149,9 @@ AcDbViewportTableRecord
  37
 0
  40
-79.39812164130794
+29.31877483826548
  41
-1.561122244488978
+1.513622603430878
  42
 50
  43
@@ -2285,7 +2285,7 @@ AcDbLayerTableRecord
   2
 0_draft
  70
-    1
+    0
  62
     7
   6
@@ -2649,7 +2649,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-iso
+unicode
  70
     0
  40
@@ -2663,7 +2663,7 @@ iso
  42
 1
   3
-iso
+unicode
   4
 
   0
@@ -2677,7 +2677,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-unicode
+azomix
  70
     0
  40
@@ -2691,7 +2691,7 @@ unicode
  42
 1
   3
-unicode
+azomix
   4
 
   0
@@ -2705,7 +2705,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-STANDARD
+iso
  70
     0
  40
@@ -2719,7 +2719,7 @@ STANDARD
  42
 1
   3
-STANDARD
+iso
   4
 
   0
@@ -2733,7 +2733,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-azomix
+STANDARD
  70
     0
  40
@@ -2747,7 +2747,7 @@ azomix
  42
 1
   3
-azomix
+STANDARD
   4
 
   0
