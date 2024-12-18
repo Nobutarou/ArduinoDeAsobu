@@ -3911,12 +3911,6 @@
 		(uuid "bf14feef-d269-4a3e-bd92-a1d81c6e229a")
 	)
 	(junction
-		(at 121.92 140.97)
-		(diameter 0)
-		(color 0 0 0 0)
-		(uuid "c47bbe3f-0890-4045-9353-41faf8c35b53")
-	)
-	(junction
 		(at 152.4 92.71)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -3945,6 +3939,10 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "f4eafa38-68f9-4694-bc48-7084390c5d76")
+	)
+	(no_connect
+		(at 96.52 125.73)
+		(uuid "7e397baf-00d9-4200-ae52-0dd5ce45c646")
 	)
 	(wire
 		(pts
@@ -5086,28 +5084,6 @@
 			)
 		)
 	)
-	(global_label "3V3"
-		(shape input)
-		(at 96.52 125.73 270)
-		(fields_autoplaced yes)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "8be572a3-d872-4096-acfe-c62b4c1d8b25")
-		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 96.52 132.2228 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify right)
-				(hide yes)
-			)
-		)
-	)
 	(global_label "5V"
 		(shape input)
 		(at 146.05 82.55 90)
@@ -5460,24 +5436,24 @@
 			)
 		)
 	)
-	(global_label "5V"
+	(global_label "3V3"
 		(shape input)
-		(at 121.92 133.35 90)
+		(at 121.92 140.97 180)
 		(fields_autoplaced yes)
 		(effects
 			(font
 				(size 1.27 1.27)
 			)
-			(justify left)
+			(justify right)
 		)
-		(uuid "c2497d55-439f-431f-885e-88dd789e7a9d")
+		(uuid "c43b245c-25fe-4fc0-99a5-7107048b489b")
 		(property "Intersheetrefs" "${INTERSHEET_REFS}"
-			(at 121.92 128.0667 90)
+			(at 115.4272 140.97 0)
 			(effects
 				(font
 					(size 1.27 1.27)
 				)
-				(justify left)
+				(justify right)
 				(hide yes)
 			)
 		)
@@ -6411,75 +6387,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 121.92 137.16 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "303ac06f-7fc6-4e6d-b75d-a4df90bcd973")
-		(property "Reference" "R7"
-			(at 117.348 136.144 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 117.348 138.684 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 120.142 137.16 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 121.92 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 121.92 137.16 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "52d5cec6-bce9-454e-be20-ed9902e17328")
-		)
-		(pin "2"
-			(uuid "e09e3b12-c39d-4857-b19c-61eef6e3a6b7")
-		)
-		(instances
-			(project ""
-				(path "/771e0143-a3a0-4c81-ba67-0e42084fb48e"
-					(reference "R7")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "0Ore:R7FA4M1AB3CFM")
 		(at 107.95 128.27 0)
 		(unit 1)
@@ -6862,75 +6769,6 @@
 			(project "ASOBoardR4_v1.1"
 				(path "/771e0143-a3a0-4c81-ba67-0e42084fb48e"
 					(reference "#PWR018")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 121.92 152.4 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "4c39581a-91b4-4306-8d01-a74c26a2721f")
-		(property "Reference" "R9"
-			(at 117.348 151.384 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 117.348 153.924 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 120.142 152.4 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 121.92 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 121.92 152.4 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "391d4004-3dfc-47d5-a7ab-4d90d3ed70b8")
-		)
-		(pin "2"
-			(uuid "059f83a0-f46b-4fdf-93d6-d241f4185499")
-		)
-		(instances
-			(project "ASOBoardR4_v1.1"
-				(path "/771e0143-a3a0-4c81-ba67-0e42084fb48e"
-					(reference "R9")
 					(unit 1)
 				)
 			)
@@ -8192,71 +8030,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 121.92 156.21 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "aee72b97-eaa3-4d09-84ec-d3cde85fa06f")
-		(property "Reference" "#PWR04"
-			(at 121.92 162.56 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "GND"
-			(at 121.92 160.274 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 121.92 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 121.92 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 121.92 156.21 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "8c06fcc9-7361-480b-b01f-738a8ed12dd5")
-		)
-		(instances
-			(project "ASOBoardR4_v1.1"
-				(path "/771e0143-a3a0-4c81-ba67-0e42084fb48e"
-					(reference "#PWR04")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 134.62 59.69 0)
 		(unit 1)
 		(exclude_from_sim no)
@@ -8315,75 +8088,6 @@
 			(project "ASOBoardR4_v1.1"
 				(path "/771e0143-a3a0-4c81-ba67-0e42084fb48e"
 					(reference "#PWR013")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 121.92 144.78 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(uuid "bea1912c-c578-4bd3-ab87-108ef19cad13")
-		(property "Reference" "R8"
-			(at 117.348 143.764 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Value" "10k"
-			(at 117.348 146.304 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 120.142 144.78 90)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" "~"
-			(at 121.92 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" "Resistor"
-			(at 121.92 144.78 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "28c0e469-a79d-465a-9654-2f9032503494")
-		)
-		(pin "2"
-			(uuid "7c12c57e-8cd7-455c-96a4-7704131b5f92")
-		)
-		(instances
-			(project "ASOBoardR4_v1.1"
-				(path "/771e0143-a3a0-4c81-ba67-0e42084fb48e"
-					(reference "R8")
 					(unit 1)
 				)
 			)
