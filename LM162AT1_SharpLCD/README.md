@@ -68,3 +68,15 @@ ASOBoard 側には 8P の XH コネクタで繋ぐ。LCD 側には基板に挿�
 ば ASOBoard シールド側にも XH 8P のポストを載せるわけだが、結構でかいので、それならもうボ
 リュームと 2x7P のピンヘッダを付けて、直接シールドに付けられるほうがすっきりするのでは？ケ
 ーブルも嵩張るし。
+
+## 疑問
+
+- lcd.print の桁丸めは実は Serial.print と同じように ``lcd.print(1.234,2)`` → 1.23 みたい
+  にできるらしい。
+  - https://akizukidenshi.com/goodsaffix/LM162AT1.pdf
+- [ ] lcd.print でカーソル位置は変化しない？つまり複数回使っても上書きするだけ？
+  - https://akizukidenshi.com/goodsaffix/LM162AT1.pdf
+  - ここを見る限り、カーソルは文字列末尾にありそうなんだが。
+- [ ] カナなどを書くのに例えば「ア」を ``\xb1`` → ``10110001`` と 16進数で書いているんだ
+  が ``\b10110001`` じゃ駄目なんか？
+  - https://mecha-norimaki.com/arduino_start_17/ 
