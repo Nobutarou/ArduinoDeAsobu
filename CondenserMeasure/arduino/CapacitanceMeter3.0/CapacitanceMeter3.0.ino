@@ -22,12 +22,28 @@
 
 #define _analog_pin A0 //測定用アナログピン, PC0
 
+// とりあえず決めておいて、設計の都合で変更できるように
+
+#define _lcd_rs 12
+#define _lcd_en 13
+#define _lcd_d4 10
+#define _lcd_d5 9
+#define _lcd_d6 A1
+#define _lcd_d7 11
+
+#include <LiquidCrystal.h>
+
+const int rs=_lcd_rs, en=_lcd_en, d4=_lcd_d4, d5=_lcd_d5, d6=_lcd_d6, d7=_lcd_d7;
+LiquidCrystal lcd(rs, en, d4, d5, d6, d7);
+
 void(* resetFunc) (void) = 0; //declare reset function @ address 0
 
 void setup()
 {
   Serial.begin(9600);
   Serial.println("Initializing...");
+
+  lcd.begin(16,2);
   
   // ADC の高速化
   // ADCSRA の ADPS0=ADPS2=0, ADPS1=1 とする
@@ -42,11 +58,6 @@ void setup()
   //デジタル4ピンを全部 low にする
   digital_low();
   delay(100);
-
-  Serial.println("Enter to start measureing.");
-  while (Serial.available() == 0) {}; //打ち込みを待つ
-  Serial.read();
-
 }
 
 void loop() {
@@ -111,18 +122,17 @@ void loop() {
     Serial.print(c,16);
     Serial.println(" [uF]");
     
+    lcd.print(c,14);
+    lcd.setCursor(0,1);
+    lcd.print("uF");
+
     discharge();
     delay(td);
     digital_low();
     delay(100);
 
-    //何か打ち込んだらリスタートする
-    //Serial.println("Enter (or reset button) to restart measureing.");
-    //while (Serial.available() == 0) {}; //打ち込みを待つ
-    //Serial.read();
-    //Serial.println("Restarting...");
     Serial.end();
-    resetFunc();
+    while(1){};
   }
   
   //1-4
@@ -164,20 +174,18 @@ void loop() {
     Serial.print("Capacitance: ");
     Serial.print(c,16);
     Serial.println(" [uF]");
+
+    lcd.print(c,14);
+    lcd.setCursor(0,1);
+    lcd.print("uF");
     
     discharge();
     delay(td);
     digital_low();
     delay(100);
 
-    //何か打ち込んだらリスタートする
-    //何か打ち込むのを待つ必要は別にない
-    //Serial.println("Enter (or reset button) to restart measureing.");
-    //while (Serial.available() == 0) {}; //打ち込みを待つ
-    //Serial.read();
-    //Serial.println("Restarting...");
     Serial.end();
-    resetFunc();
+    while(1){};
   }
   
   //2-4
@@ -219,9 +227,17 @@ void loop() {
   if(c>=0.005){
     Serial.print(c,16);
     Serial.println(" [uF]");
+    lcd.print(c,14);
+    lcd.setCursor(0,1);
+    lcd.print("uF");
+    
   } else {
     Serial.print(c*1.0e6,16);
     Serial.println(" [pF]");
+    lcd.print(c*1.0e6,14);
+    lcd.setCursor(0,1);
+    lcd.print("uF");
+    
   }
     
   discharge();
@@ -229,15 +245,8 @@ void loop() {
   digital_low();
   delay(100);
 
-  //何か打ち込んだらリスタートする
-  // ようにしていたが、別にシリアル端末画面がリセットされる分けでもないので
-  // 無条件でリセットすれば良い。
-  //Serial.println("Enter (or reset button) to restart measureing.");
-  //while (Serial.available() == 0) {}; //打ち込みを待つ
-  //Serial.read();
-  //Serial.println("Restarting...");
   Serial.end();
-  resetFunc();
+  while(1){};
 
 }  
 

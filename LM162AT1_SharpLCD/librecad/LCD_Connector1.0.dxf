@@ -91,7 +91,7 @@ STANDARD
   9
 $CLAYER
   8
-0_wire
+0
   9
 $CELTYPE
   6
@@ -803,7 +803,7 @@ $PEXTMAX
   9
 $GRIDMODE
  70
-    0
+    1
   9
 $SNAPSTYLE
  70
@@ -1121,9 +1121,9 @@ AcDbViewportTableRecord
  21
 1
  12
-61.02327354733581
+51.87086328718026
  22
-22.26715293413177
+18.12124429071547
  13
 0
  23
@@ -1149,7 +1149,7 @@ AcDbViewportTableRecord
  37
 0
  40
-93.10864370347927
+63.34445535131933
  41
 1.513622603430878
  42
@@ -1173,7 +1173,7 @@ AcDbViewportTableRecord
  75
     0
  76
-    0
+    1
  77
     0
  78
@@ -2311,7 +2311,7 @@ AcDbLayerTableRecord
   2
 0_wire
  70
-    0
+    1
  62
     3
   6
@@ -22167,6 +22167,52 @@ azomix
  44
 1.54
   0
+MTEXT
+  5
+39B
+100
+AcDbEntity
+  8
+0
+  6
+ByLayer
+ 62
+  256
+370
+   -1
+100
+AcDbMText
+ 10
+60.31999999999605
+ 20
+30.92000000000017
+ 30
+0
+ 40
+1
+ 41
+11.81222222222222
+ 71
+    5
+ 72
+    1
+  1
+逆になってしまっている。
+  7
+azomix
+210
+0
+220
+0
+230
+1
+ 50
+0
+ 73
+    2
+ 44
+1.54
+  0
 ENDSEC
   0
 SECTION
@@ -22199,7 +22245,7 @@ AcDbDictionary
   0
 PLOTSETTINGS
   5
-39B
+39C
 100
 AcDbPlotSettings
   6
