@@ -17,7 +17,7 @@
 
 #define _r_s 1.0e3    //小さい抵抗[Ω]
 #define _r_m  100.0e3 //中くらい抵抗[Ω]
-#define _r_l 10.0e6 //大抵抗[Ω] 300Ωの付け替えをしたときに壊れたのか？10MΩなんだが。。。
+#define _r_l 10.0e6 //大抵抗[Ω] 
 #define _r_discharge 300.0 //放電抵抗[Ω]
 
 #define _analog_pin A0 //測定用アナログピン, PC0
