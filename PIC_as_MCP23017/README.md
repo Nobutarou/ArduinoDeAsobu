@@ -1,5 +1,6 @@
 # 余っている PIC を I/O エキスパンダ MCP23017 としてみたい
 
+MCP23017 見てて、余ってるマイコンでできそうだよなあと思っていたら、
 このようにそのままのことをやってる方がいた。
 [こちら](
 https://kikyoya.wordpress.com/2017/12/04/
@@ -29,3 +30,18 @@ https://docs.sunfounder.com/projects/elite-explorer-kit/ja/latest/appendix/i2c_s
 
 その後、参考にした方のプログラムも動作した。[PIC16F18323 用のソース](
 ./pic16f18323/i2c2asoboard/)
+
+# もう一度 MCP23017 擬態に挑戦
+
+PPS が必要ということが分かったのでデフォルト？ピン配置にこだわる必要がない。RA3 はどのみち
+使えないので、RA4, RA5 を I2C に使い、RC ポートを全部 IO にするほうが素直な気がする。つま
+り GPIOA に RA0~RA2, GPIOB に RC0~RC5 を配置する。
+
+また ```-std=c90``` が必要だったところを直しておきたい。
+
+[ソース](./pic16f18323/true_main.c)
+
+Adafruit MCP23017 ライブラリを使ったテストで使用可能な全 9ピンの digitalWrite を確認。
+[ソース](./arduino/mcp23017_blink/mcp23017_blink.ino)
+
+![テスト動画](./arduino/mcp23017_blink/test.mov)
