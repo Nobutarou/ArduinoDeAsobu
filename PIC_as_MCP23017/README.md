@@ -45,3 +45,11 @@ Adafruit MCP23017 ライブラリを使ったテストで使用可能な全 9ピ
 [ソース](./arduino/mcp23017_blink/mcp23017_blink.ino)
 
 https://youtu.be/OH9FeNeptBQ
+
+LCD LM162AT1 も動かせた。ライブラリはこちら
+
+https://github.com/ATrappmann/LiquidCrystal_MCP23017_I2C/tree/master
+
+[ソース](./arduino/lcd_hello/)
+
+![テスト](./arduino/lcd_hello/pic16f18323_as_mcp23017_lcd.jpg)
