@@ -37,3 +37,7 @@
 |  品番、品目 | 個数 |
 |-----|--------------|
 | LM162AT1 | 1 |
+
+[設計図](./librecad/Adapter1.1.pdf)
+
+[回路図](./kicad/adaptor1.1/adaptor1.1.pdf)
