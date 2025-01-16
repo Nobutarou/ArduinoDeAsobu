@@ -41,3 +41,9 @@
 [設計図](./librecad/Adapter1.1.pdf)
 
 [回路図](./kicad/adaptor1.1/adaptor1.1.pdf)
+
+[こちらの方のライブラリ](https://github.com/ATrappmann/LiquidCrystal_MCP23017_I2C/tree/master)
+の 4ビット版の訂正と LM162AT1 に合わせた変更を行なって Hello World してみたのが
+[こちら](./arduino/)
+
+![Hello World I2C](./picture/LM162AT1_I2C_Hello.jpg)

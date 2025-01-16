@@ -148,7 +148,7 @@ void LiquidCrystal_MCP23017_I2C::begin(uint8_t cols, uint8_t lines, uint8_t dots
   // according to datasheet, we need at least 40ms after power rises above 2.7V
   // before sending commands. Arduino can turn on way before 4.5V so we'll wait 50
   // LM162AT1 は 15ms 待つとある
-  delayMicroseconds(20000);
+  delayMicroseconds(16000);
 
   // Now we pull both RS and R/W low to begin commands
   // LATA=0, LATC=0 やってるから不要な気はする
@@ -172,7 +172,7 @@ void LiquidCrystal_MCP23017_I2C::begin(uint8_t cols, uint8_t lines, uint8_t dots
     // だろうな。それでも十分すぎるほどありがたいけど。
 
     write4bits(0b00110000);
-    delayMicroseconds(4500); // wait min 4.1ms
+    delayMicroseconds(4150); // wait min 4.1ms
 
     // second try
     //write4bits(0x03);
@@ -198,7 +198,7 @@ void LiquidCrystal_MCP23017_I2C::begin(uint8_t cols, uint8_t lines, uint8_t dots
 
     // Send function set command sequence
     command(LCD_FUNCTIONSET | _displayfunction);
-    delayMicroseconds(4500);  // wait more than 4.1ms
+    delayMicroseconds(4150);  // wait more than 4.1ms
 
     // second try
     command(LCD_FUNCTIONSET | _displayfunction);
@@ -269,7 +269,7 @@ void LiquidCrystal_MCP23017_I2C::clear()
 void LiquidCrystal_MCP23017_I2C::home()
 {
   command(LCD_RETURNHOME);  // set cursor position to zero
-  delayMicroseconds(2000);  // this command takes a long time!
+  delayMicroseconds(1600);  // this command takes a long time!
 }
 
 void LiquidCrystal_MCP23017_I2C::setCursor(uint8_t col, uint8_t row)
@@ -421,7 +421,7 @@ void LiquidCrystal_MCP23017_I2C::pulseEnable(void) {
   digitalWrite(_enable_pin, LOW);
   */
   writeEnable(LOW);
-  delayMicroseconds(100);   // commands need > 37us to settle
+  delayMicroseconds(50);   // commands need > 37us to settle
 }
 
 void LiquidCrystal_MCP23017_I2C::write4bits(uint8_t value) {
