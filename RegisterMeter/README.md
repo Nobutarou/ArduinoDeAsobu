@@ -179,3 +179,7 @@ SHARP の LCD [LM162AT1](../LM162AT1_SharpLCD/) の I2C 版で結果表示でき
 | T1 | 端子台 2P | 1 |
 | UB1 | ユニバーサル基板 17x9P | 1 | 
 | | ジャンパ線 | 適量 |
+
+[ソース](./arduino/RegisterMeter_2.0/)
+
+![完成図](./RegisterMeter2.0.jpg)
