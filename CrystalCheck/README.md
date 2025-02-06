@@ -116,3 +116,9 @@ LCD は SHARP LM162AT1。
 | U2     | TC74HC590AP | 1 |
 | UB1    | ユニバーサル基板 17x14P | 1 |
 | XH1    | XH ヘッダ 6P | 1 |
+
+[ソース](./arduinio/CrystalChecker2.0/)
+
+![動作写真](./figure/CrystalChecker2.0.jpg)
+
+UI がやたらと騒がしい。
