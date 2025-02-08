@@ -12,4 +12,6 @@ ISP で Arduino IDE から書き込むことはできる。
 
 まあこれは、おかしいのはマイコンということになるんだろうなあ。
 
+# EEPROM retained にしてはだめな気がする
 
+EEPROM retained で ブートローダを書き込むと、UART での書き込みができない気がする。
