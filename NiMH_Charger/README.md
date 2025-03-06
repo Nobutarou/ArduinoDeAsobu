@@ -134,11 +134,11 @@ $Iorg=\frac{Vin-Vbat}{R}$
 
 ADC の電圧測定値的には Vin --> 1023 であるから、Vbat の読み値を ADCbat とすると
 
-$ Vin:Vbat=1023:ADCbat $
+$Vin:Vbat=1023:ADCbat$
 
 だから
 
-$ ADCbat = \frac{1023 Vbat}{Vin} $
+$ADCbat = \frac{1023 Vbat}{Vin}$
 
 $V_{BAT} = 0.5V$ までは 0.1A にしたいので PWN のデューティ比 D は 100%=255 (マイコンや設定
 によるけど) として 
