@@ -1265,6 +1265,18 @@
 		)
 	)
 	(junction
+		(at 92.71 62.23)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "044a347a-8762-45f9-a4ff-3b9fe707cb4a")
+	)
+	(junction
+		(at 100.33 73.66)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "085e1777-5992-4401-8363-040969b8ffa9")
+	)
+	(junction
 		(at 100.33 44.45)
 		(diameter 0)
 		(color 0 0 0 0)
@@ -1324,13 +1336,13 @@
 	)
 	(wire
 		(pts
-			(xy 92.71 41.91) (xy 92.71 62.23)
+			(xy 92.71 57.15) (xy 92.71 62.23)
 		)
 		(stroke
 			(width 0)
 			(type default)
 		)
-		(uuid "764e0567-018a-421d-af36-d4825d4bc6e6")
+		(uuid "7708b0c6-8ba4-4b0b-bb36-817576f1cd34")
 	)
 	(wire
 		(pts
@@ -1341,6 +1353,26 @@
 			(type default)
 		)
 		(uuid "a260e66b-6bbd-4c15-a4b4-27a76652f8b6")
+	)
+	(wire
+		(pts
+			(xy 92.71 62.23) (xy 92.71 66.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "aa4ca316-6c7f-496b-9377-c0c416187256")
+	)
+	(wire
+		(pts
+			(xy 100.33 73.66) (xy 100.33 67.31)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "b6a3423b-429e-4c23-8acb-693baf791794")
 	)
 	(wire
 		(pts
@@ -1364,6 +1396,16 @@
 	)
 	(wire
 		(pts
+			(xy 92.71 41.91) (xy 92.71 49.53)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d3ab4bfc-b5f4-4306-9432-6d25f0d80d9c")
+	)
+	(wire
+		(pts
 			(xy 100.33 54.61) (xy 100.33 57.15)
 		)
 		(stroke
@@ -1374,6 +1416,16 @@
 	)
 	(wire
 		(pts
+			(xy 92.71 73.66) (xy 100.33 73.66)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "dd3642b3-a248-4127-b799-9d76d1f9bcc0")
+	)
+	(wire
+		(pts
 			(xy 80.01 39.37) (xy 80.01 31.75)
 		)
 		(stroke
@@ -1381,6 +1433,75 @@
 			(type default)
 		)
 		(uuid "f494dd15-60f5-4e26-9966-8e62530d462c")
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 92.71 69.85 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "031dcbdc-40ec-4e6e-9af4-eb8d379b01c6")
+		(property "Reference" "R4"
+			(at 93.98 68.58 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100k"
+			(at 93.98 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.932 69.85 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 92.71 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 92.71 69.85 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "1aad111a-5de1-4ee7-8453-5820163a3eb8")
+		)
+		(pin "1"
+			(uuid "32439150-c5c4-4f46-b58e-a3a75b0dd45a")
+		)
+		(instances
+			(project "NiMhCharger3.0"
+				(path "/866d9a63-1488-411c-99b4-4053267033ec"
+					(reference "R4")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(symbol
 		(lib_id "power:GND")
@@ -1672,7 +1793,7 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 100.33 67.31 0)
+		(at 100.33 73.66 0)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -1681,7 +1802,7 @@
 		(fields_autoplaced yes)
 		(uuid "26b1cc91-dee1-4923-8735-aac06f0050b2")
 		(property "Reference" "#PWR04"
-			(at 100.33 73.66 0)
+			(at 100.33 80.01 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1690,7 +1811,7 @@
 			)
 		)
 		(property "Value" "GND"
-			(at 100.33 72.39 0)
+			(at 100.33 78.74 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1698,7 +1819,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 100.33 67.31 0)
+			(at 100.33 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1707,7 +1828,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 100.33 67.31 0)
+			(at 100.33 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1716,7 +1837,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 100.33 67.31 0)
+			(at 100.33 73.66 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -1797,6 +1918,75 @@
 			(project "NiMhCharger3.0"
 				(path "/866d9a63-1488-411c-99b4-4053267033ec"
 					(reference "#PWR03")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 92.71 53.34 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "897e1099-bcdb-4e50-9f74-1c6b6d87a323")
+		(property "Reference" "R3"
+			(at 93.98 52.07 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "300"
+			(at 93.98 54.61 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 90.932 53.34 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 92.71 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 92.71 53.34 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "2"
+			(uuid "d3ac3b26-5a17-4829-b1ff-5d7a8c2e9970")
+		)
+		(pin "1"
+			(uuid "bcc108c1-beb7-4a23-99f2-81f8291f6e1f")
+		)
+		(instances
+			(project "NiMhCharger3.0"
+				(path "/866d9a63-1488-411c-99b4-4053267033ec"
+					(reference "R3")
 					(unit 1)
 				)
 			)
