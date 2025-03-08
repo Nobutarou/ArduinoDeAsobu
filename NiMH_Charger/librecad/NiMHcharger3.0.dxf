@@ -1121,9 +1121,9 @@ AcDbViewportTableRecord
  21
 1
  12
-180.2930851253248
+137.3978082672342
  22
-4.13602489338597
+-4.437801280322319
  13
 0
  23
@@ -1149,7 +1149,7 @@ AcDbViewportTableRecord
  37
 0
  40
-181.7970941774651
+84.14419290336633
  41
 1.514994829369183
  42
@@ -2651,7 +2651,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-unicode
+kst32b
  70
     0
  40
@@ -2665,7 +2665,7 @@ unicode
  42
 1
   3
-unicode
+kst32b
   4
 
   0
@@ -2679,7 +2679,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-STANDARD
+unicode
  70
     0
  40
@@ -2693,7 +2693,7 @@ STANDARD
  42
 1
   3
-STANDARD
+unicode
   4
 
   0
@@ -2707,7 +2707,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-kst32b
+STANDARD
  70
     0
  40
@@ -2721,7 +2721,7 @@ kst32b
  42
 1
   3
-kst32b
+STANDARD
   4
 
   0
@@ -2939,7 +2939,7 @@ Standard
 289
     3
 340
-5B
+5C
   0
 ENDTAB
   0
@@ -73443,9 +73443,9 @@ AcDbMText
  72
     1
   3
-C12-13: セラコン 0.1uF\PCxx    : 在庫処分コンデンサ\PD11-13: LED\PDC1-3: 電池ケース SN3-1PC\PPH1-6: ピンヘッダ 2P\PPS1-6: ピンソケット 2P\PQ11-13: Nch MOSFET, EKI04036\PR11-13: 抵抗 MPC74-1ohmJ\PR21-23: 抵抗 2.7kΩ\PR
+C12-13: セラコン 0.1uF\PCxx    : 在庫処分コンデンサ\PD11-13: LED\PDC1-3: 電池ケース SN3-1PC\PIS11-13: IC ソケット 8P\PPH1-6: ピンヘッダ 2P\PPS1-6: ピンソケット 2P\PQ11-13: Nch MOSFET, EKI04036\PR11-13: 抵抗 MPC74-1o
   1
-31-33: 抵抗 300Ω、ジャンパ線で様子見\PR41-R43: 抵抗 100kΩ、未実装で様子見\PT1      : ターミナル 2P\PU11-13: PIC12F1501\PUB1,2: ユニバーサル基板 26x21P
+hmJ\PR21-23: 抵抗 2.7kΩ\PR31-33: 抵抗 300Ω、ジャンパ線で様子見\PR41-R43: 抵抗 100kΩ、未実装で様子見\PT1      : ターミナル 2P\PU11-13: PIC12F1501\PUB1,2: ユニバーサル基板 26x21P
   7
 unicode
 210
