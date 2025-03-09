@@ -72,10 +72,13 @@ void main(void) {
 // 回路図、図面、秋月への買い物をしてしまったので、プラス側を止めずに測ることにする。
 // 回路は、ジャンパ線で継ぎ換えるだけで変えられそうだし、ソースも 1023 から引くだけで良い
 // はずだから、とりあえずやってみよう。
-//      set_duty(0); //止めて測るとき
+// と思ったが PWM の周期と被るので駄目だ。ADC の変換に 2us*11=22usec -- > 45kHz。桁が近す
+// ぎる。止めて マイナス側を測ろう。
+        set_duty(0); 
+        __delay_ms(1); // ADC のためのおまじない
         ADCON0bits.GO_nDONE=1;
         while(ADCON0bits.GO_nDONE){};
-        adc=ADRESH*256+ADRESL;
+        adc=1023-ADRESH*256+ADRESL;
 // Vbat=adc/1023*3.3
 // Vr=Vdd-Vbat=3.3-adc/1023*3.3=3.3(1023-adc)/1023
 
