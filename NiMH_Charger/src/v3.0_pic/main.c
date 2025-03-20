@@ -36,6 +36,7 @@
 
 #define _XTAL_FREQ 8000000
 
+//#define _pr2 101
 #define _pr2 63
 #define _r1 1.0
 #define _vref 3.3
@@ -48,7 +49,15 @@
 // あらかじめ ADC の値を計算しておく
 #define _adc_vbat_low 155
 #define _adc_vbat_high 372
-#define _adc_vbat_max 403
+// 1.3V
+//#define _adc_vbat_max 403
+// 1.4V
+// #define _adc_vbat_max 434
+// 1.5V
+// これくらいまで上げないと、実測の解放電圧 1.25V くらいの電池でも判定に入ってしまう。
+// なぞなのは、
+#define _adc_vbat_max 465
+//#define _adc_vbat_max 900
 
 void setup(void);
 void set_duty(short duty);
@@ -56,14 +65,13 @@ void setup_led(void);
 
 void main(void) {
     short adc; // ADC 読み値 0-255
-    short duty; // duty 比 0-255
-    short adc_pre=0; // 前回の ADC 読み値
+    long duty; // duty 比 0-255
+    short adc_max=0; 
     char stage=0; // トリクル 0, 通常 1
     char min=0; // 実行時間、分
     char i;
     setup();
     setup_led();
-
 // 1サイクル 1分、120分で終了
     while(min<120){
 // 止めて測ろうと思っていたけど、止めると電流流れないから 3.3V になるということに後で気が
@@ -78,7 +86,7 @@ void main(void) {
         __delay_ms(1); // ADC のためのおまじない
         ADCON0bits.GO_nDONE=1;
         while(ADCON0bits.GO_nDONE){};
-        adc=1023-ADRESH*256+ADRESL;
+        adc=1023-(ADRESH*256+ADRESL);
 // Vbat=adc/1023*3.3
 // Vr=Vdd-Vbat=3.3-adc/1023*3.3=3.3(1023-adc)/1023
 
@@ -86,7 +94,7 @@ void main(void) {
 
 // 電流を 0.1A にするための Duty比 (100%で 255) は
 // 255:I=x:0.1 より
-// x=255*0.1/I=25.5*1023/3.3/(1023-adc)
+// x=255*0.1/I=25.5*1023/3.3/(1023-adc)1
 //  =7905/(1023-adc)
 // 検算, 0.5V --> 155 なら x=9, I=2.8A
 //       2.8*9/255=0.0988 A → OK
@@ -98,25 +106,42 @@ void main(void) {
         if(adc <= _adc_vbat_low){
             duty=7905/(1023-adc);
             stage=0;
-        } else if(adc <= _adc_vbat_high){
+        } else {
             duty=79050/(1023-adc);
             stage=1;
-            if (adc==adc_pre){
-                set_duty(0);
-                LATAbits.LATA2=0;
-                while(1){};
-            };
-        } else if(adc <= _adc_vbat_max){
+        };
+       
+        if (adc >= _adc_vbat_high && adc <= adc_max){
             set_duty(0);
             LATAbits.LATA2=0;
-            while(1){};
+            while(1){
+              __delay_ms(100);
+              LATAbits.LATA2=1;
+              __delay_ms(100);
+              LATAbits.LATA2=0;
+            };
         };
+        if(adc >= _adc_vbat_max){
+            set_duty(0);
+            LATAbits.LATA2=0;
+            while(1){
+              __delay_ms(500);
+              LATAbits.LATA2=1;
+              __delay_ms(1000);
+              LATAbits.LATA2=0;
+            };
+        };
+        if(duty>255){duty=255;};
+        if(duty<0){duty=0;};
         set_duty(duty);
-        adc_pre=adc;
-        for(i=0;i<30;i++){
+        if(adc > adc_max){
+            adc_max=adc;
+        };
+        for(i=0;i<15;i++){
             __delay_ms(2000);
-            // stage=0 なら反転, stage=1 なら常に 1 のつもりだが。。。
-            LATAbits.LATA2=!LATAbits.LATA2 | stage;
+            LATAbits.LATA2=1;
+            __delay_ms(2000);
+            LATAbits.LATA2=stage;
         }
         min++;
     };
@@ -129,6 +154,8 @@ void setup_led(void){
     TRISAbits.TRISA2=0;
     ANSELAbits.ANSA2=0;
     LATAbits.LATA2=0;
+//なぜか PWM の影響を受けてしまって High にならないのでこれでどうかと思ったけど駄目だった。
+    WPUAbits.WPUA2=0;
 }
 
 void set_duty(short duty){
@@ -167,7 +194,9 @@ void setup(void){
 // 5, PIR1 の TMR2IF をクリア
     PIR1bits.TMR2IF=0;
 //   T2CON の T2CKPS プリスケーラをセット --> 1.0 倍 = 0b00
-    T2CONbits.T2CKPS = 0;
+//   4倍 0b01
+//   1倍だと波形がちゃんと出ない。
+    T2CONbits.T2CKPS = 0b01;
 //   T2CON の TMR2ON を enable = 1
     T2CONbits.TMR2ON = 1;
 // 6, PIR1 の TMR2IF が 1 になるのを待て
@@ -187,12 +216,18 @@ void setup(void){
     TRISAbits.TRISA1=1;
     ANSELAbits.ANSA1=1;
 
+// pull-up 無効
+// やらないと 80% くらいの値を常時読むことになってしまう
+    OPTION_REGbits.nWPUEN=1;
+    WPUAbits.WPUA1=0; //多分不要
+
 // 2. ADCON0, ADCON1 の設定
 //    ADCON1=| ADFM | ADCS<2:0> |-|-| ADPREF<1:0>|
 //      ADFM=1 for 右詰め. 
 //      ADCS=0b101 for FOSC/16
+//      ADCS=0b010 for FOSC/32
 //      ADPREF = 0b00 for Vref=VDD
-    ADCON1=0b11010000;
+    ADCON1=0b10100000;
 
 //    ADCON0=|-| CHS<4:0> | GO/DONE | ADON |
 //      CHS=0b00001 for RA1
