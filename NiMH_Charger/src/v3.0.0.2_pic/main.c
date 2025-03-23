@@ -112,6 +112,14 @@ void main(void) {
         // 0.5-1V, 素の I=2.8A~. duty=36%=92 
             duty=92;
             stage=1;
+        } else if(adc <= 341){
+        // 1~1.1V, 素の I=2.3~2.2A, duty=43%=110 
+            duty=110;
+            stage=1;
+        } else if(adc <= 372){
+        // 1.1~1.2V, 素の I=2.2~2.1A, duty=45%=117
+            duty=117;
+            stage=1;
         } else if(adc <= 465){
         // 1+V, 素の I=2.3A~. 1A 狙いの duty=43%=110
             duty=110;
