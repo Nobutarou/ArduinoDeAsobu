@@ -10,7 +10,8 @@
 // Table 21-2 の 19.61kHz を基準に考える。 
 // FOSC=8MHz で決定
 // Eq. 21-4 より Duty比が 8bits = 255 となる PR2 = 63
-// 式 21.1 より周波数は 31kHz くらいになる
+// TMR2 プリスケールは 4倍
+// 式 21.1 より波長は 0.000128s なので周波数は 7.8kHz
 
 // ADC の設定
 // Table 15-1 の FOSC=8MHz, 2.0us で行く。
@@ -36,27 +37,14 @@
 
 #define _XTAL_FREQ 8000000
 
-//#define _pr2 101
 #define _pr2 63
-#define _r1 1.0
-#define _vref 3.3
-#define _vbat_low 0.5
-#define _vbat_high 1.2
-#define _vbat_max 1.3
-#define _i_low 0.1
-#define _i_max 1.0
 
 // あらかじめ ADC の値を計算しておく
 #define _adc_vbat_low 155
-#define _adc_vbat_high 372
 // 1.3V
-//#define _adc_vbat_max 403
+#define _adc_vbat_high 403
 // 1.4V
-// #define _adc_vbat_max 434
-// 1.5V
-// これくらいまで上げないと、実測の解放電圧 1.25V くらいの電池でも判定に入ってしまう。
-// なぞなのは、
-#define _adc_vbat_max 465
+#define _adc_vbat_max 434
 //#define _adc_vbat_max 900
 
 void setup(void);
@@ -72,57 +60,41 @@ void main(void) {
     char i;
     setup();
     setup_led();
-// 1サイクル 1分、120分で終了
+// 当初 1サイクル 1分でやっていたが、実際の電流が 0.5~0.6A といったところで 1900mAHr の電
+// 池では C/3 ~ C/4 というところ。MAX713 では 168 sec でサンプリングしてるので
+// 1サイクル 3分、120分で終了
     while(min<120){
-// 止めて測ろうと思っていたけど、止めると電流流れないから 3.3V になるということに後で気が
-// 付く。止めてマイナス側を測って Vdd-Vbat となってるはずだから、 1023 から引くか、止めず
-// に測るか。
-// 回路図、図面、秋月への買い物をしてしまったので、プラス側を止めずに測ることにする。
-// 回路は、ジャンパ線で継ぎ換えるだけで変えられそうだし、ソースも 1023 から引くだけで良い
-// はずだから、とりあえずやってみよう。
-// と思ったが PWM の周期と被るので駄目だ。ADC の変換に 2us*11=22usec -- > 45kHz。桁が近す
-// ぎる。止めて マイナス側を測ろう。
         set_duty(0); 
-        __delay_ms(1); // ADC のためのおまじない
+
+        //PWM 周期が 0.000128sec。10倍掛けて安全に止める（なんとなくのイメージ)として
+        __delay_ms(2);
         ADCON0bits.GO_nDONE=1;
         while(ADCON0bits.GO_nDONE){};
         adc=1023-(ADRESH*256+ADRESL);
-// Vbat=adc/1023*3.3
-// Vr=Vdd-Vbat=3.3-adc/1023*3.3=3.3(1023-adc)/1023
-
-// I=Vr/R=3.3(1023-adc)/1023 (Duty比100%なら)
-
-// 電流を 0.1A にするための Duty比 (100%で 255) は
-// 255:I=x:0.1 より
-// x=255*0.1/I=25.5*1023/3.3/(1023-adc)1
-//  =7905/(1023-adc)
-// 検算, 0.5V --> 155 なら x=9, I=2.8A
-//       2.8*9/255=0.0988 A → OK
-//
-// 1A 流すには Duty 比は
-// x=79050/(1023-adc)
-// 検算 1.2V --> 372 なら x = 121
-//      (3.3-1.2)*121/255=1.00A --> OK
 //
         if(adc <= 155){
-        // 0-0.5V 素の I=3.3A~。1A 狙いで duty=30%=77
-            duty=77;
+        // adc=155=0.5V
+        // 0V で 3.3A。0.1A 狙いで duty=3.0%=8
+        // 0.5V で 2.8A。duty=8 で 0.088A
+            duty=8;
             stage=0;
         } else if(adc <= 310){
-        // 0.5-1V, 素の I=2.8A~. duty=36%=92 
+        // adc=310=1.0V
+        // 0.5V で 2.8A。1A 狙いで duty=36%=92
+        // 1V で 2.3A。2.3*92/255=0.83A
             duty=92;
             stage=1;
-        } else if(adc <= 341){
-        // 1~1.1V, 素の I=2.3~2.2A, duty=43%=110 
-            duty=110;
+        } else if(adc <= 434){
+        // adc=434=1.4V
+        // 1V で 2.3A。1A 狙いで duty=1/2.3*255=111
+        // 1.4V で 1.9A。1.9*111/255=0.83A
+            duty=111;
             stage=1;
-        } else if(adc <= 372){
-        // 1.1~1.2V, 素の I=2.2~2.1A, duty=45%=117
-            duty=117;
-            stage=1;
-        } else if(adc <= 465){
-        // 1+V, 素の I=2.3A~. 1A 狙いの duty=43%=110
-            duty=110;
+        } else if(adc <= 1023){
+        // adc=1023=3.3V
+        // 1.4V で 1.9A。1A 狙いで duty=1/1.9*255=134
+        // 3.3V で 0A。
+            duty=134;
             stage=1;
         } else {
         // error
@@ -162,14 +134,17 @@ void main(void) {
         if(adc > adc_max){
             adc_max=adc;
         };
-        for(i=0;i<15;i++){
+        for(i=0;i<30;i++){
             __delay_ms(2000);
             LATAbits.LATA2=1;
             __delay_ms(2000);
             LATAbits.LATA2=stage;
         }
-        min++;
+        min=min+2;
     };
+    //120分経過につき終了
+    set_duty(0);
+    LATAbits.LATA2=0;
     while(1);
     return;
 }

@@ -236,7 +236,7 @@ void loop() {
     Serial.println(" [pF]");
     lcd.print(c*1.0e6,14);
     lcd.setCursor(0,1);
-    lcd.print("uF");
+    lcd.print("pF");
     
   }
     

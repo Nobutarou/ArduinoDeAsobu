@@ -169,6 +169,9 @@ void main(void) {
         }
         min=min+2;
     };
+    // 120分で終了
+    set_duty(100);
+    LATAbits.LATA2=0;
     while(1);
     return;
 }
