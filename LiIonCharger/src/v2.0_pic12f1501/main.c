@@ -43,10 +43,12 @@
 #define _pr2 24
 
 // あらかじめ ADC の値を計算しておく
+// リチウムイオンの最大電圧は 4.2V らしい
 // 標準 3.7V --> 757.02
-#define _adc_vbat_high 758
-// 3.8V --> 777.48
-#define _adc_vbat_max 778
+// 4.0V --> 818 までは無制限に充電しよう。
+#define _adc_vbat_high 818
+// 4.1V --> 839 で止めよう
+#define _adc_vbat_max 839
 
 void setup(void);
 void set_duty(short duty);
@@ -116,12 +118,26 @@ void main(void) {
         // 100-63=37
             duty=37;
             stage=1;
-        } else if(adc <= 1023){
-        // adc=1023 → 5V
+        } else if(adc <= 798){
+        // adc=798 → 3.9V
         // 3.7V なら 1.3A なのでデューティ比 77% で 1.3Ax0.77=1.00A
-        // 5.0V なら 0A なので 流れない
+        // 3.9V なら 1.1A なので 1.1Ax0.77=0.85A
         // 100-77=23
             duty=23;
+            stage=1;
+        } else if(adc <= 839){
+        // adc=839 → 4.1V
+        // 3.9V なら 1.1A なのでデューティ比 91% で 1.1Ax0.91=1.00A
+        // 4.1V なら 0.9A なので 0.9Ax0.91=0.82A
+        // 100-91=9
+            duty=9;
+            stage=1;
+        } else if(adc <= 1023){
+        // adc=1023 → 5V
+        // 4.1V なら 0.9A なのでデューティ比 100% で 0.9A
+        // 5.0V なら 0A なので 流れない
+        // 100-100=0
+            duty=0;
             stage=1;
         } else {
         // error
