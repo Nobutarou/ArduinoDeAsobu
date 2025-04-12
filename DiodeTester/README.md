@@ -65,3 +65,7 @@ LCD 対応にしよう。配置の都合で D3, D4 にピンを変更。
 | X1    | XH ヘッダー 2P         | 1    |
 
 XH ヘッダより先は、v1.0 の物を流用するので準備不要。
+
+[ソース](./arduino/DiodeChecker2.0/)
+
+![完成品](./photo/diodechecker2.0.jpg)
