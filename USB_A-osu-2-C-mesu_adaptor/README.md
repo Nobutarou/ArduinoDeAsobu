@@ -42,3 +42,9 @@ TYPE-A プラグ側部品表
 
 type-A 側のシールド線は、プラグ側はシャーシに落とし、XH 側は GND に合流させる。ニチフと
 AWG24 ケーブルはその加工用。
+
+![完成品](./photos/A_osu-2-C_mesu_adaptor1.0.jpg)
+
+Type-C 接続の USB ハブが動作したのと、
+[type-A 充電器](../USBChargerDIY/) 
+に接続したときに iPhone12 が 1A, Sharp Aquos Sense 3 か 4 が 0.5A だった。まずまず。
