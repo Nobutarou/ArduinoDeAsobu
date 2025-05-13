@@ -59,3 +59,9 @@ Eleshop で一体型のマイクロヒューズのまとめ売りがあり、買
 使える。
 
 [設計図2.0](./librecad/USBConnectorWithFuse2.0.pdf)
+
+## v2.1
+
+せっかくだから適当に φ5 のコンデンサも処分しよう。
+
+[設計図2.1](./librecad/USBConnectorWithFuse2.1.pdf)
