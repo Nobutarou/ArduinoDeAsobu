@@ -280,3 +280,8 @@ io_mapping.h を読むと LED を付けるときは LOW output で電流を引�
 | S1 | IC ソケット 14P | 1 |
 | S2,3 | ピンソケット 7P | 2 |
 | U1 | PIC16F1455 | 1 |
+
+![完成品v2.0](./figures/pic16f1455_uart_v2.0.jpg)
+
+RX と TX をショートさせた状態で Arduino IDE から打ち込んだ文字を受信領域に表示できたので、
+多分大丈夫
