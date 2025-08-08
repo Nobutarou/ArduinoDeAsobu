@@ -76,4 +76,66 @@ make program
 で良いはず。ビルド済みの main.hex が同梱されているので gcc-avr を入れてビルドする必要は無
 い。
 
+実際は ``make program`` だとなんかエラーが出る。繋いでも認識に失敗する。
 
+```
+> make program
+avrdude -c usbasp -p attiny44  -U flash:w:main.hex:i
+avrdude -c usbasp -p attiny44  -U hfuse:w:0xDF:m -U lfuse:w:0xFF:m
+Device signature = 1E 92 FF
+Error: expected signature for ATtiny44 is 1E 92 07
+  - double check chip or use -F to carry on regardless
+
+  Avrdude done.  Thank you.
+  make: *** [Makefile:118: fuse] エラー 1
+  make: *** 未完了のジョブを待っています....
+  Reading 2116 bytes for flash from input file main.hex
+  Writing 2116 bytes to flash
+  Writing | ################################################## | 100% 1.05 s
+  Reading | ################################################## | 100% 0.88 s
+  2116 bytes of flash verified
+
+  Avrdude done.  Thank you.
+```
+
+``make flash`` から ``make fuse`` するとエラーもなく上手くいく。Makefile 的にわらないと思
+うけど分からない。
+
+```
+> make flash
+avrdude -c usbasp -p attiny44  -U flash:w:main.hex:i
+Reading 2116 bytes for flash from input file main.hex
+Writing 2116 bytes to flash
+Writing | ################################################## | 100% 1.04 s
+Reading | ################################################## | 100% 0.88 s
+2116 bytes of flash verified
+
+Avrdude done.  Thank you.
+```
+
+```
+> make fuse
+avrdude -c usbasp -p attiny44  -U hfuse:w:0xDF:m -U lfuse:w:0xFF:m
+
+Processing -U hfuse:w:0xDF:m
+Reading 1 byte for hfuse from input file 0xDF
+Writing 1 byte (0xDF) to hfuse, 1 byte written, 1 verified
+
+Processing -U lfuse:w:0xFF:m
+Reading 1 byte for lfuse from input file 0xFF
+Writing 1 byte (0xFF) to lfuse, 1 byte written, 1 verified
+
+Avrdude done.  Thank you.
+```
+
+``dmesg`` にて認識成功。
+
+```
+[45121.693012] usb 1-3.1: new low-speed USB device number 69 using xhci_hcd
+[45121.910647] usb 1-3.1: New USB device found, idVendor=1781, idProduct=0c9f, bcdDevice=
+1.04
+[45121.910651] usb 1-3.1: New USB device strings: Mfr=0, Product=2, SerialNumber=0
+[45121.910652] usb 1-3.1: Product: FabISP
+```
+
+Arduino でも無事成功。
