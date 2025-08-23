@@ -191,7 +191,7 @@ Failed programming: uploading error: exit status 1
 
 ![Lチカ](./fig/AVR64DD28_v1.0.jpg)
 
-## UPDI について
+## UPDI は FT232RL なら動くが PIC16F1455 では動かないことが判明
 
 コマンドでボーレート 300bps でゆっくり動かしながら kit_scope で観察し -vv でデバグ出力もさ
 せてみたところ、どうも PIC16F1455 からは信号を送っているが、AVR64DD28 から信号が出てこない
@@ -210,3 +210,50 @@ Failed programming: uploading error: exit status 1
 
 とにかくいろいろテストして動くようにしたい。OptiBoot は Atmega328P で結構失敗していたので、
 あまり頼りきりたくない。
+
+まずはただの配線間違えかもしれないので、UART アタッチメントとブレッドボードで同じ UPDI を
+組んでみたが
+
+```
+pymcuprog.deviceinfo.deviceinfo - INFO - Looking for device avr64dd28
+pymcuprog.serialupdi.physical - INFO - Opening port '/dev/ttyACM0' at '57600' baud
+pymcuprog.serialupdi.physical - DEBUG - send 1 bytes
+pymcuprog.serialupdi.physical - DEBUG - data:  : [0x0]
+pymcuprog.serialupdi.link - INFO - STCS 08 to 0x03
+pymcuprog.serialupdi.physical - DEBUG - send 3 bytes
+pymcuprog.serialupdi.physical - DEBUG - data:  : [0x55, 0xc3, 0x8]
+pymcuprog.serialupdi.link - INFO - STCS 06 to 0x02
+pymcuprog.serialupdi.physical - DEBUG - send 3 bytes
+pymcuprog.serialupdi.physical - DEBUG - data:  : [0x55, 0xc2, 0x6]
+pymcuprog.serialupdi.link - INFO - LDCS from 0x00
+pymcuprog.serialupdi.physical - DEBUG - send 2 bytes
+pymcuprog.serialupdi.physical - DEBUG - data:  : [0x55, 0x80]
+pymcuprog.serialupdi.physical - DEBUG - We were supposed to receive 1 bytes - we got
+nothing! Check connections.
+pymcuprog.serialupdi.link - WARNING - UPDI init failed: Can't read CS register. likely
+wiring error.
+```
+
+で変わらない。
+
+Tx, Rx を逆にしている可能性もあるので、引っくり返したけど変化なし。
+
+これも駄目。一応 Ideal に近付けたつもりなんだけど。
+
+```
+RX -------------+- 680Ω - UPDI
+TX - 1.5kΩ - D +
+```
+
+なので PIC16F1455 の問題かと思い 
+[秋月の FT232RL](https://akizukidenshi.com/catalog/g/g106693/) 
+で最初の 300Ωだけのやつをやってみたところ、普通に書き込みが成功した。秋月も Tx (Rx にも)
+に何も抵抗を入れていない。
+
+本家を読んでいたら
+
+```
+The UPDI protocol uses parity and 2 stop bits (parity can be disabled by a control register flag, but you need to access UPDI in the default mode using parity to change this). Adapters that do not support parity or 2 stop bits, such as the MCP2200 and MCP2221, cannot be used.
+```
+
+という記述を見つけた。これらは PIC をプログラムしたもの、というようなことを聞いたことがある。もしかしてこれだろうか。
