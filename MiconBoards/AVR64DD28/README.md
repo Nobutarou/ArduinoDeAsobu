@@ -112,3 +112,101 @@ VDDIO2 はスペースの都合で、ただのジャンパ線となった。広�
 | H8    | ピンヘッダ 2P            | 1    |
 | R8    | 300Ω                    | 1    |
 | R9,10 | 1kΩ前後                 | 2    |
+
+動いたら試したいこと
+
+- analogRead() の速度
+- 1~13 ピンはどこ？
+- I2C による LCD hello world
+
+結果:
+
+動かない。テスターとキットスコープで導通、UPDI, TX, RX の信号ラインの電圧なんかは見てみた
+けど、配線間違いではなさそう。
+
+```
+pymcuprog.programmer - INFO - Setting up programming session for 'avr64dd28'
+pymcuprog.deviceinfo.deviceinfo - INFO - Looking for device avr64dd28
+pymcuprog.serialupdi.physical - INFO - Opening port '/dev/ttyACM0' at '115200' baud
+pymcuprog.serialupdi.link - INFO - STCS 08 to 0x03
+pymcuprog.serialupdi.link - INFO - STCS 06 to 0x02
+pymcuprog.serialupdi.link - INFO - LDCS from 0x00
+pymcuprog.serialupdi.link - WARNING - UPDI init failed: Can't read CS register. likely wiring error.
+pymcuprog.serialupdi.physical - INFO - extra-long break requested. Close serial port, reopen @ 300, send 0x00, receive the 0x00, and then proceed. 
+pymcuprog.serialupdi.physical - INFO - Double-break sent. Re-initializeing USART to retry.
+pymcuprog.serialupdi.physical - INFO - Opening port '/dev/ttyACM0' at '115200' baud
+pymcuprog.serialupdi.link - INFO - STCS 08 to 0x03
+pymcuprog.serialupdi.link - INFO - STCS 06 to 0x02
+pymcuprog.serialupdi.link - INFO - LDCS from 0x00
+pymcuprog.serialupdi.link - WARNING - UPDI init failed: Can't read CS register. likely wiring error.
+```
+
+大元の [ここ](https://github.com/SpenceKonde/AVR-Guidance/blob/master/UPDI/jtag2updi.md)
+なのだけど、Ideal つまり理想は Tx に 2.2kΩで UPDI に 470Ωと書いてあるのに、なんで Tx に
+抵抗が始めから入っていないものは、入れなくて良いのだろうか。コネクタの手前にあるかどうかな
+んて電気回路的には関係ないのだから、どんな場合でも Ideal に近づけるような抵抗の入れ方をし
+ないといけないのでは？？？
+
+急遽 [jtag2updi by SpenceKonde 氏](git@github.com:SpenceKonde/jtag2updi.git) を試してみたんだけど、
+
+```
+Writing | ################################################## | 100% 0.26s
+
+avrdude: 812 bytes of flash written
+avrdude: verifying flash memory against /tmp/arduino/sketches/CA09F6DE8155DB6DA91F3C3F89B8BB8F/Blink.ino.hex:
+avrdude: load data flash data from input file /tmp/arduino/sketches/CA09F6DE8155DB6DA91F3C3F89B8BB8F/Blink.ino.hex:
+avrdude: input file /tmp/arduino/sketches/CA09F6DE8155DB6DA91F3C3F89B8BB8F/Blink.ino.hex contains 812 bytes
+avrdude: reading on-chip flash data:
+
+Reading | avrdude: jtagmkII_paged_load(): timeout/error communicating with programmer (status -1)
+avrdude: jtagmkII_paged_load(): bad response to read memory command: RSP_NO_TARGET_POWER
+#########################avrdude: jtagmkII_recv(): msglen 167772161 exceeds max message size 100000, ignoring message
+avrdude: jtagmkII_recv(): msglen 167772161 exceeds max message size 100000, ignoring message
+avrdude: jtagmkII_recv(): msglen 167772161 exceeds max message size 100000, ignoring message
+avrdude: jtagmkII_recv(): msglen 167772161 exceeds max message size 100000, ignoring message
+avrdude: jtagmkII_read_byte(): timeout/error communicating with programmer (status -1)
+avrdude: jtagmkII_read_byte(): timeout/error communicating with programmer (status -1)
+avrdude: jtagmkII_read_byte(): timeout/error communicating with programmer (status -1)
+avrdude: jtagmkII_read_byte(): timeout/error communicating with programmer (status -1)
+avrdude: jtagmkII_read_byte(): fatal timeout/error communicating with programmer (status -1)
+avr_read(): error reading address 0x0000
+    read operation not supported for memory "flash"
+avrdude: failed to read all of flash memory, rc=-2
+avrdude: jtagmkII_program_disable(): timeout/error communicating with programmer (status -1)
+avrdude: jtagmkII_close(): timeout/error communicating with programmer (status -1)
+avrdude: jtagmkII_close(): timeout/error communicating with programmer (status -1)
+
+avrdude done.  Thank you.
+
+Failed programming: uploading error: exit status 1
+```
+
+書き込みはできているようだけど、verify に失敗してるみたい。Lチカはできた。
+
+検索してたらオリジナルの [ElTangas 氏の jtag2updi](https://github.com/ElTangas/jtag2updi)
+の方が新しい更新があり DB, DD に対応と書いてある。しかし、結果は同じだった。
+
+とりあえずブートローダを書き込んでおいた。一応 OptiBoot で USB シリアルでのアップロードは
+成功した。
+
+![Lチカ](./fig/AVR64DD28_v1.0.jpg)
+
+## UPDI について
+
+コマンドでボーレート 300bps でゆっくり動かしながら kit_scope で観察し -vv でデバグ出力もさ
+せてみたところ、どうも PIC16F1455 からは信号を送っているが、AVR64DD28 から信号が出てこない
+ように見えた。
+
+マイコンのピンは流れる電流が少ないので、電流が大きいと Hi 5V, Low 0V がしっかり出ないのは
+抵抗測定器などで経験済。回路シミュレーターは理想的なので UPDI 側が Low になれば Rx に Low
+が入るが、実際には UPDI の Low で電圧がちゃんと下がらずに、信号を観測できなかったのかも。
+
+```
+"/home/snob/.arduino15/packages/megaTinyCore/tools/python3/3.7.2-post1/python3" -u "/home/snob/.arduino15/packages/DxCore/hardware/megaavr/1.5.11/tools/prog.py" -t uart -u /dev/ttyACM0 -b 300 -d avr64dd28 --fuses 0:0b00000000 1:0x00 2:0x00 5:0b11011000 6: 0b00001100 7:0x00 8:0x01 -f "/home/snob/.arduino15/packages/DxCore/hardware/megaavr/1.5.11/bootloaders/hex/optiboot_64dd_ser0_extr.hex" -a write -v -vv 
+```
+
+あとは、UART は物によっては Tx-Tx, Rx-Rx を繋ぐものもあるので、何か自分が勘違いしているの
+かも。
+
+とにかくいろいろテストして動くようにしたい。OptiBoot は Atmega328P で結構失敗していたので、
+あまり頼りきりたくない。
