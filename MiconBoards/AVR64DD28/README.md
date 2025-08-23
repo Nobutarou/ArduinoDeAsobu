@@ -257,3 +257,7 @@ The UPDI protocol uses parity and 2 stop bits (parity can be disabled by a contr
 ```
 
 という記述を見つけた。これらは PIC をプログラムしたもの、というようなことを聞いたことがある。もしかしてこれだろうか。
+
+https://github.com/Calcousin55/PIC16F145x_USB2Serial
+
+を見てみたが、どうもパリティは使わない、ということでハードコードされているようだ。
