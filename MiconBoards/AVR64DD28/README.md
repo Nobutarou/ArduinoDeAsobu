@@ -260,4 +260,32 @@ The UPDI protocol uses parity and 2 stop bits (parity can be disabled by a contr
 
 https://github.com/Calcousin55/PIC16F145x_USB2Serial
 
-を見てみたが、どうもパリティは使わない、ということでハードコードされているようだ。
+を見てみたが、どうもパリティは使わない、ということでハードコードされているようだ。というか
+データシート 23.1 にハードウェアサポートは無いと書いてある。ソフトでやれると書いてあるが、
+完全に実力不足。
+
+なので、そのうち FT232RL 用のアタッチメントも作ろう。
+
+# analogRead() の速度
+
+[公式情報](https://github.com/SpenceKonde/DxCore/blob/master/megaavr/extras/Ref_Analog.md)
+によると ADC のクロックを最大 2MHz としているが、これは
+[データシート](https://ww1.microchip.com/downloads/aemDocuments/documents/MCU08/ProductDocuments/DataSheets/AVR64DD32-28-Complete-DataSheet-DS40002315.pdf)
+によると T_CLK_ADC の最小が 0.5us だから、それ以上になるようにしていると思う。
+
+[analogClockSpeed()](./arduino/analogClockSpeed/analogClockSpeed.ino) で変更と確認をしてみ
+たが、24MHz 駆動で 2MHz となった。分周比が 2^n だと思っていたので変だなと思ったらデータシ
+ート 33.5.3 によると分周率 12 とかもある。24MHz/12=2MHz なのでこれが最速。
+
+analogSampleDuration() で遅延 ADC サイクル数の指定。デフォルトが 14サイクルだけど最速は 0
+のはず。0 にするとデータシート 33.3.3.4.1 から、全体 24MHz, ADC 2MHz 駆動で 7.92us。
+[analogReadh()を100回計測](./arduino/AdcSpeedTest/AdcSpeedTest.ino)
+してみた。せっかなので analogResolution(12) で 12ビットにしている。
+デフォルトは 2586us, 2MHz の遅延 0サイクルだと 909us だった。タイマーをサクっと
+使う実力がないので単純に while() で 100カウントしたから、その分はほんの少し乗るとは思うが、
+想定よりも少し長い。ちなみにコードは残してないが 10bit なら 10% くらい速い。
+
+[0.5VDD を測定してみた](./arduino/analogReadTest/) んだけど、最速のときも 2051 と出たので
+大丈夫だろう。そもそも 5%誤差の抵抗で分圧してるから。
+あとついでに分かったんだけど、なぜか初回の analogRead() は変な値が出るので、実用時はメイン
+ルーチンに入る前に一度空打ちしておいたほうが良さそう。外れ石なのだろうか。
