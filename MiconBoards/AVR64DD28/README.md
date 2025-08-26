@@ -4,6 +4,7 @@ AVR64DD28 でマイコンボードを作ってみたい。
 
 # 研究
 
+<!-- {{{ -->
 ピン配置等はここ
 
 https://github.com/SpenceKonde/DxCore/blob/master/megaavr/extras/DD28.md
@@ -58,9 +59,11 @@ Yes resistor on target >= 100 ohms and not more than a few k.
                 Gnd|--------------------'
 --------------------
 ```
+<!-- }}} -->
 
 # 開発ボード 1.0
 
+<!-- {{{ -->
 RST は Datasheet 4.3 によると内部でプルアップしてるとのことなので、プルアップ抵抗は不要。
 
 参考回路の 2個は RST から 5V に向けてのダイオードがないのだが、ATMega328P と同じやりかたで
@@ -117,7 +120,10 @@ VDDIO2 はスペースの都合で、ただのジャンパ線となった。広�
 
 - analogRead() の速度
 - 1~13 ピンはどこ？
+  - 面倒だし作者も薦めていないし、別に他のマイコンとピン配置互換があるわけでもないし、別に
+    いいか。
 - I2C による LCD hello world
+  - 普通に ATMega328P と同じコードが動いた。I2C だから当たり前か。 
 
 結果:
 
@@ -265,6 +271,7 @@ https://github.com/Calcousin55/PIC16F145x_USB2Serial
 完全に実力不足。
 
 なので、そのうち FT232RL 用のアタッチメントも作ろう。
+<!-- }}} -->
 
 # analogRead() の速度
 
@@ -289,3 +296,16 @@ analogSampleDuration() で遅延 ADC サイクル数の指定。デフォルト�
 大丈夫だろう。そもそも 5%誤差の抵抗で分圧してるから。
 あとついでに分かったんだけど、なぜか初回の analogRead() は変な値が出るので、実用時はメイン
 ルーチンに入る前に一度空打ちしておいたほうが良さそう。外れ石なのだろうか。
+
+# FT232RL UPDI アダプタ for 1.0
+
+アダプタは本ボードでしか使えないから、このページでいいでしょう。
+
+使う FT232RL は 
+[秋月 AE-UM232R](https://akizukidenshi.com/catalog/g/g106693/)
+
+# digitalWrite() の速度
+
+[digitalWrite()を1000回計測](./arduino/digitalWriteSpeedtest/digitalWriteSpeedtest.ino)
+すると High が 1.6us, Low が 1.5us くらいであることが判明。ATMega328P の倍くらいは速い。
+PORTx.OUT レジスタなら High が 0.4us, Low が 0.3us くらいであることが判明。
