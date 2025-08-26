@@ -27,4 +27,4 @@ $` CT=\frac{V0-VT}{VT}CB `$ ...(5)
 
 プログラム節約するために常数を出しておくなら
 
-$`{ CT=\frac{V0 \cdot CB}{VT} -CB `$ {6}
+$` CT=\frac{V0 \cdot CB}{VT} -CB `$ {6}
