@@ -27,4 +27,12 @@ $` CT=\frac{V0-VT}{VT}CB `$ ...(5)
 
 プログラム節約するために常数を出しておくなら
 
-$` CT=\frac{V0 \cdot CB}{VT} -CB `$ {6}
+$` CT=\frac{V0 \cdot CB}{VT} -CB `$ ...(6)
+
+VT を 12bit ADC で測定するとして、値を ADC とすると、
+
+$` VT=ADC \frac{V0}{4095} `$ ...(7)
+
+(6)(7) より
+
+$` CT=\frac{4095 \cdot CB}{ADC} - CB `$ ...(8)
