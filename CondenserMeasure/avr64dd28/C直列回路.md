@@ -15,7 +15,7 @@ $` CT \cdot VT = CB \cdot VB `$ ... (2)
 
 (2) は
 
-$` T=\frac{VB}{VT}CB `$ ...(3)
+$` CT=\frac{VB}{VT}CB `$ ...(3)
 
 VT を測定する場合、(1)は
 
@@ -36,3 +36,4 @@ $` VT=ADC \frac{V0}{4095} `$ ...(7)
 (6)(7) より
 
 $` CT=\frac{4095 \cdot CB}{ADC} - CB `$ ...(8)
+
