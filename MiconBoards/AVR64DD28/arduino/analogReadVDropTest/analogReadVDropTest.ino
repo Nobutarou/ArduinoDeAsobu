@@ -1,5 +1,5 @@
 // PC0 HIGH - R + PC1 digitai In
-//              + PC2 analogRead
+//              + PD1 analogRead
 
 
 void setup() {

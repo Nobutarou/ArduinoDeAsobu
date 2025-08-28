@@ -273,6 +273,17 @@ https://github.com/Calcousin55/PIC16F145x_USB2Serial
 なので、そのうち FT232RL 用のアタッチメントも作ろう。
 <!-- }}} -->
 
+# FT232RL UPDI アダプタ for 1.0
+
+<!-- {{{ -->
+アダプタは本ボードでしか使えないから、このページでいいでしょう。
+
+使う FT232RL は 
+[秋月 AE-UM232R](https://akizukidenshi.com/catalog/g/g106693/)
+
+[くわしくはここ](./ft232rl_updi_adaptor/README.md)
+<!-- }}} -->
+
 # analogRead() の速度
 
 [公式情報](https://github.com/SpenceKonde/DxCore/blob/master/megaavr/extras/Ref_Analog.md)
@@ -296,13 +307,6 @@ analogSampleDuration() で遅延 ADC サイクル数の指定。デフォルト�
 大丈夫だろう。そもそも 5%誤差の抵抗で分圧してるから。
 あとついでに分かったんだけど、なぜか初回の analogRead() は変な値が出るので、実用時はメイン
 ルーチンに入る前に一度空打ちしておいたほうが良さそう。外れ石なのだろうか。
-
-# FT232RL UPDI アダプタ for 1.0
-
-アダプタは本ボードでしか使えないから、このページでいいでしょう。
-
-使う FT232RL は 
-[秋月 AE-UM232R](https://akizukidenshi.com/catalog/g/g106693/)
 
 # digitalWrite() の速度
 
@@ -366,3 +370,13 @@ RC 回路によるコンデンサ容量測定のように ADC を回し続ける
 るのは 10kΩくらいからとなることが分かった。10M や 1MΩ繋げて 90% くらいの ADC の読み取
 りを待ったところで、そもそも 50~75% くらいまで下がってしまってるんだから、それ以上上がるは
 ずが無かった。
+
+そもそもデータシート 38.17 に input resistance 1kΩとある。で単純に 1kΩが直列なら、先の結
+果はどれもほぼ 0V になるはずだけど、そうならないのは Input capacitance 7pF ではないだろう
+か。この 7pF を ADC の完了時に他に流してしまうのではないだろうか。なので 10000回とか繰替え
+していると、他に電流を流してしまった分、電圧が下がるのではないだろうか。
+
+# ADC に使えるピン
+
+MVIO （電圧違いの IO) を enable にしていると C ポートを ADC に使えなくなる。enable がデフ
+ォルト。
