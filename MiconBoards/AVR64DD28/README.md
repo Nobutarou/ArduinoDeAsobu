@@ -284,6 +284,30 @@ https://github.com/Calcousin55/PIC16F145x_USB2Serial
 [くわしくはここ](./ft232rl_updi_adaptor/README.md)
 <!-- }}} -->
 
+# MVIO を無効にして OptiBoot を書き込んだときの ヒューズビットが違う気がする。
+
+Tool -> MVIO で MVIO を disabled にする選択肢は 2個あるけど、どちらでブートローダを書き込
+んでも
+
+```sh
+> avrdude -c serialupdi -p 64dd28 -P /dev/ttyUSB0 -U fuse6:r:-:h
+Reading fuse6/syscfg1 memory ...
+Writing 1 byte to output file <stdout>
+0xc
+```
+
+0xc=0b01100 で、頭の 2ビットが MVIO で下の 3ビットがスタートアップタイム。自分の設定では
+MVIO 無しの Start up 8ms (DxCore のデフォルト) なので、ここは
+0b10100 = 0x14 のはず。
+
+```
+echo "0x14" > fuse6.txt
+avrdude -c serialupdi -p 64dd28 -P /dev/ttyUSB0 -U fuse6:w:fuse6.txt
+```
+
+多分これで analogRead for port-c が動いていると思う。
+
+
 # analogRead() の速度
 
 [公式情報](https://github.com/SpenceKonde/DxCore/blob/master/megaavr/extras/Ref_Analog.md)

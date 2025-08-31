@@ -37,3 +37,6 @@ $` VT=ADC \frac{V0}{4095} `$ ...(7)
 
 $` CT=\frac{4095 \cdot CB}{ADC} - CB `$ ...(8)
 
+ADC の読みを逆算したいなら (8) より、
+
+$` \frac{4095 \cdot CB}{CT+CB} `$ ...(9)

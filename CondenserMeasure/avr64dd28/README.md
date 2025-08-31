@@ -112,15 +112,24 @@ ATMega328P はデータシートの 29.8 に analog input resistance = 100MΩっ
 [回路図](./v2.0/CapMeterAvr64_v2.0/CapMeterAvr64_v2.0.pdf)
 
 1. PC0, PC2, PD1 を output low で放電。PC1, PC3, PD2 で analogRead で放電完了判定。
-1. PC0,PD1 は input で絶縁。PC2 を output high で充電。PC3,PD2 で充電完了判定と電圧読み取
-   り
+1. PC0,PD1 は input で絶縁。PC2 を output high で充電。PC3 で充電完了判定して PD2 で電圧読
+   み取り
 1. 放電
-1. PC2, PD1 は input で絶縁、PC0 を output high で充電。PC1,PD2 で測定
+1. PC2, PD1 は input で絶縁、PC0 を output high で充電。PC1,PD2 で判定と測定
+1. 放電
 
 基準コンデンサが直列になってるけど、小さい方に引っ張られるので、C1 と C2 で 470pF からは
 468.85pF と誤差にもならない。
 
-TinkerCAD の Arduino Uno R3 では動いたけど AVR64 実機ではどうだろうか。
+[TinkerCAD の Arduino Uno R3 では動いた](https://www.tinkercad.com/things/6FRR9RiKOJp-)。
+
+速度を気にしないから Arduino 命令だけで書けるところが Arduino らしくて良いのかもしれない。
+
+と思って試しているのだけど、そもそも analogRead の挙動がおかしくない?
+v1.0 が動かないのも analogRead がおかしいからだったりしない？
+もしかして自分で ADC 動かさないと駄目？
+どうも PC, PA は変。PD は大丈夫。PF は調査していない。
+
 
 # v3.0 RC回路のコンパレータ版
 
@@ -131,4 +140,4 @@ TinkerCAD の Arduino Uno R3 では動いたけど AVR64 実機ではどうだ�
 
 また立ち上がりは 85ns 0.085us であり、
 [digitalRead()の計測](../../MiconBoards/AVR64DD28/arduino/FuncSpeedTest/) 
-では 0.42us。ADC よりも高速な動作が期待できる。
+では 0.25us。ADC よりも高速な動作が期待できる。
