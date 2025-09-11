@@ -19,7 +19,7 @@ https://akizukidenshi.com/catalog/g/g118314/
 
 [DxCore](https://github.com/SpenceKonde/DxCore) がサポートしている。
 
-# PIC1827Q43
+# PIC18F27Q43
 
 秋月で、ATMega328P よりも高性能で安い AVR64DD28 よりも安いのに、さらに高性能？
 

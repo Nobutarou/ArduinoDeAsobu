@@ -40,12 +40,18 @@
 #define _pr2 63
 
 // あらかじめ ADC の値を計算しておく
+// 1.3V: 403
+// 1.4V: 434
+// 1.5V: 465
 #define _adc_vbat_low 155
-// 1.3V
-#define _adc_vbat_high 403
+
+#define _adc_vbat_high 434
+
 // 1.4V
-#define _adc_vbat_max 434
-//#define _adc_vbat_max 900
+#define _adc_vbat_max 465
+// 1.5V
+//#define _adc_vbat_max 465
+
 
 void setup(void);
 void set_duty(short duty);
