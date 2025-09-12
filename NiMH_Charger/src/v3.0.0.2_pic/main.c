@@ -43,12 +43,13 @@
 // 1.3V: 403
 // 1.4V: 434
 // 1.5V: 465
+// 1.7V: 527
 #define _adc_vbat_low 155
 
-#define _adc_vbat_high 434
+#define _adc_vbat_high 465
 
 // 1.4V
-#define _adc_vbat_max 465
+#define _adc_vbat_max 527
 // 1.5V
 //#define _adc_vbat_max 465
 
@@ -96,11 +97,18 @@ void main(void) {
         // 1.4V で 1.9A。1.9*111/255=0.83A
             duty=111;
             stage=1;
-        } else if(adc <= 1023){
+        } else if(adc <= 527){
         // adc=1023=3.3V
         // 1.4V で 1.9A。1A 狙いで duty=1/1.9*255=134
-        // 3.3V で 0A。
+        // 1.7V で 1.6A*134/255=0.84A
             duty=134;
+            stage=1;
+        } else if(adc <= 1023){
+        // 1.7V で 1A を狙うので duty=1/(3.3-1.7)*255=159
+        // duty=159 だと 2V で 0.81A となる
+        // この先は電流減る一方だけど、ここまで電圧上がってれば、もう無理に流す必要もない
+        // か
+            duty=159;
             stage=1;
         } else {
         // error
@@ -116,7 +124,8 @@ void main(void) {
         // PWM 掛ける瞬間にシャットダウンしてる？
         // 抵抗？
        
-        if (adc >= _adc_vbat_high && adc <= adc_max){
+        //if (adc >= _adc_vbat_high && adc <= adc_max){
+        if (adc <= adc_max){
             set_duty(0);
             LATAbits.LATA2=0;
             while(1){
@@ -138,7 +147,7 @@ void main(void) {
         };
         set_duty(duty);
         if(adc > adc_max){
-            adc_max=adc;
+            adc_max=(adc+adc_max)/2; //どうせばらつくので少しずつ更新してみる
         };
         for(i=0;i<30;i++){
             __delay_ms(2000);
