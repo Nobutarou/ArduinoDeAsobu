@@ -1,0 +1,76 @@
+; 自作 mcp23017 に繋いだ LM162AT1 を動かす。 A0-A2, C0-C5 が GPIO A, B として使える
+; RS = B0 (PIC ではなくて GPIO で記述)
+; RW = B5
+; EN = B4
+; D4 = B2
+; D5 = B3
+; D6 = B1
+; D7 = A2
+
+; chip_type, clock (MHz)
+; クロックが低いと I2C 失敗が多い？
+; 4MHz まず動かない
+; 8MHz まず動くみたい
+; 16MHz ここまで上げたら安心か？
+#Chip 18f27q43,16
+; The default is LVP = OFF. Very dangerous.
+#config LVP = ON
+#config MCLR = ON
+
+; 下二個の意味は分かってない。ヘルプのコピペ
+#define USART_BAUD_RATE 9600
+#define USART_TX_BLOCKING
+#define USART_DELAY OFF
+; PPS で TX を決める
+RC6PPS = 0x20 ; UART1 TX from 21.3 PPS Outputs
+
+; PPS。SCL を RC4, SDA を RC5 にしておこう
+; 双方向なので input, output 両方必要
+I2C1SCLPPS = 0b010100;
+RC4PPS = 0x37
+I2C1SDAPPS = 0b010101;
+RC5PPS = 0x38
+
+; I2C の設定も別途やっておかないとだめなようだ
+; mcp23017.h が勝手にやってくれたりはしない
+HI2CMODE  Master
+#define HI2C_DATA PORTC.5
+#define HI2C_CLOCK PORTC.4
+; default 記述が 100 だったり 125 だったり怪しい。データシート的には 100kHz がデフォルト
+; 不安なので明示しておく
+#define HI2C_BAUD_RATE 100
+Dir HI2C_DATA out
+Dir HI2C_CLOCK out 
+
+; include はコードの実行はしないようだ
+#include "ore_mcp23017.h"
+#define DeviceAddress 0x40 
+; read モードは捨てている
+INIT_MCP23017_GPA DeviceAddress, 0 ; Aポートは output
+INIT_MCP23017_GPB DeviceAddress, 0 ; Bポートは output
+
+#include "ore_lcd.h"
+InitLCD
+
+ORE_PRINT "Hello,"
+; single (浮動小数点) もこれでいける
+ore_print singletostring(1.234)
+
+;long is OK
+;ore_print 80000
+; integer OK
+;ore_print -32768
+; word OK
+;ore_print 65535
+;byte OK
+;ORE_PRINT 255
+
+do
+  ore_locate 1, 5
+  ore_print 1
+  wait 1 s
+  ore_locate 1, 5
+  ore_print 0
+  wait 1 s
+loop
+
