@@ -1,0 +1,105 @@
+; クロックが低いと I2C 失敗が多い？
+; 4MHz まず動かない
+; 8MHz まず動くみたい
+; 16MHz ここまで上げたら安心か？
+#Chip 18f27q43,16
+
+; デフォルトで off になっててなんか怖い
+#config LVP = ON 
+#config MCLR = ON
+
+; UART TX の設定
+; 下二個の意味は分かってない。ヘルプのコピペ
+#define USART_BAUD_RATE 9600
+#define USART_TX_BLOCKING
+#define USART_DELAY OFF
+; PPS で TX を決める
+RB0PPS = 0x20 ; UART1 TX from 21.3 PPS Outputs
+
+; I2C (LCD) の設定
+; PPS。RB7 = SCL(0x37), RB6 = SDA (0x38)
+; 双方向なので input, output 両方必要
+I2C1SCLPPS = 0b001111;
+RB7PPS = 0x37
+I2C1SDAPPS = 0b001110;
+RB6PPS = 0x38
+
+HI2CMODE  Master
+#define HI2C_CLOCK PORTB.7
+#define HI2C_DATA PORTB.6
+; default 記述が 100 だったり 125 だったり怪しい。データシート的には 100kHz がデフォルト
+; 不安なので明示しておく
+#define HI2C_BAUD_RATE 100
+Dir HI2C_DATA out
+Dir HI2C_CLOCK out 
+
+; include はコードの実行はしない。サブルーチンや定義を読むだけ。
+#include "ore_mcp23017.h"
+#define DeviceAddress 0x40 
+; read モードは捨てている
+INIT_MCP23017_GPA DeviceAddress, 0 ; Aポートは output
+INIT_MCP23017_GPB DeviceAddress, 0 ; Bポートは output
+
+#include "ore_lcd.h"
+InitLCD
+
+; ADC の設定
+#define ADSpeed LowSpeed
+; adc_ref_source が働いていない気がする
+;#define adc_ref_source AD_REF_AREF
+; ADREF の PREF = 0b10 で VREF
+ADREF.PREF0 = 0
+ADREF.PREF1 = 1
+
+dir PORTA.5 in
+; 初回はなんか信用できないイメージがあるので空打ちしておく
+
+dim ore_adc as word
+ore_adc=ReadAD12(ANA5)
+
+
+; 測定開始
+#define ore_R1 1000.0
+#define charge_pin 
+
+dir PORTA.4 out
+PORTA.4 = 1
+wait 100 ms
+
+ore_adc = readad12(ana5)
+
+; 4095 は 0割が起きるので、終っておく
+if ore_adc = 4095 then
+  ore_post ( 10, "M", ">")
+  do
+  loop
+end if
+
+dim ore_Rtest as single
+ore_Rtest = [single](ore_adc) / [single](4095-ore_adc) * 1000.0
+
+if ore_Rtest >= 1000000.0 then
+  ore_Rtest = ore_Rtest / 1000000.0
+  ore_post(ore_Rtest, "M", "")
+else if ore_Rtest >= 1000.0 then
+  ore_Rtest = ore_Rtest / 1000.0
+  ore_post(ore_Rtest, "k", "")
+else
+  ore_post(ore_Rtest,"","")
+end if
+
+do
+loop
+
+macro ore_post (ore_post_value, ore_post_order, ore_post_fugo)
+  HSerPrint ore_post_fugo+" "
+  HserPrint ore_post_value
+  HSerPrint " "+ore_post_order
+  HSerPrintCRLF
+  Ore_Print Ore_Post_Fugo+" "+SingleToString(Ore_Post_Value)
+  Ore_Locate 1,0
+  Ore_Print Ore_Post_Order
+  Ore_LCDHex 0b11110100 ; Ω
+end macro
+
+' vim: set filetype=awk:
