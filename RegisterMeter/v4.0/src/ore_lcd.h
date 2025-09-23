@@ -7,10 +7,16 @@
 ; こっちは、無理矢理やってるから GPIOA, GPIOB 両方使うので、ピン配置を変えるだけでは対応できない。
 ; 普通の 4線通信の LCD_IO 4 を変更する
 
-; あまりに汚いコード。いつか書き直す実力が備わると良いのだが。
+; print, locate, cls, hex に対応
+; print の引数は string, long のみ。他は WordToString とかそういうの使え
+; hex は単純に文字コード表そのまま描画。
+; 他は無視
 
-; print, locate,cls を動かすことが目標。
-; それらに関係ない sub は無視
+; GCBasic は全てグローバル変数
+; そして <inst_dir>/include 以下はすべて自動読み込み
+; つまり自分の知らんうちに変数が使われている
+; Ore_ とか付けておくのが無難
+; 「？？？」となったときに変数名変えるだけで解決したりする
 
 ; 初期設定
 ; RS = B0 (PIC ではなくて GPIO で記述)
@@ -21,46 +27,37 @@
 ; D6 = B1
 ; D7 = A2
 
-dim RS_STATE as bit
+#DEFINE OreDebug 0; 1: debug out to serial
+#define ORE_LCD_WIDTH 16
 
-; なぜか 1 を渡しても 0 が渡ってしまう
-;macro RS(bit)
-;  OUT_GPB_BIT(DeviceAddress,0,bit)
-;  ;HSerPrint "RS "
-;  ;HSerPrint bit
-;  ;HSerPrintCRLF   
-;
-;  RS_STATE=bit
-;end macro
+dim OreLCD_RS_STATE as bit
 
-; コピーして名前を変えただけなのになぜか動く
-macro ORE_RS(bit)
+macro OreLCD_RS(bit)
   OUT_GPB_BIT(DeviceAddress,0,bit)
-  ;HSerPrint "RS "
-  ;HSerPrint bit
-  ;HSerPrintCRLF   
-
-  RS_STATE=bit
+  #ifdef OreDebug 1
+    HSerPrint "RS "
+    HSerPrint bit
+    HSerPrintCRLF   
+  #endif
+  OreLCD_RS_STATE=bit
 end macro
 
-macro RW(bit)
+macro OreLCD_RW(bit)
   OUT_GPB_BIT(DeviceAddress,5,bit)
-  ;HSerPrint "RW "
-  ;HSerPrint bit
-  ;HSerPrintCRLF   
+  #ifdef OreDebug 1
+    HSerPrint "RW "
+    HSerPrint bit
+    HSerPrintCRLF   
+  #endif
 end macro
 
-;macro EN(bit)
-;  OUT_GPB_BIT(DeviceAddress,4,bit)
-;  ;HSerPrint "EN "
-;  ;HSerPrint bit
-;  ;HSerPrintCRLF   
-;end macro
-macro ORE_EN(bit)
+macro OreLCD_EN(bit)
   OUT_GPB_BIT(DeviceAddress,4,bit)
-  ;HSerPrint "EN "
-  ;HSerPrint bit
-  ;HSerPrintCRLF   
+  #ifdef OreDebug 1
+    HSerPrint "EN "
+    HSerPrint bit
+    HSerPrintCRLF   
+  #endif
 end macro
 
 ; これらの時間は 270kHz 動作時の話。100kHz ではおよそ 3倍となる。
@@ -70,81 +67,70 @@ end macro
 ; だがインストラクション実行時間が基本 37us。
 ; 37us を越えるクリアとカーソルホームは別途 wait を掛けよう
 
-macro EN_PULSE
+macro OreLCD_EN_PULSE
   wait 1 us ; 1 us >> 140 ns *3
-  ORE_EN 1
+  OreLCD_EN 1
   wait 2 us ; 2 us >> 450 ns *3
-  ORE_EN 0
+  OreLCD_EN 0
   wait 220 us ; 220us >> 37 us * 3
 end macro
 
-macro DB4(bit)
+macro OreLCD_DB4(bit)
   OUT_GPB_BIT(DeviceAddress,2,bit)
-  ;HSerPrint "DB4 "
-  ;HSerPrint bit
-  ;HSerPrintCRLF   
+  #ifdef OreDebug 1
+    HSerPrint "DB4 "
+    HSerPrint bit
+    HSerPrintCRLF   
+  #endif
 end macro
 
-macro DB5(bit)
+macro OreLCD_DB5(bit)
   OUT_GPB_BIT(DeviceAddress,3,bit)
-  ;HSerPrint "DB5 "
-  ;HSerPrint bit
-  ;HSerPrintCRLF   
+  #ifdef OreDebug 1
+    HSerPrint "DB5 "
+    HSerPrint bit
+    HSerPrintCRLF   
+  #endif
 end macro
 
-macro DB6(bit)
+macro OreLCD_DB6(bit)
   OUT_GPB_BIT(DeviceAddress,1,bit)
-  ;HSerPrint "DB6 "
-  ;HSerPrint bit
-  ;HSerPrintCRLF   
+  #ifdef OreDebug 1
+    HSerPrint "DB6 "
+    HSerPrint bit
+    HSerPrintCRLF   
+  #endif
 end macro
 
-macro DB7(bit)
+macro OreLCD_DB7(bit)
   OUT_GPA_BIT(DeviceAddress,2,bit)
-  ;HSerPrint "DB7 "
-  ;HSerPrint bit
-  ;HSerPrintCRLF   
+  #ifdef OreDebug 1
+    HSerPrint "DB7 "
+    HSerPrint bit
+    HSerPrintCRLF   
+  #endif
 end macro
 
-#define ORE_LCD_WIDTH 16
 
-Dim SysLCDTemp as Byte
-
-;Sub PUT (In LCDPutLine, In LCDPutColumn, In LCDChar)
-;'Sub to put a character at the specified location
-;    LOCATE LCDPutLine, LCDPutColumn
-;    Set LCD_RS on
-;    LCDWriteByte(LCDChar)
-;End Sub
-
-;Function GET (LCDPutLine, LCDPutColumn)
-;'Sub to get the value of the current LCD GCGRAM
-;'GET only supported in 8 and 4 bit modes
-;
-;    LOCATE LCDPutLine, LCDPutColumn
-;    Set LCD_RS on
-;    GET = LCDReadByte
-;End Function
-
-Sub ORE_LOCATE (In LCDLine, In LCDColumn)
+Sub ORE_LOCATE (In OreLCDLINE, In OreLCDCOlumn)
 'Sub to LOCATE the cursor
-'Where LCDColumn is 0 to screen width-1, LCDLine is 0 to screen height-1
+'Where OreLCDCOlumn is 0 to screen width-1, OreLCDLine is 0 to screen height-1
 
-    If LCDLine > 1 Then
-        LCDLine = LCDLine - 2
-        LCDColumn = LCDColumn + ORE_LCD_WIDTH
+    If OreLCDLINE > 1 Then
+        OreLCDLINE = OreLCDLINE - 2
+        OreLCDCOlumn = OreLCDCOlumn + ORE_LCD_WIDTH
     End If
 
     ; 0x80 = 0b1000000, or だから先頭の 1 は必ず残る。これは DD RAM アドレスセットのインス
     ; トラクションの合図
-    ; 0x40 = 0b0100000。先頭行のアドレスが 0、二行目が 0x40 から始まる。LCDLINE=1 となれば
+    ; 0x40 = 0b0100000。先頭行のアドレスが 0、二行目が 0x40 から始まる。OreLCDLINE=1 となれば
     ; 二行目となる
-    ORE_LCDWriteByte(0x80 or 0x40 * LCDLine + LCDColumn)
+    ORE_LCDWriteByte(0x80 or 0x40 * OreLCDLINE + OreLCDCOlumn)
 End Sub
 
 Sub ORE_CLS
 'Sub to clear the LCD
-    ORE_RS(0)
+    OreLCD_RS(0)
 
     'Clear screen
     ORE_LCDWriteByte (0b00000001)
@@ -157,83 +143,10 @@ Sub ORE_CLS
 
 End Sub
 
-;Sub LCDHOME
-;'Sub to set the cursor to the home position
-;    SET LCD_RS OFF
-;    'Return CURSOR to home
-;    LCDWriteByte (0b00000010)
-;    Wait 2 ms 'Must be > 1.52 ms
-;End Sub
-
-;Sub LCDcmd ( In LCDValue )
-;'Sub to send specified command direct to the LCD
-;    SET LCD_RS OFF
-;
-;    LCDWriteByte ( LCDValue)
-;
-;    IF LCDValue = 1 OR LCDValue = 2 then  ' HOME or CLEAR
-;       Wait 2 ms ' Must be > 1.52 ms
-;    Else
-;       Wait 50 us
-;    END IF
-;
-;End sub
-
-;Sub LCD3_CMD(In LCDValue as Byte)
-;    LCD_DB = 0  'really maps to the LCD_RS
-;    LCDWriteByte(LCDValue)
-;end sub
-;
-;sub LCD3_DATA(In LCDValue as byte)
-;    LCD3_DB = 1  'really maps to the LCD_RS
-;    LCDWriteByte(LCDValue)
-;end sub
-
-;' Used in 1-wire mode; a "zero" bit is 10us low and minimal 20 us High
-;Sub Zerobit
-;    SET LCD_CD OFF
-;    wait 10 us ' bit time
-;    SET LCD_CD ON
-;    wait 20 us ' recovery RC time
-;    wait 1 ms
-;end sub
-;
-;' Used in 1-wire mode; a "one" bit is 1us low and minimal 5 us High
-;Sub Onebit
-;    SET LCD_CD OFF
-;    wait 1 us ' bit time
-;    SET LCD_CD ON
-;    wait 5 us ' recovery RC time
-;    wait 1 ms
-;end sub
-;
-;' Used in 1-wire mode; reset is 350 us low and minimal 300 us high
-;Sub ResetShiftReg
-;    SET LCD_CD OFF
-;    wait 350 us
-;    SET LCD_CD ON
-;    wait 300 us
-;    wait 1 ms
-;end sub
-
 sub InitLCD
 ; データシートと読み比べていく
 
-    asm showdebug  `LCD_IO selected is ` LCD_IO
-
-    #IFDEF LCD_Speed FAST
-        asm showdebug  `LCD_Speed is FAST`
-    #ENDIF
-    #IFDEF LCD_Speed MEDIUM
-        asm showdebug  `LCD_Speed is MEDIUM`
-    #ENDIF
-    #IFDEF LCD_Speed SLOW
-        asm showdebug  `LCD_Speed is SLOW`
-    #ENDIF
-
-    asm showdebug  `OPTIMAL is set to ` OPTIMAL
-    asm showdebug  `LCD_Speed is set to ` LCD_Speed
-
+    asm showdebug  `OreLCD`
 
         ; VDD が 4.5V に到達してから 15ms 以上待つ
         ; 270kHz の話と仮定して 100kHz であれば 
@@ -242,37 +155,37 @@ sub InitLCD
         ; ORE_RS| R/W | DB7-DB4 | で
         ; 0 | 0   | 0011    | 
 
-        ORE_RS 0
-        RW 0
-        ORE_EN 0
+        OreLCD_RS 0
+        OreLCD_RW 0
+        OreLCD_EN 0
 
-        DB7 0
-        DB6 0
-        DB5 1
-        DB4 1
+        OreLCD_DB7 0
+        OreLCD_DB6 0
+        OreLCD_DB5 1
+        OreLCD_DB4 1
 
-        EN_PULSE
+        OreLCD_EN_PULSE
 
         ; 4.1ms 以上待つ (x3)
         Wait 22 ms
         
         ; 2回目
-        EN_PULSE
+        OreLCD_EN_PULSE
         
         ; 100us 以上待つ (x3)
         wait 470 us
 
         ; 3回目
-        EN_PULSE
+        OreLCD_EN_PULSE
 
         ; RS| R/W | DB7-DB4 | 
         ; 0 | 0   | 0010    | 4 bit mode の指定
 
-        DB7 0
-        DB6 0
-        DB5 1
-        DB4 0
-        EN_PULSE
+        OreLCD_DB7 0
+        OreLCD_DB6 0
+        OreLCD_DB5 1
+        OreLCD_DB4 0
+        OreLCD_EN_PULSE
 
        '===== now in 4 bit mode =====
 
@@ -292,188 +205,242 @@ sub InitLCD
 
     ; 12 = 0b1100 だけど CLS しちゃってるから 1 だと思うんだけど。
     ; 多分デバグ出力目的で、実動作には使わない？
-    LCD_State = 12
+    ;LCD_State = 12
 
 end sub
 
 
 SUB ORE_PRINT (In ORE_PRINTData As String)
 'Sub to PRINT a string variable on the LCD
-    ;HSerPrint "PRINTData "
-    ;HSerPrint ORE_PRINTData
-    ;HSerPrintCRLF   
+  #ifdef OreDebug 1
+    HSerPrint "PRINTData "
+    HSerPrint ORE_PRINTData
+    HSerPrintCRLF   
+  #endif
 
+  ; help に従うなら LEN 関数かな
+  ; この書式で良いみたいだけど Help に記載がないように思う
+  ; https://sourceforge.net/p/gcbasic/discussion/579126/thread/9b18e3fc/
     Ore_PRINTLen = ORE_PRINTData(0)
-    ;HSerPrint "PRINTLen "
-    ;HSerPrint ORE_PRINTLen
-    ;HSerPrintCRLF   
+  #ifdef OreDebug 1
+    HSerPrint "PRINTLen "
+    HSerPrint ORE_PRINTLen
+    HSerPrintCRLF   
+  #endif
 
     If ORE_PRINTLen = 0 Then Exit Sub
-    ;Set LCD_RS On
-    ORE_RS 1
-    ;HSerPrint "oreprint orers 1"
-    ;HSerPrintCRLF   
-    ;do
-    ;loop
+    OreLCD_RS 1
+
     'Write Data
     dim i as integer
-    ;For SysPRINTTemp = 1 To PRINTLen
     For i = 1 To ORE_PRINTLen step 1
-        ;HSerPrint "SysPRINTTemp "
-        ;HSerPrint i
-        ;HSerPrintCRLF   
-        ;HSerPrint "PRINTDATA(SysPRINTTemp) "
-        ;HSerPrint ORE_PRINTData(SysPRINTTemp)
-        ;HSerPrintCRLF   
+      #ifdef OreDebug 1
+        HSerPrint "String Index "
+        HSerPrint i
+        HSerPrintCRLF   
+        HSerPrint "Char "
+        HSerPrint ORE_PRINTData(i)
+        HSerPrintCRLF   
+      #endif
         ORE_LCDWriteByte Ore_PRINTData(i)
     Next
-    ORE_RS 0
+    OreLCD_RS 0
 End Sub
 
-SUB ORE_PRINT (In LCDValue)
-'Sub to PRINT a byte variable on the LCD
+; OBSO
+; Ore_LCDHex で代用
+; Ore_Print は、あくまで、与えた文字列や整数をそのまま描画することにして、
+; バイトコード送るのは Ore_LCDHex の役目にする
+;SUB ORE_PRINT (In OreLCDValue)
+;SUB ORE_PRINT (In OreLCDValue as Byte) ; と書くべきか？
+;'Sub to PRINT a byte variable on the LCD
+;
+;    OreLCDValueTemp = 0
+;    ;Set LCD_RS On
+;    OreLCD_RS(1)
+;
+;    IF OreLCDValue >= 100 Then
+;        OreLCDValueTemp = OreLCDValue / 100
+;        OreLCDValue = SysCalcTempX
+;        ORE_LCDWriteByte(OreLCDValueTemp + 48)
+;    End If
+;
+;    If OreLCDValueTemp > 0 Or OreLCDValue >= 10 Then
+;        OreLCDValueTemp = OreLCDValue / 10
+;        OreLCDValue = SysCalcTempX
+;        ORE_LCDWriteByte(OreLCDValueTemp + 48)
+;    End If
+;    ORE_LCDWriteByte (OreLCDValue + 48)
+;    OreLCD_RS 0
+;End Sub
 
-    LCDValueTemp = 0
-    ;Set LCD_RS On
-    ORE_RS(1)
+; なんか間違ってない？
+; Ore_Print WordToString(65536) ; とか
+; Ore_Print [long]65536 ; とか、そんな感じで良いんじゃね？
+;SUB ORE_PRINT (In LCDValue As Word)
+;'Sub to PRINT a word variable on the LCD
+;
+;    Dim SysCalcTempX As Word
+;
+;    OreLCD_RS(1)
+;    LCDValueTemp = 0
+;
+;    If LCDValue >= 10000 then
+;        LCDValueTemp = LCDValue / 10000 [word]
+;         
+;         ; dim で宣言 = 0 になるとすると LCDValue = 0になっちゃうよ
+;         ; これ 10000 で割った余りじゃないといけないんじゃないの？
+;         ; LCDValue = LCDValue % 10000 ; とかじゃないの？？？
+;        LCDValue = SysCalcTempX  
+;        ORE_LCDWriteByte(LCDValueTemp + 48)
+;        Goto LCDPRINTWord1000
+;    End If
+;
+;    If LCDValue >= 1000 then
+;        LCDPRINTWord1000:
+;        LCDValueTemp = LCDValue / 1000 [word]
+;        LCDValue = SysCalcTempX
+;        ORE_LCDWriteByte(LCDValueTemp + 48)
+;        Goto LCDPRINTWord100
+;    End If
+;
+;    If LCDValue >= 100 then
+;        LCDPRINTWord100:
+;        LCDValueTemp = LCDValue / 100 [word]
+;        LCDValue = SysCalcTempX
+;        ORE_LCDWriteByte(LCDValueTemp + 48)
+;        Goto LCDPRINTWord10
+;    End If
+;
+;    If LCDValue >= 10 then
+;        LCDPRINTWord10:
+;        LCDValueTemp = LCDValue / 10 [word]
+;        LCDValue = SysCalcTempX
+;        ORE_LCDWriteByte(LCDValueTemp + 48)
+;    End If
+;
+;    ORE_LCDWriteByte (LCDValue + 48)
+;    OreLCD_RS 0
+;End Sub
 
-    IF LCDValue >= 100 Then
-        LCDValueTemp = LCDValue / 100
-        LCDValue = SysCalcTempX
-        ORE_LCDWriteByte(LCDValueTemp + 48)
-    End If
+; obso
+; 最後に Ore_Print word に送るんだけど、その word が動作する気がしない
+;SUB ORE_PRINT (In ORE_LCDValueInt As Integer)
+;'Sub to PRINT an integer variable on the LCD
+;
+;    Dim LCDValue As Word
+;
+;    'If sign bit is on, PRINT - sign and then negate
+;    If ORE_LCDValueInt.15 = On Then
+;              ;LCDWriteChar("-")
+;              ore_print "-"
+;              LCDValue = -ORE_LCDValueInt
+;
+;    'Sign bit off, so just copy value
+;    Else
+;              LCDValue = ORE_LCDValueInt
+;    End If
+;
+;    'Use PRINT(word) to display value
+;    ORE_PRINT LCDValue
+;End Sub
 
-    If LCDValueTemp > 0 Or LCDValue >= 10 Then
-        LCDValueTemp = LCDValue / 10
-        LCDValue = SysCalcTempX
-        ORE_LCDWriteByte(LCDValueTemp + 48)
-    End If
-    ORE_LCDWriteByte (LCDValue + 48)
-    ORE_RS 0
-End Sub
-
-SUB ORE_PRINT (In LCDValue As Word)
-'Sub to PRINT a word variable on the LCD
-
-    Dim SysCalcTempX As Word
-
-    ;Set LCD_RS On
-    ORE_RS(1)
-    LCDValueTemp = 0
-
-    If LCDValue >= 10000 then
-        LCDValueTemp = LCDValue / 10000 [word]
-        LCDValue = SysCalcTempX
-        ORE_LCDWriteByte(LCDValueTemp + 48)
-        Goto LCDPRINTWord1000
-    End If
-
-    If LCDValue >= 1000 then
-        LCDPRINTWord1000:
-        LCDValueTemp = LCDValue / 1000 [word]
-        LCDValue = SysCalcTempX
-        ORE_LCDWriteByte(LCDValueTemp + 48)
-        Goto LCDPRINTWord100
-    End If
-
-    If LCDValue >= 100 then
-        LCDPRINTWord100:
-        LCDValueTemp = LCDValue / 100 [word]
-        LCDValue = SysCalcTempX
-        ORE_LCDWriteByte(LCDValueTemp + 48)
-        Goto LCDPRINTWord10
-    End If
-
-    If LCDValue >= 10 then
-        LCDPRINTWord10:
-        LCDValueTemp = LCDValue / 10 [word]
-        LCDValue = SysCalcTempX
-        ORE_LCDWriteByte(LCDValueTemp + 48)
-    End If
-
-    ORE_LCDWriteByte (LCDValue + 48)
-    ORE_RS 0
-End Sub
-
-SUB ORE_PRINT (In ORE_LCDValueInt As Integer)
-'Sub to PRINT an integer variable on the LCD
-
-    Dim LCDValue As Word
-
-    'If sign bit is on, PRINT - sign and then negate
-    If ORE_LCDValueInt.15 = On Then
-              ;LCDWriteChar("-")
-              ore_print "-"
-              LCDValue = -ORE_LCDValueInt
-
-    'Sign bit off, so just copy value
-    Else
-              LCDValue = ORE_LCDValueInt
-    End If
-
-    'Use PRINT(word) to display value
-    ORE_PRINT LCDValue
-End Sub
-
+; LongToString ですかっと送れば良い気もするけどね
 SUB ORE_PRINT (In OreLCDValue As Long)
 'Sub to PRINT a long variable on the LCD
-    ;HSerPrint "LCDValue "
-    ;HSerPrint OreLCDValue
-    ;HSerPrintCRLF   
+    #ifdef OreDebug 1
+      HSerPrint "LCDValue "
+      HSerPrint OreLCDValue
+      HSerPrintCRLF   
+    #endif
 
-    ;Dim SysCalcTempA As Long
-    Dim SysPRINTBuffer(10)
+    Dim OreSysPrintBuffer(10)
     Dim ore_len as integer
-    ;SysPRINTBuffLen = 0
     ore_len=0
 
     Do
         'Divide number by 10, remainder into buffer
-        ;SysPRINTBuffLen += 1
         ore_len = ore_len+1
-        ;HSerPrint "SysPRINTBuffLen "
-        ;HSerPrint ore_len
-        ;HSerPrintCRLF   
-        ;SysPRINTBuffer(SysPRINTBuffLen) = OreLCDValue % 10
-        SysPRINTBuffer(ore_len) = OreLCDValue % 10
-        ;HSerPrint "SysPRINTBuff() "
-        ;HSerPrint SysPRINTBuffer(ore_len)
-        ;HSerPrintCRLF   
-        ;OreLCDValue = SysCalcTempA
-        OreLCDValue = (OreLCDValue-SysPRINTBuffer(ore_len))/10
-        ;HSerPrint "OreLCDValue "
-        ;HSerPrint OreLCDValue
-        ;HSerPrintCRLF   
+        #ifdef OreDebug 1
+          HSerPrint "ore_len "
+          HSerPrint ore_len
+          HSerPrintCRLF   
+        #endif
+        OreSysPrintBuffer(ore_len) = OreLCDValue % 10
+        #ifdef OreDebug 1
+          HSerPrint "OreSysPrintBuffer(ore_len) "
+          HSerPrint OreSysPrintBuffer(ore_len)
+          HSerPrintCRLF   
+        #endif
+        OreLCDValue = (OreLCDValue-OreSysPrintBuffer(ore_len))/10
+        #ifdef OreDebug 1
+          HSerPrint "OreLCDValue "
+          HSerPrint OreLCDValue
+          HSerPrintCRLF   
+        #endif
     Loop While OreLCDValue <> 0
 
     'Display
-    ;Set LCD_RS On
-    ORE_RS(1)
+    OreLCD_RS(1)
     dim i as integer
-    ;For SysPRINTTemp = SysPRINTBuffLen To 1 Step -1
     For i = ore_len To 1 Step -1
+      #ifdef OreDebug 1
         ;HSerPrint "i "
         ;HSerPrint i
         ;HSerPrintCRLF   
-        ;HSerPrint "SysPRINTBuffer() "
-        ;HSerPrint SysPRINTBuffer(i)
+        ;HSerPrint "OreSysPrintBuffer() "
+        ;HSerPrint OreSysPrintBuffer(i)
         ;HSerPrintCRLF   
-              ORE_LCDWriteByte(SysPRINTBuffer(i) + 48)
+      #endif
+        ORE_LCDWriteByte(OreSysPrintBuffer(i) + 48) ;48 は文字コード表で "0" の場所
     Next
 
-    ORE_RS(0)
+    OreLCD_RS(0)
 End Sub
 
 
 sub Ore_LCDHex  (In Ore_LCDValue as byte)
 ' 文字コードを直接叩く
 
-    ORE_RS(1)
+    OreLCD_RS(1)
     ORE_LCDWriteByte(Ore_LCDValue)
-    ORE_RS(0)
+    OreLCD_RS(0)
 
 end sub
-;
+
+sub ORE_LCDWriteByte(In Ore_LCDByte )
+
+            OreLCD_DB7(Ore_LCDByte.7)
+            OreLCD_DB6(Ore_LCDByte.6)
+            OreLCD_DB5(Ore_LCDByte.5)
+            OreLCD_DB4(Ore_LCDByte.4)
+
+        Wait 1 us
+        OreLCD_EN_PULSE
+
+        ; 下 4ビットを送る
+
+            OreLCD_DB7(Ore_LCDByte.3)
+            OreLCD_DB6(Ore_LCDByte.2)
+            OreLCD_DB5(Ore_LCDByte.1)
+            OreLCD_DB4(Ore_LCDByte.0)
+
+        Wait 1 us
+        OreLCD_EN_PULSE
+
+; LCD_State がどこにも使われていない (少なくとも採用した sub の中では)
+; 要らないと思う
+;    'If Register Select is low
+;    IF OreLCD_RS_STATE = 0 then
+;        IF LCDByte < 16 then
+;            if LCDByte > 7 then
+;               LCD_State = LCDByte
+;            end if
+;        END IF
+;    END IF
+
+end sub
+
 ;sub LCDWriteChar(In LCDChar)
 ;'Sub to PRINT character on the LCD
 ;
@@ -552,38 +519,6 @@ end sub
 ;
 ;End Sub
 
-
-sub ORE_LCDWriteByte(In LCDByte )
-
-
-            DB7(LCDByte.7)
-            DB6(LCDByte.6)
-            DB5(LCDByte.5)
-            DB4(LCDByte.4)
-
-        Wait 1 us
-        EN_PULSE
-
-        ; 下 4ビットを送る
-
-            DB7(LCDByte.3)
-            DB6(LCDByte.2)
-            DB5(LCDByte.1)
-            DB4(LCDByte.0)
-
-        Wait 1 us
-        EN_PULSE
-
-    'If Register Select is low
-    IF RS_STATE = 0 then
-        IF LCDByte < 16 then
-            if LCDByte > 7 then
-               LCD_State = LCDByte
-            end if
-        END IF
-    END IF
-
-end sub
 
 ;SUB LCD2_NIBBLEOUT (In LCD2BYTE)
 ;'Sub to send byte in two nibbles to LCD
@@ -947,4 +882,45 @@ end sub
 ;        LCDWriteByte(0)
 ;    #ENDIF
 ;end Sub
+
+;Dim SysLCDTemp as Byte
+
+;Sub PUT (In LCDPutLine, In LCDPutColumn, In LCDChar)
+;'Sub to put a character at the specified location
+;    LOCATE LCDPutLine, LCDPutColumn
+;    Set LCD_RS on
+;    LCDWriteByte(LCDChar)
+;End Sub
+
+;Function GET (LCDPutLine, LCDPutColumn)
+;'Sub to get the value of the current LCD GCGRAM
+;'GET only supported in 8 and 4 bit modes
+;
+;    LOCATE LCDPutLine, LCDPutColumn
+;    Set LCD_RS on
+;    GET = LCDReadByte
+;End Function
+
+;Sub LCDHOME
+; Ore_Locate でカバーできる
+;'Sub to set the cursor to the home position
+;    SET LCD_RS OFF
+;    'Return CURSOR to home
+;    LCDWriteByte (0b00000010)
+;    Wait 2 ms 'Must be > 1.52 ms
+;End Sub
+
+;Sub LCDcmd ( In LCDValue )
+;'Sub to send specified command direct to the LCD
+;    SET LCD_RS OFF
+;
+;    LCDWriteByte ( LCDValue)
+;
+;    IF LCDValue = 1 OR LCDValue = 2 then  ' HOME or CLEAR
+;       Wait 2 ms ' Must be > 1.52 ms
+;    Else
+;       Wait 50 us
+;    END IF
+;
+;End sub
 

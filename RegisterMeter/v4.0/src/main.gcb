@@ -93,7 +93,7 @@ loop
 
 macro ore_post (ore_post_value, ore_post_order, ore_post_fugo)
   HSerPrint ore_post_fugo+" "
-  HserPrint ore_post_value
+  HserPrint SingleToString(ore_post_value)
   HSerPrint " "+ore_post_order
   HSerPrintCRLF
   Ore_Print Ore_Post_Fugo+" "+SingleToString(Ore_Post_Value)
