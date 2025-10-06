@@ -1,0 +1,592 @@
+     VMA      LMA     Size Align Out     In      Symbol
+       0        0        4     2 .vec
+       0        0        4     2         ./src/smc_gen/general/r_cg_vect_table.o:(.vec)
+       0        0        4     1                 _HardwareVectors
+       4        4       7c     2 .vects
+       4        4       7c     2         ./src/smc_gen/general/r_cg_vect_table.o:(.vects)
+       4        4       7c     1                 _Vectors
+      80       80        0     2 .callt0
+      80       80        0     1         . = ALIGN ( 2 )
+      c0       c0        4     1 .option_byte
+      c0       c0        4     1         ./src/smc_gen/general/r_cg_vect_table.o:(.option_bytes)
+      c0       c0        4     1                 _Option_Bytes
+      c4       c4        a     1 .security_id
+      c4       c4        a     1         ./src/smc_gen/general/r_cg_vect_table.o:(.security_id)
+      c4       c4        a     1                 _Security_Id
+      d8       d8        0     2 .lowtext
+      d8       d8        0     2         <internal>:(.lowtext)
+      d8       d8        0     1 __mdata = .
+      d8       d8      88c     1 .text
+      d8       d8        0     1         ./src/smc_gen/r_pincfg/Pin.o:(.text)
+      d8       d8        0     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.text)
+      d8       d8        0     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.text)
+      d8       d8        e     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common_llvm.o:(.text)
+      da       da        0     1                 loop
+      da       da        0     1                 _delay_wait
+      e1       e1        0     1                 check
+      e5       e5        0     1                 _exit
+      e6       e6       a5     1         ./src/smc_gen/r_bsp/mcu/all/start.o:(.text)
+      e6       e6        0     1                 _PowerON_Reset
+     12a      12a        0     1                 _sbss_zero_done
+     139      139        0     1                 _bss_zero_done
+     14c      14c        0     1                 _exit
+     14e      14e        0     1                 _rl78_run_init_array
+     159      159        0     1                 _rl78_run_fini_array
+     162      162        0     1                 _rl78_run_inilist
+     162      162        0     1                 next_inilist
+     17b      17b        0     1                 skip_inilist
+     180      180        0     1                 done_inilist
+     181      181        0     1                 __rl78_init
+     186      186        0     1                 __rl78_fini
+     18b      18b        0     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.text)
+     18b      18b        0     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.text)
+     18b      18b        0     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text)
+     18b      18b        0     1         ./src/smc_gen/general/r_cg_systeminit.o:(.text)
+     18b      18b        0     1         ./src/smc_gen/general/r_cg_vect_table.o:(.text)
+     18b      18b        0     1         ./src/Blink.o:(.text)
+     18b      18b       2c     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ulldiv.S.o):(.text)
+     194      194       23     1                 __COM_ulldiv
+     194      194       23     1                 ___udivdi3
+     1b7      1b7      1ff     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(REL_lldiv.S.o):(.text)
+     1d2      1d2      1e4     1                 __REL_lldiv
+     3b6      3b6       38     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o):(.text)
+     3b6      3b6       38     1                 __COM_llmul
+     3b6      3b6       38     1                 ___muldi3
+     3ee      3ee       4f     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_mulul.S.o):(.text)
+     3ee      3ee       4f     1                 __COM_mulul
+     43d      43d       12     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(REL_llmul_addh.S.o):(.text)
+     43d      43d       12     1                 __REL_llmul_addh
+     44f      44f        4     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_mului.S.o):(.text)
+     44f      44f        4     1                 __COM_mului
+     453      453       1a     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_lmul.S.o):(.text)
+     453      453       1a     1                 __COM_lmul
+     453      453       1a     1                 ___mulsi3
+     46d      46d        1     1         ./src/smc_gen/r_pincfg/Pin.o:(.text._R_Pins_Create)
+     46d      46d        1     1                 _R_Pins_Create
+     46e      46e      113     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.text._get_fclk_freq_hz)
+     46e      46e      113     1                 _get_fclk_freq_hz
+     581      581       67     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.text._mcu_clock_setup)
+     581      581       67     1                 _mcu_clock_setup
+     5e8      5e8        3     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.text._R_BSP_GetFclkFreqHz)
+     5e8      5e8        3     1                 _R_BSP_GetFclkFreqHz
+     5eb      5eb      2b3     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.text._R_BSP_SoftwareDelay)
+     5eb      5eb      2b3     1                 _R_BSP_SoftwareDelay
+     89e      89e        d     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.text._hdwinit)
+     89e      89e        d     1                 _hdwinit
+     8ab      8ab        2     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.text._output_ports_configure)
+     8ab      8ab        2     1                 _output_ports_configure
+     8ad      8ad        2     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.text._interrupts_configure)
+     8ad      8ad        2     1                 _interrupts_configure
+     8af      8af        3     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.text._peripheral_modules_enable)
+     8af      8af        3     1                 _peripheral_modules_enable
+     8b2      8b2        f     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.text._bsp_init_system)
+     8b2      8b2        f     1                 _bsp_init_system
+     8c1      8c1        3     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.text._bsp_init_hardware)
+     8c1      8c1        3     1                 _bsp_init_hardware
+     8c4      8c4        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_WDTI)
+     8c4      8c4        2     1                 _INT_WDTI
+     8c6      8c6        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_LVI)
+     8c6      8c6        2     1                 _INT_LVI
+     8c8      8c8        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P0)
+     8c8      8c8        2     1                 _INT_P0
+     8ca      8ca        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P1)
+     8ca      8ca        2     1                 _INT_P1
+     8cc      8cc        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P2)
+     8cc      8cc        2     1                 _INT_P2
+     8ce      8ce        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P3)
+     8ce      8ce        2     1                 _INT_P3
+     8d0      8d0        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P4)
+     8d0      8d0        2     1                 _INT_P4
+     8d2      8d2        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P5)
+     8d2      8d2        2     1                 _INT_P5
+     8d4      8d4        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_ST2)
+     8d4      8d4        2     1                 _INT_ST2
+     8d6      8d6        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_SR2)
+     8d6      8d6        2     1                 _INT_SR2
+     8d8      8d8        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_SRE2)
+     8d8      8d8        2     1                 _INT_SRE2
+     8da      8da        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_FAAE)
+     8da      8da        2     1                 _INT_FAAE
+     8dc      8dc        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TIMEC0)
+     8dc      8dc        2     1                 _INT_TIMEC0
+     8de      8de        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_ST0)
+     8de      8de        2     1                 _INT_ST0
+     8e0      8e0        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TM00)
+     8e0      8e0        2     1                 _INT_TM00
+     8e2      8e2        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TM01H)
+     8e2      8e2        2     1                 _INT_TM01H
+     8e4      8e4        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_ST1)
+     8e4      8e4        2     1                 _INT_ST1
+     8e6      8e6        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_SR1)
+     8e6      8e6        2     1                 _INT_SR1
+     8e8      8e8        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TM03H)
+     8e8      8e8        2     1                 _INT_TM03H
+     8ea      8ea        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_IICA0)
+     8ea      8ea        2     1                 _INT_IICA0
+     8ec      8ec        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_SR0)
+     8ec      8ec        2     1                 _INT_SR0
+     8ee      8ee        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TM01)
+     8ee      8ee        2     1                 _INT_TM01
+     8f0      8f0        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TM02)
+     8f0      8f0        2     1                 _INT_TM02
+     8f2      8f2        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TM03)
+     8f2      8f2        2     1                 _INT_TM03
+     8f4      8f4        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_AD0)
+     8f4      8f4        2     1                 _INT_AD0
+     8f6      8f6        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_RTC)
+     8f6      8f6        2     1                 _INT_RTC
+     8f8      8f8        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_ITL)
+     8f8      8f8        2     1                 _INT_ITL
+     8fa      8fa        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_KR)
+     8fa      8fa        2     1                 _INT_KR
+     8fc      8fc        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TRJ0)
+     8fc      8fc        2     1                 _INT_TRJ0
+     8fe      8fe        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TRD0)
+     8fe      8fe        2     1                 _INT_TRD0
+     900      900        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TRD1)
+     900      900        2     1                 _INT_TRD1
+     902      902        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TRG)
+     902      902        2     1                 _INT_TRG
+     904      904        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TRX)
+     904      904        2     1                 _INT_TRX
+     906      906        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P20)
+     906      906        2     1                 _INT_P20
+     908      908        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P21)
+     908      908        2     1                 _INT_P21
+     90a      90a        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P6)
+     90a      90a        2     1                 _INT_P6
+     90c      90c        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P7)
+     90c      90c        2     1                 _INT_P7
+     90e      90e        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P8)
+     90e      90e        2     1                 _INT_P8
+     910      910        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P9)
+     910      910        2     1                 _INT_P9
+     912      912        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_FL)
+     912      912        2     1                 _INT_FL
+     914      914        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P10)
+     914      914        2     1                 _INT_P10
+     916      916        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P11)
+     916      916        2     1                 _INT_P11
+     918      918        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_FAATRAP)
+     918      918        2     1                 _INT_FAATRAP
+     91a      91a        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_CMP2)
+     91a      91a        2     1                 _INT_CMP2
+     91c      91c        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_CMP3)
+     91c      91c        2     1                 _INT_CMP3
+     91e      91e        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKB0)
+     91e      91e        2     1                 _INT_TMKB0
+     920      920        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKB1)
+     920      920        2     1                 _INT_TMKB1
+     922      922        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKB2)
+     922      922        2     1                 _INT_TMKB2
+     924      924        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_GCR)
+     924      924        2     1                 _INT_GCR
+     926      926        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_PMC)
+     926      926        2     1                 _INT_PMC
+     928      928        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTR00)
+     928      928        2     1                 _INT_TMKBSTR00
+     92a      92a        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTP00)
+     92a      92a        2     1                 _INT_TMKBSTP00
+     92c      92c        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTR01)
+     92c      92c        2     1                 _INT_TMKBSTR01
+     92e      92e        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTP01)
+     92e      92e        2     1                 _INT_TMKBSTP01
+     930      930        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTR20)
+     930      930        2     1                 _INT_TMKBSTR20
+     932      932        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTP20)
+     932      932        2     1                 _INT_TMKBSTP20
+     934      934        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTR21)
+     934      934        2     1                 _INT_TMKBSTR21
+     936      936        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTP21)
+     936      936        2     1                 _INT_TMKBSTP21
+     938      938        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TIMEC1)
+     938      938        2     1                 _INT_TIMEC1
+     93a      93a        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TIMEC2)
+     93a      93a        2     1                 _INT_TIMEC2
+     93c      93c        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_AD3)
+     93c      93c        2     1                 _INT_AD3
+     93e      93e        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_BRK_I)
+     93e      93e        2     1                 _INT_BRK_I
+     940      940       16     1         ./src/smc_gen/general/r_cg_systeminit.o:(.text._R_Systeminit)
+     940      940       16     1                 _R_Systeminit
+     956      956        e     1         ./src/Blink.o:(.text._main)
+     956      956        e     1                 _main
+     964      964        0     1 PROVIDE ( __rodata_limit = CONSTANT ( MIRRORAREASTART ) + 0x2000 + LENGTH ( MIRROR ) )
+    2000     2000      128     2 .rodata
+    2000     2000        0     1         . = ALIGN ( 2 )
+    2000     2000        0     1         __rodata = .
+    2000     2000      100     2         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.rodata._g_fih_hz)
+    2000     2000      100     1                 _g_fih_hz
+    2100     2100       10     2         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.rodata._g_fim_hz)
+    2100     2100       10     1                 _g_fim_hz
+    2110     2110       18     2         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.rodata._g_bsp_delay_time)
+    2110     2110       18     1                 _g_bsp_delay_time
+    2128     2128        0     1         . = ALIGN ( 2 )
+    2128     2128        0     1         . = ALIGN ( 2 )
+    2128     2128        0     1         PROVIDE ( __init_array_start = . )
+    2128     2128        0     1         PROVIDE ( __init_array_end = . )
+    2128     2128        0     1         PROVIDE ( __fini_array_start = . )
+    2128     2128        0     1         PROVIDE ( __fini_array_end = . )
+    2128     2128        0     1         __erodata = .
+    2128     2128        0     1         
+    2128     2128        0     1         
+    2128     2128        0     2 .frodata
+    2128     2128        0     1         . = ALIGN ( 2 )
+    2128     2128        0     1         __frodata = .
+    2128     2128        0     1         __efrodata = .
+    2128     2128        0     1         . = ALIGN ( 2 )
+    2128     2128        0     1         __constf = .
+    2128     2128        0     1         __econstf = .
+   fcf00    fcf00        0     1 .data
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         PROVIDE ( __datastart = . )
+   fcf00    fcf00        0     1         __data = .
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         __edata = .
+   fcf00    fcf00        0     1 PROVIDE ( __romdatastart = LOADADDR ( .data ) )
+   fcf00    fcf00        0     1 PROVIDE ( __romdatacopysize = SIZEOF ( .data ) )
+   fcf00    fcf00        0     2 .dataf
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fd800    fd800        0     1 .FAA_CODE
+   fd800    fd800        0     1         . = ALIGN ( 2 )
+   fd800    fd800        0     1         . = ALIGN ( 2 )
+   fd800    fd800        0     1         . = ALIGN ( 2 )
+   fe800    fe800        0     1 .FAA_DATA
+   fe800    fe800        0     1         . = ALIGN ( 2 )
+   fe800    fe800        0     1         . = ALIGN ( 2 )
+   fe800    fe800        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     2 .sdata
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     1         PROVIDE ( __sdatastart = . )
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     1 PROVIDE ( __romsdatastart = LOADADDR ( .sdata ) )
+   ffe20    ffe20        0     1 PROVIDE ( __romsdatacopysize = SIZEOF ( .sdata ) )
+   ffe20    ffe20        0     2 .saddr
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     2 .sbss
+   ffe20    ffe20        0     1         PROVIDE ( __sbssstart = . )
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     1         __sbss = .
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     1         __esbss = .
+   ffe20    ffe20        0     1 PROVIDE ( __sbsssize = SIZEOF ( .sbss ) )
+   fcf00    fcf00        0     2 .bss
+   fcf00    fcf00        0     1         PROVIDE ( __bssstart = . )
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         __bss = .
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         __ebss = .
+   fcf00    fcf00        0     1 PROVIDE ( __bsssize = SIZEOF ( .bss ) )
+   fcf00    fcf00        0     2 .bssf
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         . = ALIGN ( 128 )
+   fcf00    fcf00        0     1         __end = .
+   fcf00    fcf00        0     1 PROVIDE ( __stack_size = 0x100 )
+   ffe20    ffe20        0     1 .stack
+   ffe20    ffe20        0     1         PROVIDE ( __stack = . )
+   ffe20    ffe20        0     1         
+       0        0      590     1 .debug_abbrev
+       0        0       2f     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_abbrev)
+      2f       2f      130     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_abbrev)
+     15f      15f       fd     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_abbrev)
+     25c      25c       21     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common_llvm.o:(.debug_abbrev)
+     27d      27d       21     1         ./src/smc_gen/r_bsp/mcu/all/start.o:(.debug_abbrev)
+     29e      29e       9d     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_abbrev)
+     33b      33b       6a     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_abbrev)
+     3a5      3a5       48     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_abbrev)
+     3ed      3ed       ab     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_abbrev)
+     498      498       67     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_abbrev)
+     4ff      4ff       91     1         ./src/Blink.o:(.debug_abbrev)
+       0        0      e23     1 .debug_info
+       0        0       30     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_info)
+      30       30      314     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_info)
+     344      344      14b     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_info)
+     48f      48f      10f     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common_llvm.o:(.debug_info)
+     59e      59e      1f4     1         ./src/smc_gen/r_bsp/mcu/all/start.o:(.debug_info)
+     792      792       85     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_info)
+     817      817       65     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_info)
+     87c      87c      337     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_info)
+     bb3      bb3      100     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_info)
+     cb3      cb3       91     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_info)
+     d44      d44       df     1         ./src/Blink.o:(.debug_info)
+       0        0      3c4     1 .debug_str_offsets
+       0        0       18     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_str_offsets)
+      18       18       e0     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_str_offsets)
+      f8       f8       8c     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_str_offsets)
+     184      184       2c     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_str_offsets)
+     1b0      1b0       28     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_str_offsets)
+     1d8      1d8      10c     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_str_offsets)
+     2e4      2e4       5c     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_str_offsets)
+     340      340       2c     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_str_offsets)
+     36c      36c       58     1         ./src/Blink.o:(.debug_str_offsets)
+       0        0      803     1 .debug_str
+       0        0      803     1         <internal>:(.debug_str)
+       0        0      1bc     1 .debug_addr
+       0        0        c     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_addr)
+       c        c       20     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_addr)
+      2c       2c       20     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_addr)
+      4c       4c       28     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_addr)
+      74       74       18     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_addr)
+      8c       8c      100     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_addr)
+     18c      18c        c     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_addr)
+     198      198       18     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_addr)
+     1b0      1b0        c     1         ./src/Blink.o:(.debug_addr)
+       0        0       59     1 .comment
+       0        0       59     1         <internal>:(.comment)
+       0        0      57c     4 .debug_frame
+       0        0       24     4         ./src/smc_gen/r_pincfg/Pin.o:(.debug_frame)
+      24       24       3c     4         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_frame)
+      60       60       58     4         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_frame)
+      b8       b8       54     4         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_frame)
+     10c      10c       34     4         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_frame)
+     140      140      3f4     4         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_frame)
+     534      534       24     4         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_frame)
+     558      558       24     4         ./src/Blink.o:(.debug_frame)
+       0        0      d3f     1 .debug_line
+       0        0       57     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_line)
+      57       57      1d2     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_line)
+     229      229      239     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_line)
+     462      462       48     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common_llvm.o:(.debug_line)
+     4aa      4aa       9c     1         ./src/smc_gen/r_bsp/mcu/all/start.o:(.debug_line)
+     546      546       c0     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_line)
+     606      606       a3     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_line)
+     6a9      6a9      556     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_line)
+     bff      bff       8d     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_line)
+     c8c      c8c       43     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_line)
+     ccf      ccf       70     1         ./src/Blink.o:(.debug_line)
+       0        0      4bb     1 .debug_line_str
+       0        0      4bb     1         <internal>:(.debug_line_str)
+       0        0      11a     1 .debug_loclists
+       0        0       dc     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_loclists)
+      dc       dc       3e     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_loclists)
+       0        0      12f     1 .debug_rnglists
+       0        0       18     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_rnglists)
+      18       18       18     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_rnglists)
+      30       30       1d     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_rnglists)
+      4d       4d       17     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_rnglists)
+      64       64       cb     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_rnglists)
+       0        0       40     1 .debug_aranges
+       0        0       20     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common_llvm.o:(.debug_aranges)
+      20       20       20     1         ./src/smc_gen/r_bsp/mcu/all/start.o:(.debug_aranges)
+       0        0     1070     4 .symtab
+       0        0     1070     4         <internal>:(.symtab)
+       0        0      155     1 .shstrtab
+       0        0      155     1         <internal>:(.shstrtab)
+       0        0      ac3     1 .strtab
+       0        0      ac3     1         <internal>:(.strtab)
+
+Cross Reference Table
+
+Symbol                                            File
+_R_Pins_Create                                    ./src/smc_gen/r_pincfg/Pin.o
+_get_fclk_freq_hz                                 ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o
+                                                  ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+_g_fih_hz                                         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o
+_g_fim_hz                                         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o
+__COM_lmul                                        /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_lmul.S.o)
+                                                  ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o
+                                                  ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o)
+_mcu_clock_setup                                  ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o
+                                                  ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o
+_R_BSP_GetFclkFreqHz                              ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+_R_BSP_SoftwareDelay                              ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+__COM_llmul                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o)
+                                                  ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+_g_bsp_delay_time                                 ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+__COM_ulldiv                                      /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ulldiv.S.o)
+                                                  ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+_delay_wait                                       ./src/smc_gen/r_bsp/mcu/all/r_bsp_common_llvm.o
+                                                  ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+_PowerON_Reset                                    ./src/smc_gen/r_bsp/mcu/all/start.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+__stack                                           <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+_bsp_init_system                                  ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__romdatastart                                    <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__romdatacopysize                                 <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__datastart                                       <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__romsdatastart                                   <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__romsdatacopysize                                <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__sdatastart                                      <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__sbsssize                                        <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__sbssstart                                       <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__bsssize                                         <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__bssstart                                        <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+_bsp_init_hardware                                ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__rl78_init                                       ./src/smc_gen/r_bsp/mcu/all/start.o
+_main                                             ./src/Blink.o
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__rl78_fini                                       ./src/smc_gen/r_bsp/mcu/all/start.o
+_exit                                             ./src/smc_gen/r_bsp/mcu/all/start.o
+_rl78_run_init_array                              ./src/smc_gen/r_bsp/mcu/all/start.o
+__init_array_start                                <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__init_array_end                                  <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+_rl78_run_fini_array                              ./src/smc_gen/r_bsp/mcu/all/start.o
+__fini_array_start                                <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__fini_array_end                                  <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+_hdwinit                                          ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o
+                                                  ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o
+_R_Systeminit                                     ./src/smc_gen/general/r_cg_systeminit.o
+                                                  ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o
+_INT_WDTI                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_LVI                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P0                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P1                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P2                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P3                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P4                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P5                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_ST2                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_SR2                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_SRE2                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_FAAE                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TIMEC0                                       ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_ST0                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TM00                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TM01H                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_ST1                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_SR1                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TM03H                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_IICA0                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_SR0                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TM01                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TM02                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TM03                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_AD0                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_RTC                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_ITL                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_KR                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TRJ0                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TRD0                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TRD1                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TRG                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TRX                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P20                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P21                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P6                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P7                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P8                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P9                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_FL                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P10                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P11                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_FAATRAP                                      ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_CMP2                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_CMP3                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKB0                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKB1                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKB2                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_GCR                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_PMC                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTR00                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTP00                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTR01                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTP01                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTR20                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTP20                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTR21                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTP21                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TIMEC1                                       ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TIMEC2                                       ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_AD3                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_BRK_I                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_Option_Bytes                                     ./src/smc_gen/general/r_cg_vect_table.o
+_Security_Id                                      ./src/smc_gen/general/r_cg_vect_table.o
+_HardwareVectors                                  ./src/smc_gen/general/r_cg_vect_table.o
+_Vectors                                          ./src/smc_gen/general/r_cg_vect_table.o
+__REL_lldiv                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(REL_lldiv.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ulldiv.S.o)
+___udivdi3                                        /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ulldiv.S.o)
+__REL_llmul_addh                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(REL_llmul_addh.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o)
+__COM_mulul                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_mulul.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o)
+___muldi3                                         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o)
+__COM_mului                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_mului.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_mulul.S.o)
+___mulsi3                                         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_lmul.S.o)

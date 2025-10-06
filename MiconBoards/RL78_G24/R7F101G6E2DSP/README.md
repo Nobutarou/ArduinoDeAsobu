@@ -159,4 +159,67 @@ PIC16F1455 UART 用プログラマアダプタ
 | R1a | 10kΩ | 1 |
 | R2a | 300Ω | 1 |
 
+UART に PIC16F1455 を使っての書き込みテスト。
 
+```
+> ./rfp-cli -d RL78/G2x -port /dev/ttyACM0 -dtr -a ./Blink.srec
+Renesas Flash Programmer CLI V1.13
+Module Version: V3.20.00.000
+Load: "/home/snob/.local/share/renesas/rfp/linux-x64/Blink.srec" (Size=7346, CRC=8AFFE60B)
+
+Connecting the tool (COM port)
+Tool: /dev/ttyACM0
+Interface: 1 wire UART
+
+Connecting the target device
+
+[Error] E3000105: The device is not responding.
+The target device is not connected or has not returned a response. Confirm that the connection to the target device and the operating mode are correct. The security functions of the target device may have prevented the connection.
+Refer to https://www.renesas.com/rfp-error-guide#no-response, Problems during Operation.
+
+Disconnecting the tool
+```
+
+失敗する。DTR ラインをオシロで見ていると、LOW にへばりつく。これでは、マイコンが再起動できないと思う。
+-dtr-inv に変えると一瞬 Low で High なるというのを確認。たぶんこちらかな？ただ同じエラーは起きている。
+
+FT232RL だと行けた。やはりシリアルUPDI と同じでパリティが必要なのか。
+
+```
+> ./rfp-cli -d RL78/G2x -port /dev/ttyUSB0 -dtr-inv -a ./Blink.srec
+Renesas Flash Programmer CLI V1.13
+Module Version: V3.20.00.000
+Load: "/home/snob/.local/share/renesas/rfp/linux-x64/Blink.srec" (Size=7346, CRC=8AFFE60B)
+
+Connecting the tool (COM port)
+Tool: /dev/ttyUSB0
+Interface: 1 wire UART
+
+Connecting the target device
+Speed: 1,000,000 bps
+Connected to R7F101G6E
+
+Erasing the target device
+  [Code Flash 1]       00000000 - 0000FFFF
+  [Data Flash 1]       000F1000 - 000F1FFF
+  [Code Flash 1]       00000000 - 00000FFF
+  [Code Flash 1]       00002000 - 000027FF
+Writing data to the target device
+  [Code Flash 1]       00000000 - 000009FF
+  [Code Flash 1]       00002000 - 000021FF
+Verifying data on the target device
+  [Code Flash 1]       00000000 - 000009FF
+  [Code Flash 1]       00002000 - 000021FF
+
+
+Disconnecting the tool
+```
+
+ただ Lチカとかピンを High にするコードを書き込んでみても、全然 High が出ない。原因もどれか
+分からない。
+
+- コードが間違っている
+- 回路が間違っている
+- はんだが下手でごてごてやりすぎて壊した
+
+どれも有り得る。
