@@ -29,16 +29,18 @@ int main(void);
 
 int main(void)
 {
-    //EI();
+    // コンフィグレータを使ったら入ってきたけど、知らない。
+	//EI();
+
+    //P00 兼用ピンなのでデジタル宣言。7.5.1 節参照。
+    PMCA0=0b11111110;
     PM0_bit.no0 = 0;
-    PM0_bit.no1 = 0;
 
     while(1)
     {
-      P0_bit.no0 = 1;
-      P0_bit.no1 = 1;
+      P0_bit.no0 = !P0_bit.no0;
       //PIN_WRITE(P00)=1;
-      //R_BSP_SoftwareDelay(333,BSP_DELAY_MILLISECS);
+      R_BSP_SoftwareDelay(1000,BSP_DELAY_MILLISECS);
         // TODO: add application code here
     }
     return 0;

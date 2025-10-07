@@ -16,7 +16,7 @@
       d8       d8        0     2 .lowtext
       d8       d8        0     2         <internal>:(.lowtext)
       d8       d8        0     1 __mdata = .
-      d8       d8      88c     1 .text
+      d8       d8      8a0     1 .text
       d8       d8        0     1         ./src/smc_gen/r_pincfg/Pin.o:(.text)
       d8       d8        0     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.text)
       d8       d8        0     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.text)
@@ -209,9 +209,9 @@
      93e      93e        2     1                 _INT_BRK_I
      940      940       16     1         ./src/smc_gen/general/r_cg_systeminit.o:(.text._R_Systeminit)
      940      940       16     1                 _R_Systeminit
-     956      956        e     1         ./src/Blink.o:(.text._main)
-     956      956        e     1                 _main
-     964      964        0     1 PROVIDE ( __rodata_limit = CONSTANT ( MIRRORAREASTART ) + 0x2000 + LENGTH ( MIRROR ) )
+     956      956       22     1         ./src/Blink.o:(.text._main)
+     956      956       22     1                 _main
+     978      978        0     1 PROVIDE ( __rodata_limit = CONSTANT ( MIRRORAREASTART ) + 0x2000 + LENGTH ( MIRROR ) )
     2000     2000      128     2 .rodata
     2000     2000        0     1         . = ALIGN ( 2 )
     2000     2000        0     1         __rodata = .
@@ -291,7 +291,7 @@
    ffe20    ffe20        0     1 .stack
    ffe20    ffe20        0     1         PROVIDE ( __stack = . )
    ffe20    ffe20        0     1         
-       0        0      590     1 .debug_abbrev
+       0        0      5c9     1 .debug_abbrev
        0        0       2f     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_abbrev)
       2f       2f      130     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_abbrev)
      15f      15f       fd     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_abbrev)
@@ -302,8 +302,8 @@
      3a5      3a5       48     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_abbrev)
      3ed      3ed       ab     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_abbrev)
      498      498       67     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_abbrev)
-     4ff      4ff       91     1         ./src/Blink.o:(.debug_abbrev)
-       0        0      e23     1 .debug_info
+     4ff      4ff       ca     1         ./src/Blink.o:(.debug_abbrev)
+       0        0      eb2     1 .debug_info
        0        0       30     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_info)
       30       30      314     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_info)
      344      344      14b     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_info)
@@ -314,8 +314,8 @@
      87c      87c      337     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_info)
      bb3      bb3      100     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_info)
      cb3      cb3       91     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_info)
-     d44      d44       df     1         ./src/Blink.o:(.debug_info)
-       0        0      3c4     1 .debug_str_offsets
+     d44      d44      16e     1         ./src/Blink.o:(.debug_info)
+       0        0      408     1 .debug_str_offsets
        0        0       18     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_str_offsets)
       18       18       e0     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_str_offsets)
       f8       f8       8c     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_str_offsets)
@@ -324,10 +324,10 @@
      1d8      1d8      10c     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_str_offsets)
      2e4      2e4       5c     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_str_offsets)
      340      340       2c     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_str_offsets)
-     36c      36c       58     1         ./src/Blink.o:(.debug_str_offsets)
-       0        0      803     1 .debug_str
-       0        0      803     1         <internal>:(.debug_str)
-       0        0      1bc     1 .debug_addr
+     36c      36c       9c     1         ./src/Blink.o:(.debug_str_offsets)
+       0        0      812     1 .debug_str
+       0        0      812     1         <internal>:(.debug_str)
+       0        0      1c0     1 .debug_addr
        0        0        c     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_addr)
        c        c       20     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_addr)
       2c       2c       20     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_addr)
@@ -336,7 +336,7 @@
       8c       8c      100     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_addr)
      18c      18c        c     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_addr)
      198      198       18     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_addr)
-     1b0      1b0        c     1         ./src/Blink.o:(.debug_addr)
+     1b0      1b0       10     1         ./src/Blink.o:(.debug_addr)
        0        0       59     1 .comment
        0        0       59     1         <internal>:(.comment)
        0        0      57c     4 .debug_frame
@@ -348,7 +348,7 @@
      140      140      3f4     4         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_frame)
      534      534       24     4         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_frame)
      558      558       24     4         ./src/Blink.o:(.debug_frame)
-       0        0      d3f     1 .debug_line
+       0        0      da8     1 .debug_line
        0        0       57     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_line)
       57       57      1d2     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_line)
      229      229      239     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_line)
@@ -359,7 +359,7 @@
      6a9      6a9      556     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_line)
      bff      bff       8d     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_line)
      c8c      c8c       43     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_line)
-     ccf      ccf       70     1         ./src/Blink.o:(.debug_line)
+     ccf      ccf       d9     1         ./src/Blink.o:(.debug_line)
        0        0      4bb     1 .debug_line_str
        0        0      4bb     1         <internal>:(.debug_line_str)
        0        0      11a     1 .debug_loclists
@@ -397,6 +397,7 @@ _mcu_clock_setup                                  ./src/smc_gen/r_bsp/mcu/rl78_g
                                                   ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o
 _R_BSP_GetFclkFreqHz                              ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
 _R_BSP_SoftwareDelay                              ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+                                                  ./src/Blink.o
 __COM_llmul                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o)
                                                   ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
 _g_bsp_delay_time                                 ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
