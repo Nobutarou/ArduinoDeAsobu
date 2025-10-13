@@ -49,6 +49,7 @@ extern volatile uint16_t g_iica0_rx_cnt;                 /* iica0 receive data c
 extern volatile uint8_t * gp_iica0_tx_address;           /* iica0 send buffer address */
 extern volatile uint16_t g_iica0_tx_cnt;                 /* iica0 send data count */
 /* Start user code for global. Do not edit comment generated here */
+extern volatile uint8_t _i2c_send_end;
 /* End user code. Do not edit comment generated here */
 
 /***********************************************************************************************************************
@@ -73,6 +74,8 @@ static void r_Config_IICA0_callback_master_sendend(void)
 {
     SPT0 = 1U;
 /* Start user code for r_Config_IICA0_callback_master_sendend. Do not edit comment generated here */
+    R_BSP_SoftwareDelay(22, BSP_DELAY_MICROSECS);
+    _i2c_send_end=1;
 /* End user code. Do not edit comment generated here */
 }
 

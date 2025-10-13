@@ -1,0 +1,10 @@
+################################################################################
+# Automatically-generated file. Do not edit!
+################################################################################
+
+arg1 = $(1)
+export PATH=/home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/::/home/snob/.local/share/renesas/e2_studio/eclipse/plugins/com.renesas.ide.exttools.gnumake.linux.x86_64_1.0.1.v20240909-0854/mk/:/bin:/usr/bin:/usr/local/bin:/home/snob/.local/bin:/sbin:/usr/sbin/:/usr/local/sbin:/opt/microchip/xc8/v2.45/bin/:/opt/microchip/xc16/v2.10/bin/:/opt/microchip/xc32/v4.35/bin/:/opt/microchip/xc8/v2.45/bin/:/opt/microchip/xc16/v2.10/bin/:/opt/microchip/xc32/v4.35/bin/
+export TCINSTALL=/home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/
+export CWD=$(CURDIR)
+export TC_VERSION=17.0.1.202506
+export PWD=$(CURDIR)

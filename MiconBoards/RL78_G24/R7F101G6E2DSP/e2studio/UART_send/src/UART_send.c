@@ -25,20 +25,48 @@
 ***********************************************************************************************************************/
 #include "r_smc_entry.h"
 
-#include <string.h>
-
 int main(void);
+volatile uint8_t _uart_end;
+
+#define OreUART1_Send_Txt_test 0
+#define OreUART1_Send_U16_test 0
+#define OreUART1_Send_Float_test 1
 
 int main(void)
 {
-	char text[]="hello\r\n";
 	EI();
-    R_Config_UART1_Start();
+  R_Config_UART1_Start();
+  _uart_end=0;
+  
+  #if OreUART1_Send_Txt_test == 1
+  char text[7]="hello\r\n";
+  while(1){
+    OreUART1_Send_Txt( (unsigned char *)text,7);
+  };
+  #endif 
 
-    while(1)
-    {
-    	R_Config_UART1_Send( (unsigned char *)text, strlen(text));
-    	R_BSP_SoftwareDelay( 1, BSP_DELAY_SECS);
-    }
-    return 0;
+  #if OreUART1_Send_U16_test == 1
+  uint16_t num = 0;
+  while(1){
+    for(num=0; num<=0b1111111111111111; num++){
+      OreUART1_Send_U16(num);
+      OreUART1_Send_CRLF( );
+    };
+  };
+  #endif
+
+  #if OreUART1_Send_Float_test == 1
+  while(1){
+    // 最小は 
+    OreUART1_Send_Float(-1.2345678e-20, 5);
+    OreUART1_Send_CRLF( );
+    OreUART1_Send_Float(-1.2345678e20, 5);
+    OreUART1_Send_CRLF( );
+    OreUART1_Send_Float(1.2345678e-20, 5);
+    OreUART1_Send_CRLF( );
+    OreUART1_Send_Float(1.2345678e20, 5);
+    OreUART1_Send_CRLF( );
+  };
+  #endif
+  return 0;
 }

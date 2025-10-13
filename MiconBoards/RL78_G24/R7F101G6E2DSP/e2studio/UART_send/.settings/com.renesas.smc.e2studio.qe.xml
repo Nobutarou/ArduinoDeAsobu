@@ -58,7 +58,7 @@
                 <Setting id="dataLength" value="8bits"/>
                 <Setting id="directionSetting" value="lsb"/>
                 <Setting id="txPriority" value="Level3"/>
-                <Setting id="Prescaler" value="FCLK4"/>
+                <Setting id="Prescaler" value="FCLK3"/>
                 <Setting id="baudrateSetting" value="9600"/>
                 <Setting id="txCallback" value="enable"/>
                 <Setting id="Operation" value="CK0"/>

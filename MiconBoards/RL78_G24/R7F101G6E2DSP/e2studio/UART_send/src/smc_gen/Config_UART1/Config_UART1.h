@@ -40,7 +40,7 @@ Macro definitions (Register bit)
 /***********************************************************************************************************************
 Macro definitions
 ***********************************************************************************************************************/
-#define _6600_SAU0_CH2_TRANSMIT_DIVISOR    (0x6600U)
+#define _CE00_SAU0_CH2_TRANSMIT_DIVISOR    (0xCE00U)
 
 /***********************************************************************************************************************
 Typedef definitions
@@ -57,5 +57,10 @@ void R_Config_UART1_Loopback_Enable (void);
 void R_Config_UART1_Loopback_Disable (void);
 void R_Config_UART1_Create_UserInit (void);
 /* Start user code for function. Do not edit comment generated here */
+void OreUART1_Send_Txt( uint8_t * const txt, uint16_t num);
+void OreUART1_Send_U16( uint16_t num);
+void OreUART1_Send_Float( float val, uint8_t num);
+void OreUART1_Send_CRLF( );
+void OreUART1_Send_ASCII(uint8_t code );
 /* End user code. Do not edit comment generated here */
 #endif
