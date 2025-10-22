@@ -87,3 +87,42 @@ RL78/G24 ボード書き込みアダプタ
 | H1-3 | ピンヘッダ 2P            | 3    |
 | H4-6 | ピンヘッダ 1P            | 3    |
 
+結果:
+
+``dmesg`` でこんな感じでだめだった。一番不可解なのは 3.3V LDO 出力ピン 17番に 5V が出てい
+たこと。
+
+```
+usb 1-3-port1: attempt power cycle
+usb 1-3.1: new full-speed USB device number 43 using xhci_hcd
+usb 1-3.1: Device not responding to setup address.
+usb 1-3.1: Device not responding to setup address.
+usb 1-3.1: device not accepting address 43, error -71
+usb 1-3.1: WARN: invalid context state for evaluate context command.
+usb 1-3.1: new full-speed USB device number 44 using xhci_hcd
+usb 1-3.1: Device not responding to setup address.
+usb 1-3.1: Device not responding to setup address.
+usb 1-3.1: device not accepting address 44, error -71
+usb 1-3.1: WARN: invalid context state for evaluate context command.
+usb 1-3-port1: unable to enumerate USB device
+```
+
+あと
+[データシート](https://aitendo3.sakura.ne.jp/aitendo_data/product_img/ic/inteface/PL2303/PL2303HXD.pdf)
+によると、型番の刻印は 3行あり、
+
+``` 
+PL-2303HX
+LFxxxxxxD
+Txxxxxxxx
+```
+
+となっていて、2行目の最後の D が リビジョンD らしいのだが、
+
+```
+PL-2303HXD
+LF09192
+TP47143LD
+```
+
+となっている。やられたか？
