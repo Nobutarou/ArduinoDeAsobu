@@ -22,7 +22,8 @@ src/LCD_Hello.o: ../src/LCD_Hello.c \
   /home/snob/Documents/e2studio/LCD_Hello/src/smc_gen/r_pincfg/Pin.h \
   /home/snob/Documents/e2studio/LCD_Hello/src/smc_gen/general/r_cg_sau_common.h \
   /home/snob/Documents/e2studio/LCD_Hello/src/smc_gen/general/r_cg_iica_common.h \
-  /home/snob/Documents/e2studio/LCD_Hello/src/smc_gen/general/r_cg_userdefine.h
+  /home/snob/Documents/e2studio/LCD_Hello/src/smc_gen/general/r_cg_userdefine.h \
+  ../src/OreLCD.txt
 /home/snob/Documents/e2studio/LCD_Hello/src/smc_gen/general/r_smc_entry.h:
 /home/snob/Documents/e2studio/LCD_Hello/src/smc_gen/general/r_cg_macrodriver.h:
 /home/snob/Documents/e2studio/LCD_Hello/src/smc_gen/r_bsp/platform.h:
@@ -47,3 +48,4 @@ src/LCD_Hello.o: ../src/LCD_Hello.c \
 /home/snob/Documents/e2studio/LCD_Hello/src/smc_gen/general/r_cg_sau_common.h:
 /home/snob/Documents/e2studio/LCD_Hello/src/smc_gen/general/r_cg_iica_common.h:
 /home/snob/Documents/e2studio/LCD_Hello/src/smc_gen/general/r_cg_userdefine.h:
+../src/OreLCD.txt:

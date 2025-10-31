@@ -16,7 +16,7 @@
       d8       d8        0     2 .lowtext
       d8       d8        0     2         <internal>:(.lowtext)
       d8       d8        0     1 __mdata = .
-      d8       d8     1b74     1 .text
+      d8       d8     1b6a     1 .text
       d8       d8        0     1         ./src/smc_gen/r_pincfg/Pin.o:(.text)
       d8       d8        0     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.text)
       d8       d8        0     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.text)
@@ -322,66 +322,66 @@
     1389     1389       1d     1                 _r_Config_IICA0_interrupt
     13a6     13a6       88     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.text._r_Config_IICA0_master_handler)
     13a6     13a6       88     1                 _r_Config_IICA0_master_handler
-    142e     142e       12     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.text._r_Config_IICA0_callback_master_sendend)
-    142e     142e       12     1                 _r_Config_IICA0_callback_master_sendend
-    1440     1440        5     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.text._r_Config_IICA0_callback_master_receiveend)
-    1440     1440        5     1                 _r_Config_IICA0_callback_master_receiveend
-    1445     1445       1f     1         ./src/LCD_Hello.o:(.text._main)
-    1445     1445       1f     1                 _main
-    1464     1464       42     1         ./src/LCD_Hello.o:(.text._OreLCD_Print)
-    1464     1464       42     1                 _OreLCD_Print
-    14a6     14a6        9     1         ./src/LCD_Hello.o:(.text._OreLCD_Locate)
-    14a6     14a6        9     1                 _OreLCD_Locate
-    14af     14af      120     1         ./src/LCD_Hello.o:(.text._OreLCD_Uint16)
-    14af     14af      120     1                 _OreLCD_Uint16
-    15cf     15cf       11     1         ./src/LCD_Hello.o:(.text._OreLCD_Char)
-    15cf     15cf       11     1                 _OreLCD_Char
-    15e0     15e0      20d     1         ./src/LCD_Hello.o:(.text._OreLCD_Float)
-    15e0     15e0      20d     1                 _OreLCD_Float
-    17ed     17ed       15     1         ./src/LCD_Hello.o:(.text._OreLCD_RSWrite)
-    17ed     17ed       15     1                 _OreLCD_RSWrite
-    1802     1802       5c     1         ./src/LCD_Hello.o:(.text._OreLCDWriteByte)
-    1802     1802       5c     1                 _OreLCDWriteByte
-    185e     185e       80     1         ./src/LCD_Hello.o:(.text._OreLCDBegin)
-    185e     185e       80     1                 _OreLCDBegin
-    18de     18de       30     1         ./src/LCD_Hello.o:(.text._Ore_I2C_Send)
-    18de     18de       30     1                 _Ore_I2C_Send
-    190e     190e       15     1         ./src/LCD_Hello.o:(.text._OreLCD_RWWrite)
-    190e     190e       15     1                 _OreLCD_RWWrite
-    1923     1923       15     1         ./src/LCD_Hello.o:(.text._OreLCD_DB7Write)
-    1923     1923       15     1                 _OreLCD_DB7Write
-    1938     1938       15     1         ./src/LCD_Hello.o:(.text._OreLCD_DB6Write)
-    1938     1938       15     1                 _OreLCD_DB6Write
-    194d     194d       15     1         ./src/LCD_Hello.o:(.text._OreLCD_DB5Write)
-    194d     194d       15     1                 _OreLCD_DB5Write
-    1962     1962       15     1         ./src/LCD_Hello.o:(.text._OreLCD_DB4Write)
-    1962     1962       15     1                 _OreLCD_DB4Write
-    1977     1977       16     1         ./src/LCD_Hello.o:(.text._OreLCD_CLS)
-    1977     1977       16     1                 _OreLCD_CLS
-    198d     198d       15     1         ./src/LCD_Hello.o:(.text._OreLCD_ENWrite)
-    198d     198d       15     1                 _OreLCD_ENWrite
-    19a2     19a2       24     1         ./src/LCD_Hello.o:(.text._OreLCD_EN_PULSE)
-    19a2     19a2       24     1                 _OreLCD_EN_PULSE
-    19c6     19c6       12     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___lesf2)
-    19c6     19c6       12     1                 ___lesf2
-    19c6     19c6       12     1                 ___cmpsf2
-    19c6     19c6       12     1                 ___eqsf2
-    19c6     19c6       12     1                 ___ltsf2
-    19c6     19c6       12     1                 ___nesf2
-    19d8     19d8       fa     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___leXf2__)
-    19d8     19d8       fa     1                 ___leXf2__
-    1ad2     1ad2       12     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___gesf2)
-    1ad2     1ad2       12     1                 ___gesf2
-    1ad2     1ad2       12     1                 ___gtsf2
-    1ae4     1ae4      103     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___geXf2__)
-    1ae4     1ae4      103     1                 ___geXf2__
-    1be7     1be7       12     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___unordsf2)
-    1be7     1be7       12     1                 ___unordsf2
-    1bf9     1bf9       52     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___unordXf2__)
-    1bf9     1bf9       52     1                 ___unordXf2__
-    1c4b     1c4b        1     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._toRep)
-    1c4b     1c4b        1     1                 _toRep
-    1c4c     1c4c        0     1 PROVIDE ( __rodata_limit = CONSTANT ( MIRRORAREASTART ) + 0x2000 + LENGTH ( MIRROR ) )
+    142e     142e       11     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.text._r_Config_IICA0_callback_master_sendend)
+    142e     142e       11     1                 _r_Config_IICA0_callback_master_sendend
+    143f     143f        5     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.text._r_Config_IICA0_callback_master_receiveend)
+    143f     143f        5     1                 _r_Config_IICA0_callback_master_receiveend
+    1444     1444      120     1         ./src/LCD_Hello.o:(.text._OreLCD_Uint16)
+    1444     1444      120     1                 _OreLCD_Uint16
+    1564     1564       11     1         ./src/LCD_Hello.o:(.text._OreLCD_Char)
+    1564     1564       11     1                 _OreLCD_Char
+    1575     1575      20d     1         ./src/LCD_Hello.o:(.text._OreLCD_Float)
+    1575     1575      20d     1                 _OreLCD_Float
+    1782     1782       15     1         ./src/LCD_Hello.o:(.text._OreLCD_RSWrite)
+    1782     1782       15     1                 _OreLCD_RSWrite
+    1797     1797       5c     1         ./src/LCD_Hello.o:(.text._OreLCDWriteByte)
+    1797     1797       5c     1                 _OreLCDWriteByte
+    17f3     17f3       42     1         ./src/LCD_Hello.o:(.text._OreLCD_Print)
+    17f3     17f3       42     1                 _OreLCD_Print
+    1835     1835        9     1         ./src/LCD_Hello.o:(.text._OreLCD_Locate)
+    1835     1835        9     1                 _OreLCD_Locate
+    183e     183e       80     1         ./src/LCD_Hello.o:(.text._OreLCDBegin)
+    183e     183e       80     1                 _OreLCDBegin
+    18be     18be       22     1         ./src/LCD_Hello.o:(.text._OreLCD_I2C_Send)
+    18be     18be       22     1                 _OreLCD_I2C_Send
+    18e0     18e0       15     1         ./src/LCD_Hello.o:(.text._OreLCD_RWWrite)
+    18e0     18e0       15     1                 _OreLCD_RWWrite
+    18f5     18f5       15     1         ./src/LCD_Hello.o:(.text._OreLCD_DB7Write)
+    18f5     18f5       15     1                 _OreLCD_DB7Write
+    190a     190a       15     1         ./src/LCD_Hello.o:(.text._OreLCD_DB6Write)
+    190a     190a       15     1                 _OreLCD_DB6Write
+    191f     191f       15     1         ./src/LCD_Hello.o:(.text._OreLCD_DB5Write)
+    191f     191f       15     1                 _OreLCD_DB5Write
+    1934     1934       15     1         ./src/LCD_Hello.o:(.text._OreLCD_DB4Write)
+    1934     1934       15     1                 _OreLCD_DB4Write
+    1949     1949       16     1         ./src/LCD_Hello.o:(.text._OreLCD_CLS)
+    1949     1949       16     1                 _OreLCD_CLS
+    195f     195f       15     1         ./src/LCD_Hello.o:(.text._OreLCD_ENWrite)
+    195f     195f       15     1                 _OreLCD_ENWrite
+    1974     1974       24     1         ./src/LCD_Hello.o:(.text._OreLCD_EN_PULSE)
+    1974     1974       24     1                 _OreLCD_EN_PULSE
+    1998     1998       24     1         ./src/LCD_Hello.o:(.text._main)
+    1998     1998       24     1                 _main
+    19bc     19bc       12     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___lesf2)
+    19bc     19bc       12     1                 ___lesf2
+    19bc     19bc       12     1                 ___cmpsf2
+    19bc     19bc       12     1                 ___eqsf2
+    19bc     19bc       12     1                 ___ltsf2
+    19bc     19bc       12     1                 ___nesf2
+    19ce     19ce       fa     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___leXf2__)
+    19ce     19ce       fa     1                 ___leXf2__
+    1ac8     1ac8       12     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___gesf2)
+    1ac8     1ac8       12     1                 ___gesf2
+    1ac8     1ac8       12     1                 ___gtsf2
+    1ada     1ada      103     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___geXf2__)
+    1ada     1ada      103     1                 ___geXf2__
+    1bdd     1bdd       12     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___unordsf2)
+    1bdd     1bdd       12     1                 ___unordsf2
+    1bef     1bef       52     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___unordXf2__)
+    1bef     1bef       52     1                 ___unordXf2__
+    1c41     1c41        1     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._toRep)
+    1c41     1c41        1     1                 _toRep
+    1c42     1c42        0     1 PROVIDE ( __rodata_limit = CONSTANT ( MIRRORAREASTART ) + 0x2000 + LENGTH ( MIRROR ) )
     2000     2000      12e     2 .rodata
     2000     2000        0     1         . = ALIGN ( 2 )
     2000     2000        0     1         __rodata = .
@@ -487,7 +487,7 @@
    ffe20    ffe20        0     1 .stack
    ffe20    ffe20        0     1         PROVIDE ( __stack = . )
    ffe20    ffe20        0     1         
-       0        0      d32     1 .debug_abbrev
+       0        0      d08     1 .debug_abbrev
        0        0       8f     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_abbrev)
       8f       8f      130     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_abbrev)
      1bf      1bf       fd     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_abbrev)
@@ -503,9 +503,9 @@
      6dd      6dd      134     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_abbrev)
      811      811      118     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_abbrev)
      929      929      143     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_abbrev)
-     a6c      a6c      134     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_abbrev)
-     ba0      ba0      192     1         ./src/LCD_Hello.o:(.debug_abbrev)
-       0        0     1fb1     1 .debug_info
+     a6c      a6c      104     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_abbrev)
+     b70      b70      198     1         ./src/LCD_Hello.o:(.debug_abbrev)
+       0        0     1f37     1 .debug_info
        0        0       fa     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_info)
       fa       fa      314     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_info)
      40e      40e      14b     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_info)
@@ -521,9 +521,9 @@
     10b3     10b3      297     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_info)
     134a     134a      1d8     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_info)
     1522     1522      3a9     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_info)
-    18cb     18cb      1bc     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_info)
-    1a87     1a87      52a     1         ./src/LCD_Hello.o:(.debug_info)
-       0        0      8e4     1 .debug_str_offsets
+    18cb     18cb      150     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_info)
+    1a1b     1a1b      51c     1         ./src/LCD_Hello.o:(.debug_info)
+       0        0      8a4     1 .debug_str_offsets
        0        0       5c     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_str_offsets)
       5c       5c       e0     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_str_offsets)
      13c      13c       8c     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_str_offsets)
@@ -537,11 +537,11 @@
      4a8      4a8       c8     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_str_offsets)
      570      570       8c     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_str_offsets)
      5fc      5fc      10c     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_str_offsets)
-     708      708       a8     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_str_offsets)
-     7b0      7b0      134     1         ./src/LCD_Hello.o:(.debug_str_offsets)
-       0        0     102c     1 .debug_str
-       0        0     102c     1         <internal>:(.debug_str)
-       0        0      49c     1 .debug_addr
+     708      708       6c     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_str_offsets)
+     774      774      130     1         ./src/LCD_Hello.o:(.debug_str_offsets)
+       0        0     102b     1 .debug_str
+       0        0     102b     1         <internal>:(.debug_str)
+       0        0      498     1 .debug_addr
        0        0        c     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_addr)
        c        c       20     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_addr)
       2c       2c       20     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_addr)
@@ -555,8 +555,8 @@
      20c      20c       2c     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_addr)
      238      238       6c     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_addr)
      2a4      2a4       38     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_addr)
-     2dc      2dc       2c     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_addr)
-     308      308      194     1         ./src/LCD_Hello.o:(.debug_addr)
+     2dc      2dc       28     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_addr)
+     304      304      194     1         ./src/LCD_Hello.o:(.debug_addr)
        0        0       59     1 .comment
        0        0       59     1         <internal>:(.comment)
        0        0      a40     4 .debug_frame
@@ -574,7 +574,7 @@
      7d4      7d4       74     4         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_frame)
      848      848       84     4         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_frame)
      8cc      8cc      174     4         ./src/LCD_Hello.o:(.debug_frame)
-       0        0     1ddc     1 .debug_line
+       0        0     1dad     1 .debug_line
        0        0       85     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_line)
       85       85      1d2     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_line)
      257      257      239     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_line)
@@ -590,17 +590,17 @@
      fa5      fa5      191     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_line)
     1136     1136      346     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_line)
     147c     147c      214     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_line)
-    1690     1690      1c1     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_line)
-    1851     1851      58b     1         ./src/LCD_Hello.o:(.debug_line)
-       0        0      69f     1 .debug_line_str
-       0        0      69f     1         <internal>:(.debug_line_str)
-       0        0      801     1 .debug_loclists
+    1690     1690      186     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_line)
+    1816     1816      597     1         ./src/LCD_Hello.o:(.debug_line)
+       0        0      6b1     1 .debug_line_str
+       0        0      6b1     1         <internal>:(.debug_line_str)
+       0        0      7f4     1 .debug_loclists
        0        0       dc     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_loclists)
       dc       dc       3e     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_loclists)
      11a      11a       51     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_loclists)
      16b      16b      25a     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_loclists)
      3c5      3c5      10e     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_loclists)
-     4d3      4d3      32e     1         ./src/LCD_Hello.o:(.debug_loclists)
+     4d3      4d3      321     1         ./src/LCD_Hello.o:(.debug_loclists)
        0        0      25a     1 .debug_rnglists
        0        0       18     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_rnglists)
       18       18       18     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_rnglists)
@@ -621,8 +621,8 @@
        0        0     1f30     4         <internal>:(.symtab)
        0        0      155     1 .shstrtab
        0        0      155     1         <internal>:(.shstrtab)
-       0        0     16af     1 .strtab
-       0        0     16af     1         <internal>:(.strtab)
+       0        0     16b2     1 .strtab
+       0        0     16b2     1         <internal>:(.strtab)
 
 Cross Reference Table
 
@@ -640,7 +640,6 @@ _mcu_clock_setup                                  ./src/smc_gen/r_bsp/mcu/rl78_g
                                                   ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o
 _R_BSP_GetFclkFreqHz                              ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
 _R_BSP_SoftwareDelay                              ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
-                                                  ./src/smc_gen/Config_IICA0/Config_IICA0_user.o
                                                   ./src/LCD_Hello.o
 __COM_llmul                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_O2_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o)
                                                   ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
@@ -903,21 +902,21 @@ _g_iica0_rx_cnt                                   ./src/smc_gen/Config_IICA0/Con
                                                   ./src/smc_gen/Config_IICA0/Config_IICA0_user.o
 __i2c_send_end                                    ./src/LCD_Hello.o
                                                   ./src/smc_gen/Config_IICA0/Config_IICA0_user.o
-_OreLCDBegin                                      ./src/LCD_Hello.o
-_OreLCD_Print                                     ./src/LCD_Hello.o
-_OreLCD_Locate                                    ./src/LCD_Hello.o
 _OreLCD_Uint16                                    ./src/LCD_Hello.o
+_OreLCD_Char                                      ./src/LCD_Hello.o
 _OreLCD_RSWrite                                   ./src/LCD_Hello.o
 _OreLCDWriteByte                                  ./src/LCD_Hello.o
-_OreLCD_Char                                      ./src/LCD_Hello.o
 _OreLCD_Float                                     ./src/LCD_Hello.o
 __gpiob                                           ./src/LCD_Hello.o
-_Ore_I2C_Send                                     ./src/LCD_Hello.o
+_OreLCD_I2C_Send                                  ./src/LCD_Hello.o
 _OreLCD_DB7Write                                  ./src/LCD_Hello.o
 _OreLCD_DB6Write                                  ./src/LCD_Hello.o
 _OreLCD_DB5Write                                  ./src/LCD_Hello.o
 _OreLCD_DB4Write                                  ./src/LCD_Hello.o
 _OreLCD_EN_PULSE                                  ./src/LCD_Hello.o
+_OreLCD_Print                                     ./src/LCD_Hello.o
+_OreLCD_Locate                                    ./src/LCD_Hello.o
+_OreLCDBegin                                      ./src/LCD_Hello.o
 __gpioa                                           ./src/LCD_Hello.o
 _OreLCD_RWWrite                                   ./src/LCD_Hello.o
 _OreLCD_CLS                                       ./src/LCD_Hello.o
