@@ -1,0 +1,8 @@
+; chip_type, clock (MHz)
+#Chip 18f27q43,4
+
+; The default is LVP = OFF. Very dangerous.
+#config LVP = ON
+#config MCLR = ON
+
+dim ore_var_1 as single

@@ -35,3 +35,7 @@ https://akizukidenshi.com/catalog/g/g116593/
 ATMega や AVR の Arduino みたいに気楽に使えるようにできるなら、気楽というのは自分的には、
 ちょっとプログラムを書いたら Serial.print() で確認しながら、ちまちま進めるというやりかたが
 できるのであれば、面白いと思う。
+
+# RL78/G24 R7F101G6E2DSP
+
+[ここ](./RL78_G24/R7F101G6E2DSP/)

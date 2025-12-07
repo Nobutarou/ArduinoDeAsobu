@@ -1,0 +1,37 @@
+; chip_type, clock (MHz)
+#Chip 18f27q43,16
+
+; The default is LVP = OFF. Very dangerous.
+#config LVP = ON
+#config MCLR = ON
+
+; UART setup
+#define USART_BAUD_RATE 9600
+#define USART_TX_BLOCKING
+#define USART_DELAY OFF
+RC4PPS = 0x20 ; RC4 -> TX
+
+; ADC setup
+; ad_ref_source 働いていない気がする
+#define AD_REF_SOURCE AD_REF_AREF
+; ADREF = |-|-|-|NREF|-|-|PREF[1:0]|
+; ADREF の PREF は
+; 0b10 は VREF
+; 0b00 は VDD
+; RA3 ピンの ANSELA や TRISA は操作しなくて良いみたいだ
+ADREF.PREF0 = 0
+ADREF.PREF1 = 1
+
+;これは上手く動かない
+;ADREF = 0b10
+#define ADSpeed LowSpeed
+dir portb.7 in
+
+Do
+  hserprint readad12(anb7)
+  HSerPrintCRLF   
+  wait 1 s
+Loop
+
+
+' vim: set filetype=awk:

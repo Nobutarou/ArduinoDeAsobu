@@ -54,16 +54,7 @@ InitLCD
 
 ORE_PRINT "Hello,"
 ; single (浮動小数点) もこれでいける
-ore_print singletostring(1.234)
-
-;long is OK
-;ore_print 80000
-; integer OK
-;ore_print -32768
-; word OK
-;ore_print 65535
-;byte OK
-;ORE_PRINT 255
+ore_print singletostring(1.234567890)
 
 do
   ore_locate 1, 5
@@ -73,4 +64,4 @@ do
   ore_print 0
   wait 1 s
 loop
-
+' vim: set filetype=awk:
