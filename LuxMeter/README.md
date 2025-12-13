@@ -21,6 +21,9 @@ Ev=500Lx で Vout=3V, Ev=100Lx で Vout=0.6V から
 
 ```math
 log(3)=a \, log(500) + b
+```
+
+```math
 log(0.6)=10a + b
 ```
 
@@ -29,6 +32,7 @@ log(0.6)=10a + b
 ```math
 a=\frac{log(3)-log(0.6)}{log(500)-log(100)}=1.0
 ```
+
 ```math
 b=log(0.6)-a\,log(100)=-2.2218487
 ```
