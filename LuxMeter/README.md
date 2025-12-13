@@ -45,20 +45,24 @@ b=log(0.6)-a\,log(100)=-2.2218487
 E_v=10^{\frac{log(V_{out})-b}{a}}=10^{log(V_{out})+2.2218487} = 166.66665 V_{out} 
 ```
 
-ADC を使って表すと
-
-```math
-V_{out}=5 \({\frac{ADC}{4096}+0.5} \)
-```
-
-だから
-
-
 検算: OK
 - Vout=3V のとき、式のEv=500Lx でプロットと一致
 - Vout=1V のとき、式の Ev=167Lx で、多分そんな感じ
 - Vout=0.6V で、式の Ev=100Lx で OK
 - Vout=0.1V で、式の Ev=17Lx で、だいたい OK
+
+ADC を使って表すと
+
+```math
+V_{out}=5 ({\frac{ADC+0.5}{4096}} )
+```
+
+だから
+
+```math
+E_v=0.20345 ADC + 0.1027 \simeq 0.2ADC
+```
+
 
 [回路図](./v1.0/LuxMeter1.0/LuxMeter1.0.pdf)
 
