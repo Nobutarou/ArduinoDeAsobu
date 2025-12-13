@@ -48,7 +48,7 @@ E_v=10^{\frac{log(V_{out})-b}{a}}=10^{log(V_{out})+2.2218487} = 166.66665 V_{out
 ADC を使って表すと
 
 ```math
-V_{out}=5 {\frac{ADC}{4096}+0.5} 
+V_{out}=5 \({\frac{ADC}{4096}+0.5} \)
 ```
 
 だから
