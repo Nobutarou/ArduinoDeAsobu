@@ -63,3 +63,35 @@ TX=3.3 で TOOL0=5V だと 4mA くらい流れる。まあ大丈夫じゃね？3
 | R2   | 300Ω                   | 1 |
 | S1-5 | ピンソケット 1P         | 5 |
 | S6-7 | ピンソケット 2P         | 2 |      
+
+
+ボーレート 115200, 500000bps では書き込みできた。``-s`` でボーレートの指定が必要。自動では失敗する。
+
+```sh
+> rfp-cli -d RL78/G2x -port /dev/ttyUSB0 -dtr-inv -a ./LuxMeter1.0.srec -s 500000
+Renesas Flash Programmer CLI V1.13
+Module Version: V3.20.00.000
+Load: "/home/snob/Documents/e2studio/LuxMeter1.0/Release/LuxMeter1.0.srec" (Size=19968, CRC=12DC003F)
+
+Connecting the tool (COM port)
+Tool: /dev/ttyUSB0
+Interface: 1 wire UART
+
+Connecting the target device
+Speed: 500,000 bps
+Connected to R7F101G6E
+
+Erasing the target device
+  [Code Flash 1]       00000000 - 0000FFFF
+  [Data Flash 1]       000F1000 - 000F1FFF
+  [Code Flash 1]       00000000 - 000027FF
+Writing data to the target device
+  [Code Flash 1]       00000000 - 00001BFF
+  [Code Flash 1]       00002000 - 000021FF
+Verifying data on the target device
+  [Code Flash 1]       00000000 - 00001BFF
+  [Code Flash 1]       00002000 - 000021FF
+
+
+Disconnecting the tool
+```
