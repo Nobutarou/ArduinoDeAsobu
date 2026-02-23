@@ -60,3 +60,73 @@ GND パッドまでひっついてしまうし、浅いとぜんぜんはんだ�
 [完成品](v2.0/cp2104_2.0.jpg)
 
 小さくて良い感じ。
+
+
+とりあえず RF78/GL24 のプログラマも作ってみた。
+
+[設計図](v2.0/rl78_prog.pdf)
+
+3.3V の本機への保護は 300Ωの抵抗とショットキーのみ。ただし Falstad でシミュレーションする
+と、まあ壊れないだろうくらいにはなっている。
+
+https://is.gd/816afV
+
+フルの 1Mbps でも 500kbps でもどっちでも成功した。
+
+```
+> rfp-cli -d RL78/G2x -port /dev/ttyUSB0 -dtr-inv -a ./DiodeTester3.0.srec
+Renesas Flash Programmer CLI V1.13
+Module Version: V3.20.00.000
+Load: "/xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/DiodeTester3.0.srec" (Size=20508, CRC=FEC0A4D7)
+
+Connecting the tool (COM port)
+Tool: /dev/ttyUSB0
+Interface: 1 wire UART
+
+Connecting the target device
+Speed: 1,000,000 bps
+Connected to R7F101G6E
+
+Erasing the target device
+  [Code Flash 1]       00000000 - 0000FFFF
+  [Data Flash 1]       000F1000 - 000F1FFF
+  [Code Flash 1]       00000000 - 000027FF
+Writing data to the target device
+  [Code Flash 1]       00000000 - 00001CFF
+  [Code Flash 1]       00002000 - 000021FF
+Verifying data on the target device
+  [Code Flash 1]       00000000 - 00001CFF
+  [Code Flash 1]       00002000 - 000021FF
+
+
+Disconnecting the tool
+```
+
+```
+> rfp-cli -d RL78/G2x -port /dev/ttyUSB0 -dtr-inv -a ./DiodeTester3.0.srec  -s 500000
+Renesas Flash Programmer CLI V1.13
+Module Version: V3.20.00.000
+Load: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx/DiodeTester3.0.srec" (Size=20508, CRC=FEC0A4D7)
+
+Connecting the tool (COM port)
+Tool: /dev/ttyUSB0
+Interface: 1 wire UART
+
+Connecting the target device
+Speed: 500,000 bps
+Connected to R7F101G6E
+
+Erasing the target device
+  [Code Flash 1]       00000000 - 0000FFFF
+  [Data Flash 1]       000F1000 - 000F1FFF
+  [Code Flash 1]       00000000 - 000027FF
+Writing data to the target device
+  [Code Flash 1]       00000000 - 00001CFF
+  [Code Flash 1]       00002000 - 000021FF
+Verifying data on the target device
+  [Code Flash 1]       00000000 - 00001CFF
+  [Code Flash 1]       00002000 - 000021FF
+
+
+Disconnecting the tool
+```
