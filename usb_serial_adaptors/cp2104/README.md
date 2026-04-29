@@ -130,3 +130,8 @@ Verifying data on the target device
 
 Disconnecting the tool
 ```
+
+もう一度 CP2104 の
+[データシート](https://www.silabs.com/documents/public/data-sheets/cp2104.pdf)
+を読んでいたら Table 3 の UART の I/O の電機特性として Maximum Input Voltage = 5.8V とあっ
+た。なんだ、全然余裕じゃないか。

@@ -1121,9 +1121,9 @@ AcDbViewportTableRecord
  21
 1
  12
-77.75418825821524
+71.48504587594276
  22
-62.66755471557646
+61.40261715406209
  13
 0
  23
@@ -1149,9 +1149,9 @@ AcDbViewportTableRecord
  37
 0
  40
-76.83378355932746
+60.11882964599654
  41
-1.644791666666667
+1.626041666666667
  42
 50
  43
@@ -2653,7 +2653,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-kst32b
+STANDARD
  70
     0
  40
@@ -2667,7 +2667,7 @@ kst32b
  42
 1
   3
-kst32b
+STANDARD
   4
 
   0
@@ -2681,7 +2681,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-unicode
+iso
  70
     0
  40
@@ -2695,7 +2695,7 @@ unicode
  42
 1
   3
-unicode
+iso
   4
 
   0
@@ -2709,7 +2709,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-STANDARD
+kst32b
  70
     0
  40
@@ -2723,7 +2723,7 @@ STANDARD
  42
 1
   3
-STANDARD
+kst32b
   4
 
   0
@@ -2737,7 +2737,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-azomix
+unicode
  70
     0
  40
@@ -2751,7 +2751,7 @@ azomix
  42
 1
   3
-azomix
+unicode
   4
 
   0
@@ -2765,7 +2765,7 @@ AcDbSymbolTableRecord
 100
 AcDbTextStyleTableRecord
   2
-iso
+azomix
  70
     0
  40
@@ -2779,7 +2779,7 @@ iso
  42
 1
   3
-iso
+azomix
   4
 
   0
@@ -2997,7 +2997,7 @@ Standard
 289
     3
 340
-5C
+5A
   0
 ENDTAB
   0
