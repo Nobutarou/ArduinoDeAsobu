@@ -1,0 +1,11 @@
+#Chip 16f1455,8
+; デフォルトで off になっててなんか怖い
+#config LVP = ON
+#config MCLR = ON
+
+Dir PortA.5 Out
+
+Do
+  PortA.5 = !PortA.5
+  Wait 500 ms
+Loop
