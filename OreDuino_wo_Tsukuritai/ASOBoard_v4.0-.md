@@ -56,12 +56,13 @@ PIC16F1455 の UART はどうにも心許無いので Strawberry の FT232RL ア
 
 [Strawberry FT232RL アダプタ設計図](./ASOBoard_v4.0/StrawberryFT232RL_adaptor_for_v4.0.pdf)
 
+使い道の少ない 2列のヘッダを消費しておくことにする。
+
 Strawberry FT232RL アダプタ部品表
 
 | 記号 | 品番、品目  | 個数 |
 | ---  | ---         | ---  |
 | B1   | 基板 7x4P   | 1    |
-| H1   | ヘッダ 5P   | 1    |
-| H2   | ヘッダ 1P   | 1    |
+| H1   | ヘッダ 5x2P | 1    |
 | S1   | ソケット 2P | 1    |
 | S2   | ソケット 3P | 1    |
