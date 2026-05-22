@@ -346,6 +346,17 @@ VFB=\frac{R2}{R1+R2} VDAC1 + \frac{R1}{R1+R2} VDAC2
 VFB=\alpha VDAC1 + (1-\alpha) VDAC2
 ```
 
+これにより式 9
+```math
+0.58 = (1-\alpha) VDAC2
+```
+
+式10
+```math
+0.8 = 5 \alpha + (1-\alpha) VDAC2
+```
+
+とαと VDAC2 の連立となる。
 
 以下、失敗も込みの検討
 <!-- {{{ -->
