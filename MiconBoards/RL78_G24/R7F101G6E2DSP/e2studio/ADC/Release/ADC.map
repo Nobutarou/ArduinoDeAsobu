@@ -1,0 +1,1025 @@
+     VMA      LMA     Size Align Out     In      Symbol
+       0        0        4     2 .vec
+       0        0        4     2         ./src/smc_gen/general/r_cg_vect_table.o:(.vec)
+       0        0        4     1                 _HardwareVectors
+       4        4       7c     2 .vects
+       4        4       7c     2         ./src/smc_gen/general/r_cg_vect_table.o:(.vects)
+       4        4       7c     1                 _Vectors
+      80       80        0     2 .callt0
+      80       80        0     1         . = ALIGN ( 2 )
+      c0       c0        4     1 .option_byte
+      c0       c0        4     1         ./src/smc_gen/general/r_cg_vect_table.o:(.option_bytes)
+      c0       c0        4     1                 _Option_Bytes
+      c4       c4        a     1 .security_id
+      c4       c4        a     1         ./src/smc_gen/general/r_cg_vect_table.o:(.security_id)
+      c4       c4        a     1                 _Security_Id
+      d8       d8        0     2 .lowtext
+      d8       d8        0     2         <internal>:(.lowtext)
+      d8       d8        0     1 __mdata = .
+      d8       d8     153a     1 .text
+      d8       d8        0     1         ./src/smc_gen/r_pincfg/Pin.o:(.text)
+      d8       d8        0     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.text)
+      d8       d8        0     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.text)
+      d8       d8        e     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common_llvm.o:(.text)
+      da       da        0     1                 loop
+      da       da        0     1                 _delay_wait
+      e1       e1        0     1                 check
+      e5       e5        0     1                 _exit
+      e6       e6       9d     1         ./src/smc_gen/r_bsp/mcu/all/start.o:(.text)
+      e6       e6        0     1                 _PowerON_Reset
+     144      144        0     1                 _exit
+     146      146        0     1                 _rl78_run_init_array
+     151      151        0     1                 _rl78_run_fini_array
+     15a      15a        0     1                 _rl78_run_inilist
+     15a      15a        0     1                 next_inilist
+     173      173        0     1                 skip_inilist
+     178      178        0     1                 done_inilist
+     179      179        0     1                 __rl78_init
+     17e      17e        0     1                 __rl78_fini
+     183      183        0     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.text)
+     183      183        0     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.text)
+     183      183        0     1         ./src/smc_gen/general/r_cg_ad_common.o:(.text)
+     183      183        0     1         ./src/smc_gen/general/r_cg_iica_common.o:(.text)
+     183      183        0     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text)
+     183      183        0     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text)
+     183      183        0     1         ./src/smc_gen/general/r_cg_systeminit.o:(.text)
+     183      183        0     1         ./src/smc_gen/general/r_cg_vect_table.o:(.text)
+     183      183        0     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.text)
+     183      183        0     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text)
+     183      183        0     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.text)
+     183      183        0     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.text)
+     183      183        0     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.text)
+     183      183        0     1         ./src/smc_gen/Config_ADC/Config_ADC_user.o:(.text)
+     183      183        0     1         ./src/main.o:(.text)
+     183      183        e     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libc.a(libc_a-memset.o):(.text)
+     183      183        e     1                 _memset
+     191      191        0     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text)
+     191      191        c     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ftoul.S.o):(.text)
+     191      191        c     1                 __COM_ftoul
+     191      191        c     1                 ___fixunssfsi
+     19d      19d       3e     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_ftol.S.o):(.text)
+     19d      19d       3e     1                 __REL_ftol
+     1db      1db       13     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_lshr.S.o):(.text)
+     1db      1db       13     1                 __COM_lshr
+     1db      1db       13     1                 ___lshrsi3
+     1ee      1ee        6     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ultof.S.o):(.text)
+     1ee      1ee        6     1                 __COM_ultof
+     1ee      1ee        6     1                 ___floatunsisf
+     1f4      1f4       4a     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_ltof.S.o):(.text)
+     1f4      1f4       4a     1                 __REL_ltof
+     23e      23e      12b     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_fdiv.S.o):(.text)
+     29d      29d       cc     1                 __COM_fdiv
+     29d      29d       cc     1                 ___divsf3
+     369      369        8     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_f_inf.S.o):(.text)
+     369      369        8     1                 __REL_f_inf
+     371      371       10     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_f_norm.S.o):(.text)
+     371      371       10     1                 __REL_f_norm
+     381      381       13     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_f_round.S.o):(.text)
+     381      381       13     1                 __REL_f_round
+     394      394       ed     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_fmul.S.o):(.text)
+     3df      3df       a2     1                 __COM_fmul
+     3df      3df       a2     1                 ___mulsf3
+     481      481      13b     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_faddsub.S.o):(.text)
+     4dd      4dd       df     1                 __COM_fsub
+     4dd      4dd       df     1                 ___subsf3
+     4e5      4e5       d7     1                 __COM_fadd
+     4e5      4e5       d7     1                 ___addsf3
+     5bc      5bc       2a     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ulldiv.S.o):(.text)
+     5bc      5bc       2a     1                 __COM_ulldiv
+     5bc      5bc       2a     1                 ___udivdi3
+     5e6      5e6      1ff     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_lldiv.S.o):(.text)
+     601      601      1e4     1                 __REL_lldiv
+     7e5      7e5       38     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o):(.text)
+     7e5      7e5       38     1                 __COM_llmul
+     7e5      7e5       38     1                 ___muldi3
+     81d      81d       4f     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_mulul.S.o):(.text)
+     81d      81d       4f     1                 __COM_mulul
+     86c      86c       12     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_llmul_addh.S.o):(.text)
+     86c      86c       12     1                 __REL_llmul_addh
+     87e      87e        4     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_mului.S.o):(.text)
+     87e      87e        4     1                 __COM_mului
+     882      882       1a     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_lmul.S.o):(.text)
+     882      882       1a     1                 __COM_lmul
+     882      882       1a     1                 ___mulsi3
+     89c      89c       12     1         ./src/smc_gen/r_pincfg/Pin.o:(.text._R_Pins_Create)
+     89c      89c       12     1                 _R_Pins_Create
+     8ae      8ae       e3     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.text._get_fclk_freq_hz)
+     8ae      8ae       e3     1                 _get_fclk_freq_hz
+     991      991       67     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.text._mcu_clock_setup)
+     991      991       67     1                 _mcu_clock_setup
+     9f8      9f8        3     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.text._R_BSP_GetFclkFreqHz)
+     9f8      9f8        3     1                 _R_BSP_GetFclkFreqHz
+     9fb      9fb      297     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.text._R_BSP_SoftwareDelay)
+     9fb      9fb      297     1                 _R_BSP_SoftwareDelay
+     c92      c92        a     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.text._OUTLINED_FUNCTION_0)
+     c92      c92        a     1                 _OUTLINED_FUNCTION_0
+     c9c      c9c        8     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.text._OUTLINED_FUNCTION_1)
+     c9c      c9c        8     1                 _OUTLINED_FUNCTION_1
+     ca4      ca4        d     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.text._hdwinit)
+     ca4      ca4        d     1                 _hdwinit
+     cb1      cb1        2     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.text._output_ports_configure)
+     cb1      cb1        2     1                 _output_ports_configure
+     cb3      cb3        2     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.text._interrupts_configure)
+     cb3      cb3        2     1                 _interrupts_configure
+     cb5      cb5        3     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.text._peripheral_modules_enable)
+     cb5      cb5        3     1                 _peripheral_modules_enable
+     cb8      cb8       10     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.text._bsp_init_system)
+     cb8      cb8       10     1                 _bsp_init_system
+     cc8      cc8        3     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.text._bsp_init_hardware)
+     cc8      cc8        3     1                 _bsp_init_hardware
+     ccb      ccb        5     1         ./src/smc_gen/general/r_cg_ad_common.o:(.text._R_ADC_Set_PowerOn)
+     ccb      ccb        5     1                 _R_ADC_Set_PowerOn
+     cd0      cd0        5     1         ./src/smc_gen/general/r_cg_ad_common.o:(.text._R_ADC_Set_PowerOff)
+     cd0      cd0        5     1                 _R_ADC_Set_PowerOff
+     cd5      cd5        5     1         ./src/smc_gen/general/r_cg_ad_common.o:(.text._R_ADC_Set_Reset)
+     cd5      cd5        5     1                 _R_ADC_Set_Reset
+     cda      cda        5     1         ./src/smc_gen/general/r_cg_ad_common.o:(.text._R_ADC_Release_Reset)
+     cda      cda        5     1                 _R_ADC_Release_Reset
+     cdf      cdf        5     1         ./src/smc_gen/general/r_cg_iica_common.o:(.text._R_IICA0_Set_PowerOn)
+     cdf      cdf        5     1                 _R_IICA0_Set_PowerOn
+     ce4      ce4        5     1         ./src/smc_gen/general/r_cg_iica_common.o:(.text._R_IICA0_Set_PowerOff)
+     ce4      ce4        5     1                 _R_IICA0_Set_PowerOff
+     ce9      ce9        5     1         ./src/smc_gen/general/r_cg_iica_common.o:(.text._R_IICA0_Set_Reset)
+     ce9      ce9        5     1                 _R_IICA0_Set_Reset
+     cee      cee        5     1         ./src/smc_gen/general/r_cg_iica_common.o:(.text._R_IICA0_Release_Reset)
+     cee      cee        5     1                 _R_IICA0_Release_Reset
+     cf3      cf3        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_WDTI)
+     cf3      cf3        2     1                 _INT_WDTI
+     cf5      cf5        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_LVI)
+     cf5      cf5        2     1                 _INT_LVI
+     cf7      cf7        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P0)
+     cf7      cf7        2     1                 _INT_P0
+     cf9      cf9        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P1)
+     cf9      cf9        2     1                 _INT_P1
+     cfb      cfb        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P2)
+     cfb      cfb        2     1                 _INT_P2
+     cfd      cfd        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P3)
+     cfd      cfd        2     1                 _INT_P3
+     cff      cff        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P4)
+     cff      cff        2     1                 _INT_P4
+     d01      d01        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P5)
+     d01      d01        2     1                 _INT_P5
+     d03      d03        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_ST2)
+     d03      d03        2     1                 _INT_ST2
+     d05      d05        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_SR2)
+     d05      d05        2     1                 _INT_SR2
+     d07      d07        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_SRE2)
+     d07      d07        2     1                 _INT_SRE2
+     d09      d09        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_FAAE)
+     d09      d09        2     1                 _INT_FAAE
+     d0b      d0b        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TIMEC0)
+     d0b      d0b        2     1                 _INT_TIMEC0
+     d0d      d0d        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_ST0)
+     d0d      d0d        2     1                 _INT_ST0
+     d0f      d0f        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TM00)
+     d0f      d0f        2     1                 _INT_TM00
+     d11      d11        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TM01H)
+     d11      d11        2     1                 _INT_TM01H
+     d13      d13        1     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_ST1)
+     d13      d13        1     1                 _INT_ST1
+     d14      d14        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_SR1)
+     d14      d14        2     1                 _INT_SR1
+     d16      d16        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TM03H)
+     d16      d16        2     1                 _INT_TM03H
+     d18      d18        1     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_IICA0)
+     d18      d18        1     1                 _INT_IICA0
+     d19      d19        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_SR0)
+     d19      d19        2     1                 _INT_SR0
+     d1b      d1b        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TM01)
+     d1b      d1b        2     1                 _INT_TM01
+     d1d      d1d        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TM02)
+     d1d      d1d        2     1                 _INT_TM02
+     d1f      d1f        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TM03)
+     d1f      d1f        2     1                 _INT_TM03
+     d21      d21        1     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_AD0)
+     d21      d21        1     1                 _INT_AD0
+     d22      d22        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_RTC)
+     d22      d22        2     1                 _INT_RTC
+     d24      d24        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_ITL)
+     d24      d24        2     1                 _INT_ITL
+     d26      d26        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_KR)
+     d26      d26        2     1                 _INT_KR
+     d28      d28        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TRJ0)
+     d28      d28        2     1                 _INT_TRJ0
+     d2a      d2a        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TRD0)
+     d2a      d2a        2     1                 _INT_TRD0
+     d2c      d2c        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TRD1)
+     d2c      d2c        2     1                 _INT_TRD1
+     d2e      d2e        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TRG)
+     d2e      d2e        2     1                 _INT_TRG
+     d30      d30        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TRX)
+     d30      d30        2     1                 _INT_TRX
+     d32      d32        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P20)
+     d32      d32        2     1                 _INT_P20
+     d34      d34        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P21)
+     d34      d34        2     1                 _INT_P21
+     d36      d36        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P6)
+     d36      d36        2     1                 _INT_P6
+     d38      d38        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P7)
+     d38      d38        2     1                 _INT_P7
+     d3a      d3a        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P8)
+     d3a      d3a        2     1                 _INT_P8
+     d3c      d3c        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P9)
+     d3c      d3c        2     1                 _INT_P9
+     d3e      d3e        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_FL)
+     d3e      d3e        2     1                 _INT_FL
+     d40      d40        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P10)
+     d40      d40        2     1                 _INT_P10
+     d42      d42        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_P11)
+     d42      d42        2     1                 _INT_P11
+     d44      d44        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_FAATRAP)
+     d44      d44        2     1                 _INT_FAATRAP
+     d46      d46        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_CMP2)
+     d46      d46        2     1                 _INT_CMP2
+     d48      d48        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_CMP3)
+     d48      d48        2     1                 _INT_CMP3
+     d4a      d4a        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKB0)
+     d4a      d4a        2     1                 _INT_TMKB0
+     d4c      d4c        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKB1)
+     d4c      d4c        2     1                 _INT_TMKB1
+     d4e      d4e        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKB2)
+     d4e      d4e        2     1                 _INT_TMKB2
+     d50      d50        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_GCR)
+     d50      d50        2     1                 _INT_GCR
+     d52      d52        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_PMC)
+     d52      d52        2     1                 _INT_PMC
+     d54      d54        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTR00)
+     d54      d54        2     1                 _INT_TMKBSTR00
+     d56      d56        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTP00)
+     d56      d56        2     1                 _INT_TMKBSTP00
+     d58      d58        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTR01)
+     d58      d58        2     1                 _INT_TMKBSTR01
+     d5a      d5a        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTP01)
+     d5a      d5a        2     1                 _INT_TMKBSTP01
+     d5c      d5c        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTR20)
+     d5c      d5c        2     1                 _INT_TMKBSTR20
+     d5e      d5e        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTP20)
+     d5e      d5e        2     1                 _INT_TMKBSTP20
+     d60      d60        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTR21)
+     d60      d60        2     1                 _INT_TMKBSTR21
+     d62      d62        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TMKBSTP21)
+     d62      d62        2     1                 _INT_TMKBSTP21
+     d64      d64        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TIMEC1)
+     d64      d64        2     1                 _INT_TIMEC1
+     d66      d66        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_TIMEC2)
+     d66      d66        2     1                 _INT_TIMEC2
+     d68      d68        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_AD3)
+     d68      d68        2     1                 _INT_AD3
+     d6a      d6a        2     1         ./src/smc_gen/general/r_cg_inthandler.o:(.text._INT_BRK_I)
+     d6a      d6a        2     1                 _INT_BRK_I
+     d6c      d6c        7     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text._R_SAU0_Create)
+     d6c      d6c        7     1                 _R_SAU0_Create
+     d73      d73        5     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text._R_SAU1_Create)
+     d73      d73        5     1                 _R_SAU1_Create
+     d78      d78        5     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text._R_SAU0_Set_PowerOn)
+     d78      d78        5     1                 _R_SAU0_Set_PowerOn
+     d7d      d7d        5     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text._R_SAU0_Set_PowerOff)
+     d7d      d7d        5     1                 _R_SAU0_Set_PowerOff
+     d82      d82        5     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text._R_SAU1_Set_PowerOn)
+     d82      d82        5     1                 _R_SAU1_Set_PowerOn
+     d87      d87        5     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text._R_SAU1_Set_PowerOff)
+     d87      d87        5     1                 _R_SAU1_Set_PowerOff
+     d8c      d8c        5     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text._R_SAU0_Set_Reset)
+     d8c      d8c        5     1                 _R_SAU0_Set_Reset
+     d91      d91        5     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text._R_SAU0_Release_Reset)
+     d91      d91        5     1                 _R_SAU0_Release_Reset
+     d96      d96        5     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text._R_SAU1_Set_Reset)
+     d96      d96        5     1                 _R_SAU1_Set_Reset
+     d9b      d9b        5     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text._R_SAU1_Release_Reset)
+     d9b      d9b        5     1                 _R_SAU1_Release_Reset
+     da0      da0        b     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text._R_SAU0_Set_SnoozeOn)
+     da0      da0        b     1                 _R_SAU0_Set_SnoozeOn
+     dab      dab        b     1         ./src/smc_gen/general/r_cg_sau_common.o:(.text._R_SAU0_Set_SnoozeOff)
+     dab      dab        b     1                 _R_SAU0_Set_SnoozeOff
+     db6      db6       1e     1         ./src/smc_gen/general/r_cg_systeminit.o:(.text._R_Systeminit)
+     db6      db6       1e     1                 _R_Systeminit
+     dd4      dd4       4d     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.text._R_Config_UART1_Create)
+     dd4      dd4       4d     1                 _R_Config_UART1_Create
+     e21      e21       17     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.text._R_Config_UART1_Start)
+     e21      e21       17     1                 _R_Config_UART1_Start
+     e38      e38       14     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.text._R_Config_UART1_Stop)
+     e38      e38       14     1                 _R_Config_UART1_Stop
+     e4c      e4c       29     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.text._R_Config_UART1_Send)
+     e4c      e4c       29     1                 _R_Config_UART1_Send
+     e75      e75        5     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.text._R_Config_UART1_Loopback_Enable)
+     e75      e75        5     1                 _R_Config_UART1_Loopback_Enable
+     e7a      e7a        5     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.text._R_Config_UART1_Loopback_Disable)
+     e7a      e7a        5     1                 _R_Config_UART1_Loopback_Disable
+     e7f      e7f        b     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.text._OUTLINED_FUNCTION_0)
+     e7f      e7f        b     1                 _OUTLINED_FUNCTION_0
+     e8a      e8a        b     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.text._OUTLINED_FUNCTION_1)
+     e8a      e8a        b     1                 _OUTLINED_FUNCTION_1
+     e95      e95        b     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.text._OUTLINED_FUNCTION_2)
+     e95      e95        b     1                 _OUTLINED_FUNCTION_2
+     ea0      ea0        1     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._R_Config_UART1_Create_UserInit)
+     ea0      ea0        1     1                 _R_Config_UART1_Create_UserInit
+     ea1      ea1       2f     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._r_Config_UART1_interrupt_send)
+     ea1      ea1       2f     1                 _r_Config_UART1_interrupt_send
+     ed0      ed0        4     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._r_Config_UART1_callback_sendend)
+     ed0      ed0        4     1                 _r_Config_UART1_callback_sendend
+     ed4      ed4        f     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OreUART1_Send_Txt)
+     ed4      ed4        f     1                 _OreUART1_Send_Txt
+     ee3      ee3       9c     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OreUART1_Send_U16)
+     ee3      ee3       9c     1                 _OreUART1_Send_U16
+     f7f      f7f        b     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OreUART1_Send_ASCII)
+     f7f      f7f        b     1                 _OreUART1_Send_ASCII
+     f8a      f8a      1a1     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OreUART1_Send_Float)
+     f8a      f8a      1a1     1                 _OreUART1_Send_Float
+    112b     112b        a     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OreUART1_Send_CRLF)
+    112b     112b        a     1                 _OreUART1_Send_CRLF
+    1135     1135        b     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OUTLINED_FUNCTION_0)
+    1135     1135        b     1                 _OUTLINED_FUNCTION_0
+    1140     1140       13     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OUTLINED_FUNCTION_1)
+    1140     1140       13     1                 _OUTLINED_FUNCTION_1
+    1153     1153       14     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OUTLINED_FUNCTION_2)
+    1153     1153       14     1                 _OUTLINED_FUNCTION_2
+    1167     1167        8     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OUTLINED_FUNCTION_3)
+    1167     1167        8     1                 _OUTLINED_FUNCTION_3
+    116f     116f        9     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OUTLINED_FUNCTION_4)
+    116f     116f        9     1                 _OUTLINED_FUNCTION_4
+    1178     1178        c     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OUTLINED_FUNCTION_5)
+    1178     1178        c     1                 _OUTLINED_FUNCTION_5
+    1184     1184        b     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OUTLINED_FUNCTION_6)
+    1184     1184        b     1                 _OUTLINED_FUNCTION_6
+    118f     118f        b     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OUTLINED_FUNCTION_7)
+    118f     118f        b     1                 _OUTLINED_FUNCTION_7
+    119a     119a        9     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.text._OUTLINED_FUNCTION_8)
+    119a     119a        9     1                 _OUTLINED_FUNCTION_8
+    11a3     11a3       6d     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.text._R_Config_IICA0_Create)
+    11a3     11a3       6d     1                 _R_Config_IICA0_Create
+    1210     1210        5     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.text._R_Config_IICA0_Stop)
+    1210     1210        5     1                 _R_Config_IICA0_Stop
+    1215     1215        5     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.text._R_Config_IICA0_StopCondition)
+    1215     1215        5     1                 _R_Config_IICA0_StopCondition
+    121a     121a       3c     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.text._R_Config_IICA0_Master_Send)
+    121a     121a       3c     1                 _R_Config_IICA0_Master_Send
+    1256     1256       43     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.text._R_Config_IICA0_Master_Receive)
+    1256     1256       43     1                 _R_Config_IICA0_Master_Receive
+    1299     1299        8     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.text._OUTLINED_FUNCTION_0)
+    1299     1299        8     1                 _OUTLINED_FUNCTION_0
+    12a1     12a1        1     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.text._R_Config_IICA0_Create_UserInit)
+    12a1     12a1        1     1                 _R_Config_IICA0_Create_UserInit
+    12a2     12a2       1d     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.text._r_Config_IICA0_interrupt)
+    12a2     12a2       1d     1                 _r_Config_IICA0_interrupt
+    12bf     12bf       7b     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.text._r_Config_IICA0_master_handler)
+    12bf     12bf       7b     1                 _r_Config_IICA0_master_handler
+    133a     133a       11     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.text._r_Config_IICA0_callback_master_sendend)
+    133a     133a       11     1                 _r_Config_IICA0_callback_master_sendend
+    134b     134b        5     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.text._r_Config_IICA0_callback_master_receiveend)
+    134b     134b        5     1                 _r_Config_IICA0_callback_master_receiveend
+    1350     1350        7     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.text._OUTLINED_FUNCTION_0)
+    1350     1350        7     1                 _OUTLINED_FUNCTION_0
+    1357     1357       3c     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.text._R_Config_ADC_Create)
+    1357     1357       3c     1                 _R_Config_ADC_Create
+    1393     1393        a     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.text._R_Config_ADC_Start)
+    1393     1393        a     1                 _R_Config_ADC_Start
+    139d     139d        a     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.text._R_Config_ADC_Stop)
+    139d     139d        a     1                 _R_Config_ADC_Stop
+    13a7     13a7       1e     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.text._R_Config_ADC_Set_OperationOn)
+    13a7     13a7       1e     1                 _R_Config_ADC_Set_OperationOn
+    13c5     13c5        4     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.text._R_Config_ADC_Set_OperationOff)
+    13c5     13c5        4     1                 _R_Config_ADC_Set_OperationOff
+    13c9     13c9        5     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.text._R_Config_ADC_Set_SnoozeOn)
+    13c9     13c9        5     1                 _R_Config_ADC_Set_SnoozeOn
+    13ce     13ce        5     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.text._R_Config_ADC_Set_SnoozeOff)
+    13ce     13ce        5     1                 _R_Config_ADC_Set_SnoozeOff
+    13d3     13d3        8     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.text._R_Config_ADC_Get_Result_12bit)
+    13d3     13d3        8     1                 _R_Config_ADC_Get_Result_12bit
+    13db     13db       2f     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.text._R_Config_ADC_Set_ADChannel)
+    13db     13db       2f     1                 _R_Config_ADC_Set_ADChannel
+    140a     140a       15     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.text._R_Config_ADC_Set_TestChannel)
+    140a     140a       15     1                 _R_Config_ADC_Set_TestChannel
+    141f     141f        1     1         ./src/smc_gen/Config_ADC/Config_ADC_user.o:(.text._R_Config_ADC_Create_UserInit)
+    141f     141f        1     1                 _R_Config_ADC_Create_UserInit
+    1420     1420        2     1         ./src/smc_gen/Config_ADC/Config_ADC_user.o:(.text._r_Config_ADC_interrupt)
+    1420     1420        2     1                 _r_Config_ADC_interrupt
+    1422     1422       23     1         ./src/main.o:(.text._main)
+    1422     1422       23     1                 _main
+    1445     1445        c     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___lesf2)
+    1445     1445        c     1                 ___lesf2
+    1445     1445        c     1                 ___cmpsf2
+    1445     1445        c     1                 ___eqsf2
+    1445     1445        c     1                 ___ltsf2
+    1445     1445        c     1                 ___nesf2
+    1451     1451       4c     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___leXf2__)
+    1451     1451       4c     1                 ___leXf2__
+    149d     149d        c     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___gesf2)
+    149d     149d        c     1                 ___gesf2
+    149d     149d        c     1                 ___gtsf2
+    14a9     14a9       4c     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___geXf2__)
+    14a9     14a9       4c     1                 ___geXf2__
+    14f5     14f5        c     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___unordsf2)
+    14f5     14f5        c     1                 ___unordsf2
+    1501     1501       3e     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text.___unordXf2__)
+    1501     1501       3e     1                 ___unordXf2__
+    153f     153f        1     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._toRep)
+    153f     153f        1     1                 _toRep
+    1540     1540       16     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._OUTLINED_FUNCTION_0)
+    1540     1540       16     1                 _OUTLINED_FUNCTION_0
+    1556     1556       26     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._OUTLINED_FUNCTION_1)
+    1556     1556       26     1                 _OUTLINED_FUNCTION_1
+    157c     157c       26     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._OUTLINED_FUNCTION_2)
+    157c     157c       26     1                 _OUTLINED_FUNCTION_2
+    15a2     15a2       20     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._OUTLINED_FUNCTION_3)
+    15a2     15a2       20     1                 _OUTLINED_FUNCTION_3
+    15c2     15c2       15     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._OUTLINED_FUNCTION_4)
+    15c2     15c2       15     1                 _OUTLINED_FUNCTION_4
+    15d7     15d7       13     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._OUTLINED_FUNCTION_5)
+    15d7     15d7       13     1                 _OUTLINED_FUNCTION_5
+    15ea     15ea        a     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._OUTLINED_FUNCTION_6)
+    15ea     15ea        a     1                 _OUTLINED_FUNCTION_6
+    15f4     15f4        c     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._OUTLINED_FUNCTION_7)
+    15f4     15f4        c     1                 _OUTLINED_FUNCTION_7
+    1600     1600        a     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._OUTLINED_FUNCTION_8)
+    1600     1600        a     1                 _OUTLINED_FUNCTION_8
+    160a     160a        8     1         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(comparesf2.c.o):(.text._OUTLINED_FUNCTION_9)
+    160a     160a        8     1                 _OUTLINED_FUNCTION_9
+    1612     1612        0     1 PROVIDE ( __rodata_limit = CONSTANT ( MIRRORAREASTART ) + 0x2000 + LENGTH ( MIRROR ) )
+    2000     2000      128     2 .rodata
+    2000     2000        0     1         . = ALIGN ( 2 )
+    2000     2000        0     1         __rodata = .
+    2000     2000      100     2         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.rodata._g_fih_hz)
+    2000     2000      100     1                 _g_fih_hz
+    2100     2100       10     2         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.rodata._g_fim_hz)
+    2100     2100       10     1                 _g_fim_hz
+    2110     2110       18     2         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.rodata._g_bsp_delay_time)
+    2110     2110       18     1                 _g_bsp_delay_time
+    2128     2128        0     1         . = ALIGN ( 2 )
+    2128     2128        0     1         . = ALIGN ( 2 )
+    2128     2128        0     1         PROVIDE ( __init_array_start = . )
+    2128     2128        0     1         PROVIDE ( __init_array_end = . )
+    2128     2128        0     1         PROVIDE ( __fini_array_start = . )
+    2128     2128        0     1         PROVIDE ( __fini_array_end = . )
+    2128     2128        0     1         __erodata = .
+    2128     2128        0     1         
+    2128     2128        0     1         
+    2128     2128        0     2 .frodata
+    2128     2128        0     1         . = ALIGN ( 2 )
+    2128     2128        0     1         __frodata = .
+    2128     2128        0     1         __efrodata = .
+    2128     2128        0     1         . = ALIGN ( 2 )
+    2128     2128        0     1         __constf = .
+    2128     2128        0     1         __econstf = .
+   fcf00    fcf00        0     1 .data
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         PROVIDE ( __datastart = . )
+   fcf00    fcf00        0     1         __data = .
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         __edata = .
+   fcf00    fcf00        0     1 PROVIDE ( __romdatastart = LOADADDR ( .data ) )
+   fcf00    fcf00        0     1 PROVIDE ( __romdatacopysize = SIZEOF ( .data ) )
+   fcf00    fcf00        0     2 .dataf
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fd800    fd800        0     1 .FAA_CODE
+   fd800    fd800        0     1         . = ALIGN ( 2 )
+   fd800    fd800        0     1         . = ALIGN ( 2 )
+   fd800    fd800        0     1         . = ALIGN ( 2 )
+   fe800    fe800        0     1 .FAA_DATA
+   fe800    fe800        0     1         . = ALIGN ( 2 )
+   fe800    fe800        0     1         . = ALIGN ( 2 )
+   fe800    fe800        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     2 .sdata
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     1         PROVIDE ( __sdatastart = . )
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     1 PROVIDE ( __romsdatastart = LOADADDR ( .sdata ) )
+   ffe20    ffe20        0     1 PROVIDE ( __romsdatacopysize = SIZEOF ( .sdata ) )
+   ffe20    ffe20        0     2 .saddr
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     2 .sbss
+   ffe20    ffe20        0     1         PROVIDE ( __sbssstart = . )
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     1         __sbss = .
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     1         . = ALIGN ( 2 )
+   ffe20    ffe20        0     1         __esbss = .
+   ffe20    ffe20        0     1 PROVIDE ( __sbsssize = SIZEOF ( .sbss ) )
+   fcf00    fcf00       12     2 .bss
+   fcf00    fcf00        0     1         PROVIDE ( __bssstart = . )
+   fcf00    fcf00        0     1         . = ALIGN ( 2 )
+   fcf00    fcf00        0     1         __bss = .
+   fcf00    fcf00        2     2         ./src/smc_gen/Config_UART1/Config_UART1.o:(.bss._gp_uart1_tx_address)
+   fcf00    fcf00        2     1                 _gp_uart1_tx_address
+   fcf02    fcf02        2     2         ./src/smc_gen/Config_UART1/Config_UART1.o:(.bss._g_uart1_tx_count)
+   fcf02    fcf02        2     1                 _g_uart1_tx_count
+   fcf04    fcf04        2     2         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.bss._g_iica0_tx_cnt)
+   fcf04    fcf04        2     1                 _g_iica0_tx_cnt
+   fcf06    fcf06        2     2         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.bss._gp_iica0_tx_address)
+   fcf06    fcf06        2     1                 _gp_iica0_tx_address
+   fcf08    fcf08        1     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.bss._g_iica0_master_status_flag)
+   fcf08    fcf08        1     1                 _g_iica0_master_status_flag
+   fcf0a    fcf0a        2     2         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.bss._g_iica0_rx_len)
+   fcf0a    fcf0a        2     1                 _g_iica0_rx_len
+   fcf0c    fcf0c        2     2         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.bss._g_iica0_rx_cnt)
+   fcf0c    fcf0c        2     1                 _g_iica0_rx_cnt
+   fcf0e    fcf0e        2     2         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.bss._gp_iica0_rx_address)
+   fcf0e    fcf0e        2     1                 _gp_iica0_rx_address
+   fcf10    fcf10        1     1         ./src/main.o:(.bss.__i2c_send_end)
+   fcf10    fcf10        1     1                 __i2c_send_end
+   fcf11    fcf11        1     1         ./src/main.o:(.bss.__uart_end)
+   fcf11    fcf11        1     1                 __uart_end
+   fcf12    fcf12        0     1         . = ALIGN ( 2 )
+   fcf12    fcf12        0     1         . = ALIGN ( 2 )
+   fcf12    fcf12        0     1         . = ALIGN ( 2 )
+   fcf12    fcf12        0     1         __ebss = .
+   fcf12    fcf12        0     1 PROVIDE ( __bsssize = SIZEOF ( .bss ) )
+   fcf12    fcf12       6e     2 .bssf
+   fcf12    fcf12        0     1         . = ALIGN ( 2 )
+   fcf12    fcf12       6e     1         . = ALIGN ( 128 )
+   fcf80    fcf80        0     1         __end = .
+   fcf80    fcf80        0     1 PROVIDE ( __stack_size = 0x100 )
+   ffe20    ffe20        0     1 .stack
+   ffe20    ffe20        0     1         PROVIDE ( __stack = . )
+   ffe20    ffe20        0     1         
+       0        0      ee8     1 .debug_abbrev
+       0        0       8f     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_abbrev)
+      8f       8f      130     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_abbrev)
+     1bf      1bf      110     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_abbrev)
+     2cf      2cf       21     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common_llvm.o:(.debug_abbrev)
+     2f0      2f0       21     1         ./src/smc_gen/r_bsp/mcu/all/start.o:(.debug_abbrev)
+     311      311       9d     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_abbrev)
+     3ae      3ae       6a     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_abbrev)
+     418      418       91     1         ./src/smc_gen/general/r_cg_ad_common.o:(.debug_abbrev)
+     4a9      4a9       91     1         ./src/smc_gen/general/r_cg_iica_common.o:(.debug_abbrev)
+     53a      53a       48     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_abbrev)
+     582      582       c6     1         ./src/smc_gen/general/r_cg_sau_common.o:(.debug_abbrev)
+     648      648       d2     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_abbrev)
+     71a      71a       67     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_abbrev)
+     781      781      150     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_abbrev)
+     8d1      8d1      12b     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_abbrev)
+     9fc      9fc      15f     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_abbrev)
+     b5b      b5b      117     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_abbrev)
+     c72      c72      148     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.debug_abbrev)
+     dba      dba       31     1         ./src/smc_gen/Config_ADC/Config_ADC_user.o:(.debug_abbrev)
+     deb      deb       fd     1         ./src/main.o:(.debug_abbrev)
+       0        0     221b     1 .debug_info
+       0        0      140     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_info)
+     140      140      314     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_info)
+     454      454      179     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_info)
+     5cd      5cd      10d     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common_llvm.o:(.debug_info)
+     6da      6da      1bb     1         ./src/smc_gen/r_bsp/mcu/all/start.o:(.debug_info)
+     895      895       85     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_info)
+     91a      91a       65     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_info)
+     97f      97f       ff     1         ./src/smc_gen/general/r_cg_ad_common.o:(.debug_info)
+     a7e      a7e       ff     1         ./src/smc_gen/general/r_cg_iica_common.o:(.debug_info)
+     b7d      b7d      337     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_info)
+     eb4      eb4      189     1         ./src/smc_gen/general/r_cg_sau_common.o:(.debug_info)
+    103d     103d      11f     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_info)
+    115c     115c       91     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_info)
+    11ed     11ed      2de     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_info)
+    14cb     14cb      2b3     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_info)
+    177e     177e      3c2     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_info)
+    1b40     1b40      16d     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_info)
+    1cad     1cad      38e     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.debug_info)
+    203b     203b       40     1         ./src/smc_gen/Config_ADC/Config_ADC_user.o:(.debug_info)
+    207b     207b      1a0     1         ./src/main.o:(.debug_info)
+       0        0      a78     1 .debug_str_offsets
+       0        0       6c     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_str_offsets)
+      6c       6c       e0     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_str_offsets)
+     14c      14c       9c     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_str_offsets)
+     1e8      1e8       2c     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_str_offsets)
+     214      214       28     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_str_offsets)
+     23c      23c       60     1         ./src/smc_gen/general/r_cg_ad_common.o:(.debug_str_offsets)
+     29c      29c       60     1         ./src/smc_gen/general/r_cg_iica_common.o:(.debug_str_offsets)
+     2fc      2fc      10c     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_str_offsets)
+     408      408       90     1         ./src/smc_gen/general/r_cg_sau_common.o:(.debug_str_offsets)
+     498      498       68     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_str_offsets)
+     500      500       2c     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_str_offsets)
+     52c      52c       e0     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_str_offsets)
+     60c      60c       d4     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_str_offsets)
+     6e0      6e0      114     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_str_offsets)
+     7f4      7f4       74     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_str_offsets)
+     868      868      13c     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.debug_str_offsets)
+     9a4      9a4       1c     1         ./src/smc_gen/Config_ADC/Config_ADC_user.o:(.debug_str_offsets)
+     9c0      9c0       b8     1         ./src/main.o:(.debug_str_offsets)
+       0        0     13d7     1 .debug_str
+       0        0     13d7     1         <internal>:(.debug_str)
+       0        0      458     1 .debug_addr
+       0        0        c     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_addr)
+       c        c       20     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_addr)
+      2c       2c       38     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_addr)
+      64       64       28     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_addr)
+      8c       8c       18     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_addr)
+      a4       a4       18     1         ./src/smc_gen/general/r_cg_ad_common.o:(.debug_addr)
+      bc       bc       18     1         ./src/smc_gen/general/r_cg_iica_common.o:(.debug_addr)
+      d4       d4      100     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_addr)
+     1d4      1d4       3c     1         ./src/smc_gen/general/r_cg_sau_common.o:(.debug_addr)
+     210      210       18     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_addr)
+     228      228       18     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_addr)
+     240      240       50     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_addr)
+     290      290       e0     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_addr)
+     370      370       44     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_addr)
+     3b4      3b4       38     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_addr)
+     3ec      3ec       34     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.debug_addr)
+     420      420       10     1         ./src/smc_gen/Config_ADC/Config_ADC_user.o:(.debug_addr)
+     430      430       28     1         ./src/main.o:(.debug_addr)
+       0        0       59     1 .comment
+       0        0       59     1         <internal>:(.comment)
+       0        0      b44     4 .debug_frame
+       0        0       24     4         ./src/smc_gen/r_pincfg/Pin.o:(.debug_frame)
+      24       24       44     4         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_frame)
+      68       68       78     4         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_frame)
+      e0       e0       54     4         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_frame)
+     134      134       34     4         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_frame)
+     168      168       54     4         ./src/smc_gen/general/r_cg_ad_common.o:(.debug_frame)
+     1bc      1bc       54     4         ./src/smc_gen/general/r_cg_iica_common.o:(.debug_frame)
+     210      210      3f4     4         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_frame)
+     604      604       d4     4         ./src/smc_gen/general/r_cg_sau_common.o:(.debug_frame)
+     6d8      6d8       24     4         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_frame)
+     6fc      6fc       ac     4         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_frame)
+     7a8      7a8      170     4         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_frame)
+     918      918       84     4         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_frame)
+     99c      99c       94     4         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_frame)
+     a30      a30       bc     4         ./src/smc_gen/Config_ADC/Config_ADC.o:(.debug_frame)
+     aec      aec       34     4         ./src/smc_gen/Config_ADC/Config_ADC_user.o:(.debug_frame)
+     b20      b20       24     4         ./src/main.o:(.debug_frame)
+       0        0     1ba8     1 .debug_line
+       0        0       85     1         ./src/smc_gen/r_pincfg/Pin.o:(.debug_line)
+      85       85      1d2     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_line)
+     257      257      21d     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_line)
+     474      474       48     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common_llvm.o:(.debug_line)
+     4bc      4bc       92     1         ./src/smc_gen/r_bsp/mcu/all/start.o:(.debug_line)
+     54e      54e       c0     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_line)
+     60e      60e       a3     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_line)
+     6b1      6b1       c4     1         ./src/smc_gen/general/r_cg_ad_common.o:(.debug_line)
+     775      775       c4     1         ./src/smc_gen/general/r_cg_iica_common.o:(.debug_line)
+     839      839      556     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_line)
+     d8f      d8f      1b5     1         ./src/smc_gen/general/r_cg_sau_common.o:(.debug_line)
+     f44      f44       d2     1         ./src/smc_gen/general/r_cg_systeminit.o:(.debug_line)
+    1016     1016       43     1         ./src/smc_gen/general/r_cg_vect_table.o:(.debug_line)
+    1059     1059      193     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_line)
+    11ec     11ec      309     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_line)
+    14f5     14f5      1d7     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_line)
+    16cc     16cc      178     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_line)
+    1844     1844      1fe     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.debug_line)
+    1a42     1a42       6c     1         ./src/smc_gen/Config_ADC/Config_ADC_user.o:(.debug_line)
+    1aae     1aae       fa     1         ./src/main.o:(.debug_line)
+       0        0      754     1 .debug_line_str
+       0        0      754     1         <internal>:(.debug_line_str)
+       0        0      50f     1 .debug_loclists
+       0        0      110     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_loclists)
+     110      110       3e     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_loclists)
+     14e      14e       51     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_loclists)
+     19f      19f      22c     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_loclists)
+     3cb      3cb       e1     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_loclists)
+     4ac      4ac       63     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.debug_loclists)
+       0        0      2a2     1 .debug_rnglists
+       0        0       18     1         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o:(.debug_rnglists)
+      18       18       1e     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o:(.debug_rnglists)
+      36       36       1d     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o:(.debug_rnglists)
+      53       53       17     1         ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o:(.debug_rnglists)
+      6a       6a       1d     1         ./src/smc_gen/general/r_cg_ad_common.o:(.debug_rnglists)
+      87       87       1d     1         ./src/smc_gen/general/r_cg_iica_common.o:(.debug_rnglists)
+      a4       a4       cb     1         ./src/smc_gen/general/r_cg_inthandler.o:(.debug_rnglists)
+     16f      16f       35     1         ./src/smc_gen/general/r_cg_sau_common.o:(.debug_rnglists)
+     1a4      1a4       2c     1         ./src/smc_gen/Config_UART1/Config_UART1.o:(.debug_rnglists)
+     1d0      1d0       46     1         ./src/smc_gen/Config_UART1/Config_UART1_user.o:(.debug_rnglists)
+     216      216       23     1         ./src/smc_gen/Config_IICA0/Config_IICA0.o:(.debug_rnglists)
+     239      239       23     1         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o:(.debug_rnglists)
+     25c      25c       2f     1         ./src/smc_gen/Config_ADC/Config_ADC.o:(.debug_rnglists)
+     28b      28b       17     1         ./src/smc_gen/Config_ADC/Config_ADC_user.o:(.debug_rnglists)
+       0        0       40     1 .debug_aranges
+       0        0       20     1         ./src/smc_gen/r_bsp/mcu/all/r_bsp_common_llvm.o:(.debug_aranges)
+      20       20       20     1         ./src/smc_gen/r_bsp/mcu/all/start.o:(.debug_aranges)
+       0        0     2090     4 .symtab
+       0        0     2090     4         <internal>:(.symtab)
+       0        0      155     1 .shstrtab
+       0        0      155     1         <internal>:(.shstrtab)
+       0        0     193b     1 .strtab
+       0        0     193b     1         <internal>:(.strtab)
+
+Cross Reference Table
+
+Symbol                                            File
+_R_Pins_Create                                    ./src/smc_gen/r_pincfg/Pin.o
+_get_fclk_freq_hz                                 ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o
+                                                  ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+_g_fim_hz                                         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o
+_g_fih_hz                                         ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o
+__COM_lmul                                        /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_lmul.S.o)
+                                                  ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o
+                                                  ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o)
+_mcu_clock_setup                                  ./src/smc_gen/r_bsp/mcu/rl78_g24/mcu_clocks.o
+                                                  ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o
+_R_BSP_GetFclkFreqHz                              ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+_R_BSP_SoftwareDelay                              ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+                                                  ./src/main.o
+__COM_llmul                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o)
+                                                  ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+_g_bsp_delay_time                                 ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+__COM_ulldiv                                      /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ulldiv.S.o)
+                                                  ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+_delay_wait                                       ./src/smc_gen/r_bsp/mcu/all/r_bsp_common_llvm.o
+                                                  ./src/smc_gen/r_bsp/mcu/all/r_bsp_common.o
+_PowerON_Reset                                    ./src/smc_gen/r_bsp/mcu/all/start.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+__stack                                           <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+_bsp_init_system                                  ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__romdatastart                                    <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__romdatacopysize                                 <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__datastart                                       <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__romsdatastart                                   <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__romsdatacopysize                                <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__sdatastart                                      <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__sbsssize                                        <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__sbssstart                                       <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+_memset                                           /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libc.a(libc_a-memset.o)
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__bsssize                                         <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__bssstart                                        <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+_bsp_init_hardware                                ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__rl78_init                                       ./src/smc_gen/r_bsp/mcu/all/start.o
+_main                                             ./src/main.o
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__rl78_fini                                       ./src/smc_gen/r_bsp/mcu/all/start.o
+_exit                                             ./src/smc_gen/r_bsp/mcu/all/start.o
+_rl78_run_init_array                              ./src/smc_gen/r_bsp/mcu/all/start.o
+__init_array_start                                <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__init_array_end                                  <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+_rl78_run_fini_array                              ./src/smc_gen/r_bsp/mcu/all/start.o
+__fini_array_start                                <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+__fini_array_end                                  <internal>
+                                                  ./src/smc_gen/r_bsp/mcu/all/start.o
+_hdwinit                                          ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o
+                                                  ./src/smc_gen/r_bsp/board/generic_rl78_g24/r_bsp_init.o
+_R_Systeminit                                     ./src/smc_gen/general/r_cg_systeminit.o
+                                                  ./src/smc_gen/r_bsp/board/generic_rl78_g24/hdwinit.o
+_R_ADC_Set_PowerOn                                ./src/smc_gen/general/r_cg_ad_common.o
+_R_ADC_Set_PowerOff                               ./src/smc_gen/general/r_cg_ad_common.o
+_R_ADC_Set_Reset                                  ./src/smc_gen/general/r_cg_ad_common.o
+_R_ADC_Release_Reset                              ./src/smc_gen/general/r_cg_ad_common.o
+_R_IICA0_Set_PowerOn                              ./src/smc_gen/general/r_cg_iica_common.o
+_R_IICA0_Set_PowerOff                             ./src/smc_gen/general/r_cg_iica_common.o
+_R_IICA0_Set_Reset                                ./src/smc_gen/general/r_cg_iica_common.o
+_R_IICA0_Release_Reset                            ./src/smc_gen/general/r_cg_iica_common.o
+_INT_WDTI                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_LVI                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P0                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P1                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P2                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P3                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P4                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P5                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_ST2                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_SR2                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_SRE2                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_FAAE                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TIMEC0                                       ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_ST0                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TM00                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TM01H                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_ST1                                          ./src/smc_gen/general/r_cg_inthandler.o
+_INT_SR1                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TM03H                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_IICA0                                        ./src/smc_gen/general/r_cg_inthandler.o
+_INT_SR0                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TM01                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TM02                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TM03                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_AD0                                          ./src/smc_gen/general/r_cg_inthandler.o
+_INT_RTC                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_ITL                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_KR                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TRJ0                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TRD0                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TRD1                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TRG                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TRX                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P20                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P21                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P6                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P7                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P8                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P9                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_FL                                           ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P10                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_P11                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_FAATRAP                                      ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_CMP2                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_CMP3                                         ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKB0                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKB1                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKB2                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_GCR                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_PMC                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTR00                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTP00                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTR01                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTP01                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTR20                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTP20                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTR21                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TMKBSTP21                                    ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TIMEC1                                       ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_TIMEC2                                       ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_AD3                                          ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_INT_BRK_I                                        ./src/smc_gen/general/r_cg_inthandler.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_R_SAU0_Create                                    ./src/smc_gen/general/r_cg_sau_common.o
+                                                  ./src/smc_gen/general/r_cg_systeminit.o
+_R_Config_UART1_Create                            ./src/smc_gen/Config_UART1/Config_UART1.o
+                                                  ./src/smc_gen/general/r_cg_sau_common.o
+_R_SAU1_Create                                    ./src/smc_gen/general/r_cg_sau_common.o
+_R_SAU0_Set_PowerOn                               ./src/smc_gen/general/r_cg_sau_common.o
+_R_SAU0_Set_PowerOff                              ./src/smc_gen/general/r_cg_sau_common.o
+_R_SAU1_Set_PowerOn                               ./src/smc_gen/general/r_cg_sau_common.o
+_R_SAU1_Set_PowerOff                              ./src/smc_gen/general/r_cg_sau_common.o
+_R_SAU0_Set_Reset                                 ./src/smc_gen/general/r_cg_sau_common.o
+_R_SAU0_Release_Reset                             ./src/smc_gen/general/r_cg_sau_common.o
+_R_SAU1_Set_Reset                                 ./src/smc_gen/general/r_cg_sau_common.o
+_R_SAU1_Release_Reset                             ./src/smc_gen/general/r_cg_sau_common.o
+_R_SAU0_Set_SnoozeOn                              ./src/smc_gen/general/r_cg_sau_common.o
+_R_SAU0_Set_SnoozeOff                             ./src/smc_gen/general/r_cg_sau_common.o
+_R_Config_IICA0_Create                            ./src/smc_gen/Config_IICA0/Config_IICA0.o
+                                                  ./src/smc_gen/general/r_cg_systeminit.o
+_R_Config_ADC_Create                              ./src/smc_gen/Config_ADC/Config_ADC.o
+                                                  ./src/smc_gen/general/r_cg_systeminit.o
+_Option_Bytes                                     ./src/smc_gen/general/r_cg_vect_table.o
+_Security_Id                                      ./src/smc_gen/general/r_cg_vect_table.o
+_HardwareVectors                                  ./src/smc_gen/general/r_cg_vect_table.o
+_Vectors                                          ./src/smc_gen/general/r_cg_vect_table.o
+_r_Config_UART1_interrupt_send                    ./src/smc_gen/Config_UART1/Config_UART1_user.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_r_Config_IICA0_interrupt                         ./src/smc_gen/Config_IICA0/Config_IICA0_user.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_r_Config_ADC_interrupt                           ./src/smc_gen/Config_ADC/Config_ADC_user.o
+                                                  ./src/smc_gen/general/r_cg_vect_table.o
+_R_Config_UART1_Create_UserInit                   ./src/smc_gen/Config_UART1/Config_UART1_user.o
+                                                  ./src/smc_gen/Config_UART1/Config_UART1.o
+_R_Config_UART1_Start                             ./src/smc_gen/Config_UART1/Config_UART1.o
+                                                  ./src/main.o
+_R_Config_UART1_Stop                              ./src/smc_gen/Config_UART1/Config_UART1.o
+_R_Config_UART1_Send                              ./src/smc_gen/Config_UART1/Config_UART1.o
+                                                  ./src/smc_gen/Config_UART1/Config_UART1_user.o
+_g_uart1_tx_count                                 ./src/smc_gen/Config_UART1/Config_UART1.o
+                                                  ./src/smc_gen/Config_UART1/Config_UART1_user.o
+_gp_uart1_tx_address                              ./src/smc_gen/Config_UART1/Config_UART1.o
+                                                  ./src/smc_gen/Config_UART1/Config_UART1_user.o
+_R_Config_UART1_Loopback_Enable                   ./src/smc_gen/Config_UART1/Config_UART1.o
+_R_Config_UART1_Loopback_Disable                  ./src/smc_gen/Config_UART1/Config_UART1.o
+__uart_end                                        ./src/main.o
+                                                  ./src/smc_gen/Config_UART1/Config_UART1_user.o
+_OreUART1_Send_Txt                                ./src/smc_gen/Config_UART1/Config_UART1_user.o
+_OreUART1_Send_U16                                ./src/smc_gen/Config_UART1/Config_UART1_user.o
+                                                  ./src/main.o
+_OreUART1_Send_ASCII                              ./src/smc_gen/Config_UART1/Config_UART1_user.o
+_OreUART1_Send_Float                              ./src/smc_gen/Config_UART1/Config_UART1_user.o
+__COM_fmul                                        /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_fmul.S.o)
+                                                  ./src/smc_gen/Config_UART1/Config_UART1_user.o
+__COM_fdiv                                        /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_fdiv.S.o)
+                                                  ./src/smc_gen/Config_UART1/Config_UART1_user.o
+__COM_ftoul                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ftoul.S.o)
+                                                  ./src/smc_gen/Config_UART1/Config_UART1_user.o
+__COM_ultof                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ultof.S.o)
+                                                  ./src/smc_gen/Config_UART1/Config_UART1_user.o
+__COM_fsub                                        /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_faddsub.S.o)
+                                                  ./src/smc_gen/Config_UART1/Config_UART1_user.o
+_OreUART1_Send_CRLF                               ./src/smc_gen/Config_UART1/Config_UART1_user.o
+                                                  ./src/main.o
+_R_Config_IICA0_Create_UserInit                   ./src/smc_gen/Config_IICA0/Config_IICA0_user.o
+                                                  ./src/smc_gen/Config_IICA0/Config_IICA0.o
+_R_Config_IICA0_Stop                              ./src/smc_gen/Config_IICA0/Config_IICA0.o
+_R_Config_IICA0_StopCondition                     ./src/smc_gen/Config_IICA0/Config_IICA0.o
+_R_Config_IICA0_Master_Send                       ./src/smc_gen/Config_IICA0/Config_IICA0.o
+_g_iica0_tx_cnt                                   ./src/smc_gen/Config_IICA0/Config_IICA0.o
+                                                  ./src/smc_gen/Config_IICA0/Config_IICA0_user.o
+_gp_iica0_tx_address                              ./src/smc_gen/Config_IICA0/Config_IICA0.o
+                                                  ./src/smc_gen/Config_IICA0/Config_IICA0_user.o
+_g_iica0_master_status_flag                       ./src/smc_gen/Config_IICA0/Config_IICA0.o
+                                                  ./src/smc_gen/Config_IICA0/Config_IICA0_user.o
+_R_Config_IICA0_Master_Receive                    ./src/smc_gen/Config_IICA0/Config_IICA0.o
+_g_iica0_rx_len                                   ./src/smc_gen/Config_IICA0/Config_IICA0.o
+                                                  ./src/smc_gen/Config_IICA0/Config_IICA0_user.o
+_gp_iica0_rx_address                              ./src/smc_gen/Config_IICA0/Config_IICA0.o
+                                                  ./src/smc_gen/Config_IICA0/Config_IICA0_user.o
+_g_iica0_rx_cnt                                   ./src/smc_gen/Config_IICA0/Config_IICA0.o
+                                                  ./src/smc_gen/Config_IICA0/Config_IICA0_user.o
+__i2c_send_end                                    ./src/main.o
+                                                  ./src/smc_gen/Config_IICA0/Config_IICA0_user.o
+_R_Config_ADC_Create_UserInit                     ./src/smc_gen/Config_ADC/Config_ADC_user.o
+                                                  ./src/smc_gen/Config_ADC/Config_ADC.o
+_R_Config_ADC_Start                               ./src/smc_gen/Config_ADC/Config_ADC.o
+                                                  ./src/main.o
+_R_Config_ADC_Stop                                ./src/smc_gen/Config_ADC/Config_ADC.o
+                                                  ./src/main.o
+_R_Config_ADC_Set_OperationOn                     ./src/smc_gen/Config_ADC/Config_ADC.o
+_R_Config_ADC_Set_OperationOff                    ./src/smc_gen/Config_ADC/Config_ADC.o
+_R_Config_ADC_Set_SnoozeOn                        ./src/smc_gen/Config_ADC/Config_ADC.o
+_R_Config_ADC_Set_SnoozeOff                       ./src/smc_gen/Config_ADC/Config_ADC.o
+_R_Config_ADC_Get_Result_12bit                    ./src/smc_gen/Config_ADC/Config_ADC.o
+_R_Config_ADC_Set_ADChannel                       ./src/smc_gen/Config_ADC/Config_ADC.o
+_R_Config_ADC_Set_TestChannel                     ./src/smc_gen/Config_ADC/Config_ADC.o
+__REL_ftol                                        /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_ftol.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ftoul.S.o)
+___fixunssfsi                                     /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ftoul.S.o)
+__COM_lshr                                        /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_lshr.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_ftol.S.o)
+___lshrsi3                                        /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_lshr.S.o)
+__REL_ltof                                        /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_ltof.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ultof.S.o)
+___floatunsisf                                    /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ultof.S.o)
+__REL_f_inf                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_f_inf.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_fdiv.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_fmul.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_faddsub.S.o)
+__REL_f_norm                                      /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_f_norm.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_fdiv.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_fmul.S.o)
+__REL_f_round                                     /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_f_round.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_fdiv.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_fmul.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_faddsub.S.o)
+___divsf3                                         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_fdiv.S.o)
+___mulsf3                                         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_fmul.S.o)
+__COM_fadd                                        /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_faddsub.S.o)
+___subsf3                                         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_faddsub.S.o)
+___addsf3                                         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_faddsub.S.o)
+__REL_lldiv                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_lldiv.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ulldiv.S.o)
+___udivdi3                                        /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_ulldiv.S.o)
+__REL_llmul_addh                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(REL_llmul_addh.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o)
+__COM_mulul                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_mulul.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o)
+___muldi3                                         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_llmul.S.o)
+__COM_mului                                       /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_mului.S.o)
+                                                  /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_mulul.S.o)
+___mulsi3                                         /home/snob/.local/share/renesas/e2_studio/toolchains/llvm-17.0.1.202506-rl78-elf/llvm-for-renesas-rl78/bin/../lib/clang-runtimes/rl78-unknown-elf/s3_Oz_nc_nd_d32/lib/libclang_rt.builtins.a(COM_lmul.S.o)

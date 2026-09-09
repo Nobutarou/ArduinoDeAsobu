@@ -1,0 +1,28 @@
+; chip_type, clock (MHz)
+#Chip 18f27q43,4
+
+; The default is LVP = OFF. Very dangerous.
+#config LVP = ON
+#config MCLR = ON
+
+; 下二個の意味は分かってない。ヘルプのコピペ
+#define USART_BAUD_RATE 9600
+#define USART_TX_BLOCKING
+#define USART_DELAY OFF
+
+; PPS で TX を決める
+RC4PPS = 0x20 ; UART1 TX from 21.3 PPS Outputs
+
+Do
+  ;HSerPrint "Hello.\n" ; \n does not output CRLF
+  HSerPrint "Hello."
+  HSerPrintCRLF   
+  wait 1 s
+
+  HSerPrint "I have "
+  HSerPrint 2
+  HSerPrint "pens"
+  HSerPrintCRLF   
+  wait 1 s
+Loop
+
